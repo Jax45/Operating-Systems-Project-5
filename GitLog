@@ -1,0 +1,78 @@
+commit 98a82d2d7c6ea6910e17ce6ba9bf8cfc0ba07f64
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Mon Oct 21 18:13:13 2019 -0500
+
+    I had a problem with my queue, it was not enqueueing correctly, tried to fix it and got seg fault errors. now it seems to be working.
+    Still need the 10,000 line limit, and fix statistics.
+
+commit 31acb63b22cf45c9bb8b70a1afcf70042f8ce30d
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Sun Oct 20 21:29:40 2019 -0500
+
+    Multilevel queue commit. had a seg fault problem but fixed inside CalcWait() func. still need priority set in pcb. 100 limit, percent quantum. set constants. fine tune.
+
+commit 226fcbc10ace3fac89cd73647177bc2759935464
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Fri Oct 18 11:58:59 2019 -0500
+
+    Started work on user, still needs event driven stuff. might need to calculate system time? oss might do that.
+
+commit 231d5d66f72e4da36e94db4b41b108bdc33110fc
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Fri Oct 18 10:51:14 2019 -0500
+
+    I changed the message receive in user to a shm busy wait because it said so in the description. furthermore, i now have bitmap working
+    todo next would be stats, avgwait function, multilevel queue, 100 processes, log file limit.
+
+commit 8318cd4c8f9cbd96f237261280ad690aaab70ac3
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Thu Oct 17 15:55:38 2019 -0500
+
+    Commit after changes
+
+commit 18d78a11414e88229728b750316c0e3dc7c6db9f
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Thu Oct 17 15:07:12 2019 -0500
+
+    changed user to only terminate and not keep running this proves there is a queue problem
+    working on that next
+
+commit 3700c671dc86d0d10594ee49252b2de28701e50a
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Thu Oct 17 14:48:59 2019 -0500
+
+    About to make big changes after talking to bhatia all day,
+    going to try to clean up code for this next commit.
+    this commit has everything working with an error happening in user after the queue has messed with it.
+
+commit 2f129bea4ca2b9ada8ca300637aff707f8b15ab8
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Wed Oct 16 21:56:15 2019 -0500
+
+    Please help. i am dying... if you can read this. it mostly works. :,(
+
+commit 5e3fb9d9fb062f3331dd4018b89ddd027d9ecc97
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Mon Oct 14 11:10:40 2019 -0500
+
+    Added queue 0 and can now use lots of processes. still need to wait for processes in timer signal instead of just terminating.
+
+commit e6e6028819d01ca158cf429d82f7ea01e5b3b93c
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Sat Oct 12 23:41:31 2019 -0500
+
+    Added queue struct and cleaned with headers a little bit
+
+commit 2ea65a152b6bbe4834dee33d128a7ec9e8b5a029
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Sat Oct 12 23:00:18 2019 -0500
+
+    The single process WORKS I can't believe it. took so much rewriting of code but it now works with 1 process.
+    now i need to implement the round robin queue with priority of just 0 right now. and add more processes.
+    need to create queue structure and keep track of it when i dispatch. LETS GO CARDINALS.
+
+commit b11f479fb9a8d302f7faec1dafabfd96bf14c53a
+Author: Jackson Hoenig <Jthkn9@Mail.Umsl.edu>
+Date:   Fri Oct 11 21:46:52 2019 -0500
+
+    Inital commit. i got one process to kind of work. going to revamp the entire format so i can add some more processes.`
