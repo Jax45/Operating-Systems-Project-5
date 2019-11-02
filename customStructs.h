@@ -19,14 +19,25 @@ struct PCB{
         unsigned long long int CPU;
         unsigned long long int  system;
 	unsigned long long int duration;
-        int burst;
+        short claims[20];
+	short taken[20];
+	int burst;
         pid_t simPID;
         int priority;
+};
+//Struct for the Resource Descriptor
+struct RD{
+	bool sharable;
+	short total;
+	short available;
 };
 //for the message queue
 struct mesg_buffer {
         long mesg_type;
 	pid_t pid;
+	short resourceClass;
+	short quantity;
+	int bitIndex;
         char mesg_text[100];
 } message;
 

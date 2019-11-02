@@ -24,8 +24,8 @@
 #define PERMS (IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 
 //Global shm pointers
-struct PCB *shmpcb;
-struct Dispatch *dispatch;
+//struct PCB *shmpcb;
+//struct Dispatch *dispatch;
 
 //void sigHandler(int sig){
 //	exit(1);
@@ -43,21 +43,45 @@ int main(int argc, char  **argv) {
 	int semid = atoi(argv[2]);
 	int msgid = atoi(argv[3]);
 	int shmidPID = atoi(argv[4]);
-	int shmidpcb = atoi(argv[5]);	
+	int shmidpcb = atoi(argv[5]);
+	int bitIndex = atoi(argv[6]);
+	int shmidrd = atoi(argv[7]);	
         if(semid == -1){
                 perror("Error: user: Failed to create a private semaphore");
                 exit(1);
         }	
 	//initialize purpose
-	int purpose = 1;
-	unsigned int quantum;
-        int bitIndex;
+	int purpose = 0;
 	bool isFinished = false;
 	setsembuf(semwait, 0, -1, 0);
 	setsembuf(semsignal, 0, 1, 0);
 	//printf("Before the while loop\n");
+	
+	//Read/write the PCB and get max claims.
+	int numClasses = rand() % 20 + 1;
+	int x = 0;
+	int y = 0;
+	r_semop(semid, semwait, 1);
+	struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
+	struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+	for(x=0;x<numClasses;x++){
+		for(y=0;y<20;y++){
+			if(shmpcb[bitIndex].claims[y] == 0){
+				shmpcb[bitIndex].claims[y] = rand() % shmrd[y].total + 1;
+				break;
+			}
+		}	
+	}
+	shmdt(shmpcb);
+	shmdt(shmrd);
+	r_semop(semid, semsignal, 1);
+
+	printf("after the rd stuff\n");
+
     while(1){	
-	 dispatch = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
+
+	
+/*	 dispatch = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
 	pid_t myPid = getpid();
 	while(1){
 			
@@ -75,170 +99,117 @@ int main(int argc, char  **argv) {
 	dispatch->quantum = 0;
 	shmdt(dispatch);
 	r_semop(semid, semsignal, 1);
-	
-	//get random number
-	if(isFinished){
-		purpose = rand() % 4;
+*/	
+	//generate random time to execute event
+	int executeMS = 250;//rand() % 250 + 1;
+	struct Clock execute;
+	r_semop(semid, semwait, 1);
+        struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
+	long long exeNS = shmclock->nano + (executeMS * 1000000);
+	if(exeNS > 1000000000){
+		execute.second = (exeNS / 1000000000) + shmclock->second;
+		execute.nano = exeNS % 1000000000;
 	}
 	else{
-		purpose = rand() % 3 + 1;
+		execute.second = shmclock->second;
+		execute.nano = exeNS;
 	}
-	//purpose = 0;
+	shmdt(shmclock);
+	r_semop(semid, semsignal, 1);
+	// 0 - 250 ms
+		
+
+			
+	//printf("Waiting for time %d:%d\n",execute.second,execute.nano);
+	//fflush(stdout);
+	bool isWaiting = true;
+	while(isWaiting){
+		r_semop(semid, semwait, 1);
+                struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
+
+		if((execute.second == shmclock->second && execute.nano > shmclock->nano) || execute.second > shmclock->second){
+			isWaiting = false;
+			//add cpu time
+			struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+			shmpcb[bitIndex].CPU += executeMS;
+			if(shmpcb[bitIndex].CPU > 1000){
+				isFinished = true;
+			}
+		}	
+		shmdt(shmclock);
+		r_semop(semid, semsignal, 1);
+	}
+	
+	
+
+	//get random number
+	if(isFinished){
+		purpose = 0;// rand() % 4;
+	}
+	else{
+		purpose = 1;// rand() % 3 + 1;
+	}
+
+	//purpose = 1;
 	if (purpose == 0){
 		//terminate
-		message.pid = getppid();
+		message.pid = getpid();
                 message.mesg_type = 2;
                 /*send back what time you calculated to end on.*/
                 sprintf(message.mesg_text, "Done");
+		message.bitIndex = bitIndex;
+		printf("Sending message back to OSS\n");
+		fflush(stdout);
                 msgsnd(msgid, &message, sizeof(message), 0);
 		//shmdt(shmpcb);
-		shmdt(dispatch);
+	//	shmdt(dispatch);
                 exit(0);
 	}	
-	else if(purpose == 2){
-		//Wait for event
-		int r = rand() % 5;
-		int s = rand() % 1000;
-		if (r_semop(semid, semwait, 1) == -1){
-        	        perror("Error: oss: Failed to lock semid. ");
-        	        exit(1);
-	        }
+	else if(purpose == 1){
+		//Request for more resources
+		sprintf(message.mesg_text, "Request");
+        	int x = 0; 
+	       	r_semop(semid,semwait,1);
+                struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
+                struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
 
-		//r_semop(semid, semwait, 1);
-		struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-                s += shmclock->nano;
-                r += shmclock->second;
-                if( s >= 1000000000){
-                	r += s / 1000000000;
-        	        s = s % 1000000000;
-	        }
-
-                shmdt(shmclock);
-		r_semop(semid, semsignal, 1);	
-		bool eventDone = false;
-		while(!eventDone){
-			if (r_semop(semid, semwait, 1) == -1){
-		                perror("Error: user: Failed to lock semid. ");
-        		        exit(1);
-        		}
-	                struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-
-			//r_semop(semid, semwait, 1);
-			if((shmclock->second == r && shmclock->nano > s) || shmclock->second > r){
-				eventDone = true;
-			}
-			shmdt(shmclock);
-			if ( r_semop(semid, semsignal, 1) == -1) {
-                        perror("Error: user: Failed to clean up semaphore");
-                        return 1;
-	                }
-
-			//r_semop(semid, semsignal, 1);			
-		}
-	}
-	//use percentage of quantum.
-	else if(purpose == 3){
-		int part = rand() % 99 + 1;
-		double percentage = (double)part/100;
-		quantum = (unsigned int)((double)quantum*percentage);
-		sprintf(message.mesg_text,"not using its entire time quantum");
-	}
-	unsigned long long int duration; 	
-	//unsigned long long int currentTime;	
-	//unsigned long long  burst;
-	unsigned int ns = quantum;
-	unsigned int sec;
-	//unsigned long long int startTime;
-	//struct Clock start;	
-	if (r_semop(semid, semwait, 1) == -1){
-                 perror("Error: oss: Failed to lock semid. ");
-                 exit(1);
-        }
-	else{
-		//inside critical section
-	        struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-		ns += shmclock->nano;
-		sec = shmclock->second;
-	//	start.nano = shmclock->nano;
-	//	start.second = shmclock->second;
-	 //	startTime = (1000000000 * shmclock->second) + shmclock->nano; 
-	        shmdt(shmclock);
-		//printf("got the clock ns= %d sec= %d\n",ns,sec);	
-		shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-	//	burst = shmpcb[bitIndex].burst;
-		shmdt(shmpcb);	
-		//exit the Critical Section
-		if ( r_semop(semid, semsignal, 1) == -1) {
-			perror("User: Failed to clean up semaphore");
-			return 1;
-		}
-	
-	}
-	
-	
-	
-	//Make sure we convert the nanoseconds to seconds if big enough
-	if( ns >= 1000000000){
-		sec += ns / 1000000000;
-		ns = ns % 1000000000;
-	}
-	fflush(stdout);
-	bool timeElapsed = false;
-	while(!timeElapsed){
-		if ((error = r_semop(semid, semwait, 1)) == -1){
-			perror("Error: user: Child failed to lock semid. ");
-	                return 1;
-	        }
-	        else {
-		
-			//inside CS
-	                struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-			if((shmclock->nano >= ns && shmclock->second == sec) || shmclock->second > sec){
-				timeElapsed = true;
-				//currentTime = (1000000000 * shmclock->second) + shmclock->nano;
-				dispatch = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
-			        shmpcb = (struct PCB*) shmat(shmidpcb,(void*)0,0);
- 
-				//struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-				if (shmpcb == (struct PCB*)(-1)){
-
-					perror("USER: PCB SHMAT");
-					exit(1);
-
-				}
-				shmpcb[bitIndex].duration = quantum;
-				shmpcb[bitIndex].CPU += shmpcb[bitIndex].duration;
-				//shmpcb[bitIndex].CPU += quantum;
-				shmpcb[bitIndex].system = ((shmclock->second - shmpcb[bitIndex].startTime.second) * 1000000000);
-				shmpcb[bitIndex].system += shmclock->nano - shmpcb[bitIndex].startTime.nano;
-				if(shmpcb[bitIndex].CPU >= 50000000){
-					isFinished = true;
-				}
-				duration = shmpcb[bitIndex].duration;
-				shmdt(shmpcb);	
-				
-			}
-			shmdt(shmclock);
-
-			//exit CS
-	                if ((error = r_semop(semid, semsignal, 1)) == -1) {
-	                        //printf("Failed to clean up");
-       		                return 1;
-                	}
-
-		}
-	}
-	
-	//purpose = 0;
-		fflush(stdout);	
-		//message.mesg_text = "Not Done";
-		message.pid = 0;//getppid();
-		message.mesg_type = 2;
-		if(purpose != 3){
-			sprintf(message.mesg_text, "total time this dispatch was %lld nanoseconds",duration);
-		}
-		msgsnd(msgid, &message, sizeof(message), 0);
+		for(x=0; x<20; x++){
+                        if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
+                                message.resourceClass = x;
+                                break;
+                        }
+                }
+		message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
+		shmdt(shmpcb);
+                shmdt(shmrd);
+                r_semop(semid,semsignal,1);
 			
-    }
+	}
+	else if(purpose == 2){
+		//Release some Resources
+		r_semop(semid,semwait,1);
+	        struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
+                struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+		sprintf(message.mesg_text, "Release");
+		int x = 0;
+		for(x=0; x<20; x++){
+			if(shmpcb[bitIndex].taken[x] > 0){
+				message.resourceClass = x;
+				break;
+			}
+		}
+		message.quantity = rand() % shmpcb[bitIndex].taken[x] + 1;
+		shmdt(shmpcb);
+		shmdt(shmrd);
+		r_semop(semid,semsignal,1);
+	}
+        message.pid = getpid();
+        message.mesg_type = 2;
+	message.bitIndex = bitIndex;
+	msgsnd(msgid, &message, sizeof(message), 0);
+	msgrcv(msgid, &message, sizeof(message), 3, 0);
+	//continue back.	
+    	//isFinished = true;
+	}
 	return 0;
 }	

@@ -1,0 +1,828 @@
+OSS: generating a new launch time.
+OSS: Generating process 0 with pid 5220 and putting it in queue 0 at time 1:421
+OSS: generating a new launch time.
+OSS: Generating process 1 with pid 5221 and putting it in queue 0 at time 3:1538
+OSS: generating a new launch time.
+OSS: Generating process 2 with pid 5222 and putting it in queue 0 at time 5:2275
+OSS: generating a new launch time.
+OSS: Generating process 3 with pid 5223 and putting it in queue 0 at time 7:3757
+OSS: generating a new launch time.
+OSS: Generating process 4 with pid 5224 and putting it in queue 0 at time 9:5626
+OSS: generating a new launch time.
+OSS: Generating process 5 with pid 5225 and putting it in queue 0 at time 11:5991
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5220 for resource 0, with a quantity of 6
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5224 for resource 0, with a quantity of 2
+OSS: Generating process 6 with pid 5226 and putting it in queue 0 at time 13:7164
+OSS: Request Received and Granted to process 5223 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,3,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5220 for resource 1, with a quantity of 3
+OSS: Generating process 7 with pid 5227 and putting it in queue 0 at time 15:8017
+OSS: Request Received and Granted to process 5225 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5224 for resource 1, with a quantity of 1
+OSS: Generating process 8 with pid 5228 and putting it in queue 0 at time 17:9726
+OSS: Request Received and Granted to process 5223 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5226 for resource 0, with a quantity of 2
+OSS: Generating process 9 with pid 5229 and putting it in queue 0 at time 19:10136
+OSS: Current Allocation = <-1,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5220 for resource 1, with a quantity of 0
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5225 for resource 0, with a quantity of 2
+OSS: Generating process 10 with pid 5230 and putting it in queue 0 at time 21:11162
+OSS: Request Received and Granted to process 5227 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,0,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5224 for resource 1, with a quantity of 2
+OSS: Generating process 11 with pid 5231 and putting it in queue 0 at time 23:11743
+OSS: Request Received and Granted to process 5223 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5226 for resource 0, with a quantity of 1
+OSS: Generating process 12 with pid 5232 and putting it in queue 0 at time 25:13326
+OSS: Request Received and Granted to process 5220 for resource 1, with a quantity of -2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5229 for resource 0, with a quantity of 4
+OSS: Generating process 13 with pid 5233 and putting it in queue 0 at time 27:14125
+OSS: Request Received and Granted to process 5225 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5227 for resource 0, with a quantity of 1
+OSS: Generating process 14 with pid 5234 and putting it in queue 0 at time 29:14231
+OSS: Request Received and Granted to process 5230 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5224 for resource 2, with a quantity of 1
+OSS: Generating process 15 with pid 5235 and putting it in queue 0 at time 31:15204
+OSS: Request Received and Granted to process 5223 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5231 for resource 0, with a quantity of 1
+OSS: Generating process 16 with pid 5236 and putting it in queue 0 at time 33:15679
+OSS: Request Received and Granted to process 5226 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5220 is terminating and releasing its resources
+OSS: Current Allocation = <5,3,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 17 with pid 5237 and putting it in queue 0 at time 35:17233
+OSS: Current Allocation = <3,3,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5232 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,3,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5229 for resource 0, with a quantity of 3
+OSS: Generating process 18 with pid 5238 and putting it in queue 0 at time 37:18275
+OSS: Request Received and Granted to process 5225 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5227 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5233 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5230 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5234 for resource 0, with a quantity of 2
+OSS: Message received, process 5224 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 19 with pid 5239 and putting it in queue 0 at time 43:20979
+OSS: Message received, process 5223 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5235 for resource 0, with a quantity of 2
+OSS: Generating process 20 with pid 5240 and putting it in queue 0 at time 45:21577
+OSS: Request Received and Granted to process 5231 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5226 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5236 for resource 0, with a quantity of 7
+OSS: Request Received and Granted to process 5232 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5237 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5229 for resource 0, with a quantity of -2
+OSS: Message received, process 5225 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 21 with pid 5241 and putting it in queue 0 at time 52:26076
+OSS: Request Received and Granted to process 5238 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5227 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5233 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5230 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5234 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5235 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5239 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5231 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5240 for resource 0, with a quantity of 3
+OSS: Message received, process 5226 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 22 with pid 5242 and putting it in queue 0 at time 62:31126
+OSS: Request Received and Granted to process 5236 for resource 0, with a quantity of 7
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5232 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5237 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5229 for resource 0, with a quantity of 0
+OSS: Message received, process 5227 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 23 with pid 5243 and putting it in queue 0 at time 67:34120
+OSS: Request Received and Granted to process 5238 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5241 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5233 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5230 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5234 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5235 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5239 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5231 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5240 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5236 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5232 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5242 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5237 for resource 0, with a quantity of 5
+OSS: Message received, process 5229 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 24 with pid 5244 and putting it in queue 0 at time 81:40506
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5238 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5241 for resource 0, with a quantity of 1
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5243 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5233 for resource 0, with a quantity of 2
+OSS: Message received, process 5230 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 25 with pid 5245 and putting it in queue 0 at time 86:43246
+OSS: Request Received and Granted to process 5234 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5235 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5239 for resource 0, with a quantity of 3
+OSS: Message received, process 5231 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 26 with pid 5246 and putting it in queue 0 at time 90:45321
+OSS: Request Received and Granted to process 5240 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5236 for resource 0, with a quantity of 5
+OSS: Message received, process 5232 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 27 with pid 5247 and putting it in queue 0 at time 93:46575
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5242 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5237 for resource 0, with a quantity of 6
+OSS: Request Received and Granted to process 5238 for resource 0, with a quantity of 2
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5241 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5244 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5243 for resource 0, with a quantity of 1
+OSS: Message received, process 5233 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 28 with pid 5248 and putting it in queue 0 at time 100:49398
+OSS: Message received, process 5234 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Message received, process 5235 is terminating and releasing its resources
+OSS: Current Allocation = <1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 29 with pid 5249 and putting it in queue 0 at time 102:50730
+OSS: Current Allocation = <-4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5245 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5239 for resource 0, with a quantity of 3
+OSS: Generating process 30 with pid 5250 and putting it in queue 0 at time 104:51711
+OSS: Request Received and Granted to process 5240 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Message received, process 5236 is terminating and releasing its resources
+OSS: Current Allocation = <-4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 31 with pid 5251 and putting it in queue 0 at time 106:53135
+OSS: Request Received and Granted to process 5246 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5237 is terminating and releasing its resources
+OSS: Current Allocation = <-4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 32 with pid 5252 and putting it in queue 0 at time 108:54180
+OSS: Request Received and Granted to process 5242 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5247 for resource 0, with a quantity of 1
+OSS: Message received, process 5238 is terminating and releasing its resources
+OSS: Current Allocation = <-3,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 33 with pid 5253 and putting it in queue 0 at time 111:56310
+OSS: Current Allocation = <-3,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5241 for resource 1, with a quantity of 0
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5244 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5243 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5248 for resource 0, with a quantity of 3
+OSS: Current Allocation = <-3,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5245 for resource 1, with a quantity of 4
+OSS: Message received, process 5239 is terminating and releasing its resources
+OSS: Current Allocation = <-3,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 34 with pid 5254 and putting it in queue 0 at time 117:59729
+OSS: Request Received and Granted to process 5249 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Message received, process 5240 is terminating and releasing its resources
+OSS: Current Allocation = <-3,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 35 with pid 5255 and putting it in queue 0 at time 119:60537
+OSS: Request Received and Granted to process 5250 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5246 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5251 for resource 0, with a quantity of 6
+OSS: Request Received and Granted to process 5242 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5247 for resource 0, with a quantity of 2
+OSS: Message received, process 5241 is terminating and releasing its resources
+OSS: Current Allocation = <-2,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 36 with pid 5256 and putting it in queue 0 at time 125:62830
+OSS: Request Received and Granted to process 5244 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5253 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5243 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5248 for resource 0, with a quantity of 5
+OSS: Current Allocation = <-2,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5245 for resource 1, with a quantity of -2
+OSS: Request Received and Granted to process 5249 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5254 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5250 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5255 for resource 0, with a quantity of 7
+OSS: Request Received and Granted to process 5246 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5251 for resource 0, with a quantity of 3
+OSS: Message received, process 5242 is terminating and releasing its resources
+OSS: Current Allocation = <1,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 37 with pid 5257 and putting it in queue 0 at time 137:69347
+OSS: Current Allocation = <0,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5247 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5244 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5253 for resource 0, with a quantity of 2
+OSS: Message received, process 5243 is terminating and releasing its resources
+OSS: Current Allocation = <1,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 38 with pid 5258 and putting it in queue 0 at time 141:71577
+OSS: Current Allocation = <-2,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5248 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Current Allocation = <-2,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5245 for resource 1, with a quantity of 2
+OSS: Request Received and Granted to process 5249 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5254 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5250 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5255 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5246 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5251 for resource 0, with a quantity of 7
+OSS: Request Received and Granted to process 5247 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5257 for resource 0, with a quantity of 2
+OSS: Message received, process 5244 is terminating and releasing its resources
+OSS: Current Allocation = <-2,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 39 with pid 5259 and putting it in queue 0 at time 152:76750
+OSS: Request Received and Granted to process 5253 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5248 for resource 0, with a quantity of -2
+OSS: Message received, process 5245 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 40 with pid 5260 and putting it in queue 0 at time 155:78220
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5258 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5249 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5254 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5250 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5255 for resource 0, with a quantity of 4
+OSS: Message received, process 5246 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 41 with pid 5261 and putting it in queue 0 at time 161:82589
+OSS: Request Received and Granted to process 5251 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Message received, process 5247 is terminating and releasing its resources
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 42 with pid 5262 and putting it in queue 0 at time 163:83651
+OSS: Current Allocation = <-4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5257 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Message received, process 5248 is terminating and releasing its resources
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 43 with pid 5263 and putting it in queue 0 at time 165:85460
+OSS: Request Received and Granted to process 5253 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5259 for resource 0, with a quantity of 1
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5258 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5260 for resource 0, with a quantity of 1
+OSS: Message received, process 5249 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 44 with pid 5264 and putting it in queue 0 at time 170:87944
+OSS: Request Received and Granted to process 5254 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Message received, process 5250 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 45 with pid 5265 and putting it in queue 0 at time 172:88576
+OSS: Request Received and Granted to process 5255 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5251 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 46 with pid 5266 and putting it in queue 0 at time 174:90268
+OSS: Request Received and Granted to process 5261 for resource 0, with a quantity of 6
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5257 for resource 0, with a quantity of -3
+OSS: Request Received and Granted to process 5262 for resource 0, with a quantity of 1
+OSS: Message received, process 5253 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 47 with pid 5267 and putting it in queue 0 at time 178:91379
+OSS: Request Received and Granted to process 5263 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5259 for resource 0, with a quantity of 1
+OSS: Current Allocation = <-1,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5258 for resource 1, with a quantity of 3
+OSS: Request Received and Granted to process 5260 for resource 0, with a quantity of 4
+OSS: Message received, process 5254 is terminating and releasing its resources
+OSS: Current Allocation = <-1,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 48 with pid 5268 and putting it in queue 0 at time 183:93383
+OSS: Request Received and Granted to process 5264 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5265 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5261 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5266 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5257 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5262 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5263 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5259 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5267 for resource 0, with a quantity of 6
+OSS: Current Allocation = <-1,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5258 for resource 2, with a quantity of 1
+OSS: Request Received and Granted to process 5260 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5265 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5268 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5261 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5266 for resource 0, with a quantity of 1
+OSS: Message received, process 5257 is terminating and releasing its resources
+OSS: Current Allocation = <4,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 49 with pid 5269 and putting it in queue 0 at time 199:102854
+OSS: Current Allocation = <3,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5262 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <2,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5263 for resource 0, with a quantity of 1
+OSS: Current Allocation = <1,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5259 for resource 0, with a quantity of 1
+OSS: Current Allocation = <-6,2,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5267 for resource 0, with a quantity of 7
+OSS: Message received, process 5258 is terminating and releasing its resources
+OSS: Current Allocation = <-3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 50 with pid 5270 and putting it in queue 0 at time 204:104680
+OSS: Request Received and Granted to process 5260 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5265 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5268 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5261 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5266 for resource 0, with a quantity of 1
+OSS: Current Allocation = <-3,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5262 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5263 for resource 0, with a quantity of 0
+OSS: Message received, process 5259 is terminating and releasing its resources
+OSS: Current Allocation = <-2,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 51 with pid 5271 and putting it in queue 0 at time 212:109335
+OSS: Current Allocation = <-2,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5267 for resource 1, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5260 is terminating and releasing its resources
+OSS: Current Allocation = <-2,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 52 with pid 5272 and putting it in queue 0 at time 214:110688
+OSS: Request Received and Granted to process 5270 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5265 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5268 for resource 0, with a quantity of 2
+OSS: Message received, process 5261 is terminating and releasing its resources
+OSS: Current Allocation = <-2,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 53 with pid 5273 and putting it in queue 0 at time 218:112366
+OSS: Request Received and Granted to process 5266 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5262 is terminating and releasing its resources
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 54 with pid 5274 and putting it in queue 0 at time 220:113340
+OSS: Message received, process 5263 is terminating and releasing its resources
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,5,4,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5267 for resource 2, with a quantity of 2
+OSS: Generating process 55 with pid 5275 and putting it in queue 0 at time 222:115103
+OSS: Request Received and Granted to process 5271 for resource 0, with a quantity of 7
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5270 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5272 for resource 0, with a quantity of 1
+OSS: Message received, process 5265 is terminating and releasing its resources
+OSS: Current Allocation = <0,5,4,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 56 with pid 5276 and putting it in queue 0 at time 226:116633
+OSS: Request Received and Granted to process 5268 for resource 0, with a quantity of 6
+OSS: generating a new launch time.
+OSS: Message received, process 5266 is terminating and releasing its resources
+OSS: Current Allocation = <0,5,4,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 57 with pid 5277 and putting it in queue 0 at time 228:117417
+OSS: Request Received and Granted to process 5273 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5274 for resource 0, with a quantity of 5
+OSS: Message received, process 5267 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 58 with pid 5278 and putting it in queue 0 at time 231:119612
+OSS: Current Allocation = <6,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5271 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <5,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5275 for resource 0, with a quantity of 1
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5270 for resource 0, with a quantity of 1
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5272 for resource 0, with a quantity of 1
+OSS: Message received, process 5268 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 59 with pid 5279 and putting it in queue 0 at time 236:122220
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5276 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5273 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5277 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5274 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5271 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5278 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5275 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5270 for resource 0, with a quantity of 1
+OSS: Current Allocation = <0,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5272 for resource 1, with a quantity of 4
+OSS: Current Allocation = <0,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5276 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5279 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5273 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5277 for resource 0, with a quantity of 7
+OSS: Request Received and Granted to process 5274 for resource 0, with a quantity of 7
+OSS: Request Received and Granted to process 5271 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5278 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5275 for resource 0, with a quantity of 0
+OSS: Message received, process 5270 is terminating and releasing its resources
+OSS: Current Allocation = <1,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 60 with pid 5280 and putting it in queue 0 at time 254:132731
+OSS: Current Allocation = <1,3,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5272 for resource 1, with a quantity of -2
+OSS: generating a new launch time.
+OSS: Current Allocation = <1,-1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5276 for resource 1, with a quantity of 4
+OSS: Current Allocation = <0,-1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5279 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5273 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5277 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5274 for resource 0, with a quantity of 4
+OSS: Message received, process 5271 is terminating and releasing its resources
+OSS: Current Allocation = <1,-1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 61 with pid 5281 and putting it in queue 0 at time 261:136207
+OSS: Current Allocation = <-1,-1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5278 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5275 for resource 0, with a quantity of 1
+OSS: Message received, process 5272 is terminating and releasing its resources
+OSS: Current Allocation = <0,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 62 with pid 5282 and putting it in queue 0 at time 264:138057
+OSS: Request Received and Granted to process 5280 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,1,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5276 for resource 2, with a quantity of 1
+OSS: Current Allocation = <0,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5279 for resource 1, with a quantity of 1
+OSS: Message received, process 5273 is terminating and releasing its resources
+OSS: Current Allocation = <1,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 63 with pid 5283 and putting it in queue 0 at time 268:139583
+OSS: Current Allocation = <-3,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5277 for resource 0, with a quantity of 4
+OSS: generating a new launch time.
+OSS: Message received, process 5274 is terminating and releasing its resources
+OSS: Current Allocation = <-3,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 64 with pid 5284 and putting it in queue 0 at time 270:141287
+OSS: Request Received and Granted to process 5278 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5281 for resource 0, with a quantity of 1
+OSS: Message received, process 5275 is terminating and releasing its resources
+OSS: Current Allocation = <-2,0,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 65 with pid 5285 and putting it in queue 0 at time 273:143104
+OSS: Request Received and Granted to process 5280 for resource 0, with a quantity of 4
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5282 for resource 0, with a quantity of 7
+OSS: Message received, process 5276 is terminating and releasing its resources
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 66 with pid 5286 and putting it in queue 0 at time 276:144206
+OSS: Current Allocation = <0,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5279 for resource 1, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Message received, process 5277 is terminating and releasing its resources
+OSS: Current Allocation = <4,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 67 with pid 5287 and putting it in queue 0 at time 278:145459
+OSS: Current Allocation = <2,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5283 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Message received, process 5278 is terminating and releasing its resources
+OSS: Current Allocation = <4,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Current Allocation = <2,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5284 for resource 0, with a quantity of 2
+OSS: Generating process 68 with pid 5288 and putting it in queue 0 at time 281:146588
+OSS: Current Allocation = <0,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5281 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5280 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5285 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5282 for resource 0, with a quantity of 1
+OSS: Message received, process 5279 is terminating and releasing its resources
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 69 with pid 5289 and putting it in queue 0 at time 286:148486
+OSS: Current Allocation = <-3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5286 for resource 0, with a quantity of 4
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5283 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5287 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5284 for resource 0, with a quantity of 4
+OSS: Current Allocation = <-3,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5281 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5288 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5280 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5285 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5282 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5286 for resource 0, with a quantity of -3
+OSS: Request Received and Granted to process 5289 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5283 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5287 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5284 for resource 0, with a quantity of 1
+OSS: Current Allocation = <-3,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5281 for resource 1, with a quantity of 3
+OSS: Request Received and Granted to process 5288 for resource 0, with a quantity of 2
+OSS: Message received, process 5280 is terminating and releasing its resources
+OSS: Current Allocation = <-3,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 70 with pid 5290 and putting it in queue 0 at time 303:156828
+OSS: Request Received and Granted to process 5285 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5282 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5286 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5289 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5283 for resource 0, with a quantity of 4
+OSS: Request Received and Granted to process 5287 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5284 for resource 0, with a quantity of 0
+OSS: Message received, process 5281 is terminating and releasing its resources
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 71 with pid 5291 and putting it in queue 0 at time 311:160992
+OSS: Request Received and Granted to process 5288 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5285 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5290 for resource 0, with a quantity of 7
+OSS: Message received, process 5282 is terminating and releasing its resources
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 72 with pid 5292 and putting it in queue 0 at time 315:162651
+OSS: Request Received and Granted to process 5286 for resource 0, with a quantity of -1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5289 for resource 0, with a quantity of 2
+OSS: Message received, process 5283 is terminating and releasing its resources
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 73 with pid 5293 and putting it in queue 0 at time 318:163477
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5287 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5284 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 74 with pid 5294 and putting it in queue 0 at time 320:163983
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5288 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Message received, process 5285 is terminating and releasing its resources
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 75 with pid 5295 and putting it in queue 0 at time 322:165213
+OSS: Request Received and Granted to process 5290 for resource 0, with a quantity of 7
+OSS: generating a new launch time.
+OSS: Message received, process 5286 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 76 with pid 5296 and putting it in queue 0 at time 324:165960
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5292 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5289 for resource 0, with a quantity of 3
+OSS: Message received, process 5287 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 77 with pid 5297 and putting it in queue 0 at time 327:167244
+OSS: Request Received and Granted to process 5293 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Message received, process 5288 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 78 with pid 5298 and putting it in queue 0 at time 329:168356
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5294 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5290 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5295 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5292 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5296 for resource 0, with a quantity of 6
+OSS: Message received, process 5289 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 79 with pid 5299 and putting it in queue 0 at time 335:172340
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5293 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5297 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5294 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5298 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5290 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5295 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5292 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5296 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5293 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5299 for resource 0, with a quantity of 1
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5297 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5294 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5298 for resource 0, with a quantity of 3
+OSS: Message received, process 5290 is terminating and releasing its resources
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 80 with pid 5300 and putting it in queue 0 at time 349:179888
+OSS: Request Received and Granted to process 5295 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5292 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5296 for resource 0, with a quantity of 5
+OSS: Request Received and Granted to process 5293 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5299 for resource 0, with a quantity of 2
+OSS: Current Allocation = <0,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5297 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5294 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5298 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5295 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5300 for resource 0, with a quantity of 1
+OSS: Message received, process 5292 is terminating and releasing its resources
+OSS: Current Allocation = <1,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 81 with pid 5301 and putting it in queue 0 at time 360:186739
+OSS: Current Allocation = <-6,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5296 for resource 0, with a quantity of 7
+OSS: generating a new launch time.
+OSS: Message received, process 5293 is terminating and releasing its resources
+OSS: Current Allocation = <-4,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 82 with pid 5302 and putting it in queue 0 at time 362:187855
+OSS: Request Received and Granted to process 5299 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-4,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5297 for resource 2, with a quantity of 1
+OSS: Message received, process 5294 is terminating and releasing its resources
+OSS: Current Allocation = <-1,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 83 with pid 5303 and putting it in queue 0 at time 365:188980
+OSS: Request Received and Granted to process 5298 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Message received, process 5295 is terminating and releasing its resources
+OSS: Current Allocation = <-1,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 84 with pid 5304 and putting it in queue 0 at time 367:190371
+OSS: Request Received and Granted to process 5300 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5296 is terminating and releasing its resources
+OSS: Current Allocation = <6,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 85 with pid 5305 and putting it in queue 0 at time 369:191118
+OSS: Current Allocation = <4,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5299 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <3,4,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5302 for resource 0, with a quantity of 1
+OSS: Message received, process 5297 is terminating and releasing its resources
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 86 with pid 5306 and putting it in queue 0 at time 372:192672
+OSS: Message received, process 5298 is terminating and releasing its resources
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5303 for resource 0, with a quantity of 1
+OSS: Generating process 87 with pid 5307 and putting it in queue 0 at time 374:193602
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5300 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Current Allocation = <-2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5304 for resource 0, with a quantity of 4
+OSS: Message received, process 5299 is terminating and releasing its resources
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 88 with pid 5308 and putting it in queue 0 at time 377:194682
+OSS: Request Received and Granted to process 5305 for resource 0, with a quantity of 3
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5302 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5306 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5303 for resource 0, with a quantity of 0
+OSS: Current Allocation = <0,0,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5300 for resource 1, with a quantity of 5
+OSS: Request Received and Granted to process 5307 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5304 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5305 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5308 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5302 for resource 1, with a quantity of 3
+OSS: Request Received and Granted to process 5306 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5303 for resource 0, with a quantity of 0
+OSS: Message received, process 5300 is terminating and releasing its resources
+OSS: Current Allocation = <1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 89 with pid 5309 and putting it in queue 0 at time 390:201359
+OSS: Current Allocation = <-4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5307 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5304 for resource 0, with a quantity of -1
+OSS: Request Received and Granted to process 5305 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5308 for resource 0, with a quantity of 2
+OSS: Current Allocation = <-4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5302 for resource 1, with a quantity of 0
+OSS: Request Received and Granted to process 5306 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5303 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5307 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5304 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5305 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5308 for resource 0, with a quantity of 2
+OSS: Message received, process 5302 is terminating and releasing its resources
+OSS: Current Allocation = <-3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 90 with pid 5310 and putting it in queue 0 at time 402:207076
+OSS: Request Received and Granted to process 5306 for resource 0, with a quantity of 5
+OSS: generating a new launch time.
+OSS: Message received, process 5303 is terminating and releasing its resources
+OSS: Current Allocation = <-2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 91 with pid 5311 and putting it in queue 0 at time 404:208047
+OSS: Request Received and Granted to process 5307 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5304 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 92 with pid 5312 and putting it in queue 0 at time 406:208426
+OSS: Message received, process 5305 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5308 for resource 0, with a quantity of 1
+OSS: Generating process 93 with pid 5313 and putting it in queue 0 at time 408:208509
+OSS: Message received, process 5306 is terminating and releasing its resources
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <-1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5310 for resource 0, with a quantity of 2
+OSS: Generating process 94 with pid 5314 and putting it in queue 0 at time 410:209144
+OSS: Message received, process 5307 is terminating and releasing its resources
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5311 for resource 0, with a quantity of 1
+OSS: Generating process 95 with pid 5315 and putting it in queue 0 at time 412:209503
+OSS: Message received, process 5308 is terminating and releasing its resources
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5313 for resource 0, with a quantity of 1
+OSS: Generating process 96 with pid 5316 and putting it in queue 0 at time 414:210852
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5310 for resource 0, with a quantity of 0
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5314 for resource 0, with a quantity of 3
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5311 for resource 1, with a quantity of 1
+OSS: Request Received and Granted to process 5315 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5313 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5310 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5316 for resource 0, with a quantity of 2
+OSS: Current Allocation = <0,1,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5314 for resource 1, with a quantity of 4
+OSS: Current Allocation = <0,1,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5311 for resource 2, with a quantity of 1
+OSS: Request Received and Granted to process 5315 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5313 for resource 0, with a quantity of 2
+OSS: Request Received and Granted to process 5310 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5316 for resource 0, with a quantity of 3
+OSS: Current Allocation = <0,1,5,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5314 for resource 1, with a quantity of 0
+OSS: Current Allocation = <0,1,5,2,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5311 for resource 3, with a quantity of 1
+OSS: Request Received and Granted to process 5315 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5313 for resource 0, with a quantity of 3
+OSS: Message received, process 5310 is terminating and releasing its resources
+OSS: Current Allocation = <2,1,5,2,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 97 with pid 5317 and putting it in queue 0 at time 432:220777
+OSS: Current Allocation = <0,1,5,2,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5316 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Current Allocation = <0,4,5,2,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5314 for resource 1, with a quantity of -3
+OSS: Message received, process 5311 is terminating and releasing its resources
+OSS: Current Allocation = <1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 98 with pid 5318 and putting it in queue 0 at time 435:222246
+OSS: Current Allocation = <0,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5315 for resource 0, with a quantity of 1
+OSS: generating a new launch time.
+OSS: Message received, process 5313 is terminating and releasing its resources
+OSS: Current Allocation = <1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 99 with pid 5319 and putting it in queue 0 at time 437:223210
+OSS: Current Allocation = <-1,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5316 for resource 0, with a quantity of 2
+OSS: generating a new launch time.
+OSS: Request Received and Granted to process 5317 for resource 0, with a quantity of 2
+OSS: Message received, process 5314 is terminating and releasing its resources
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 5315 is terminating and releasing its resources
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Current Allocation = <2,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5318 for resource 0, with a quantity of 1
+OSS: Message received, process 5316 is terminating and releasing its resources
+OSS: Current Allocation = <6,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Current Allocation = <4,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5319 for resource 0, with a quantity of 2
+OSS: Current Allocation = <3,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5317 for resource 0, with a quantity of 1
+OSS: Current Allocation = <0,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request Received and Granted to process 5318 for resource 0, with a quantity of 3
+OSS: Request Received and Granted to process 5319 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5317 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5318 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5319 for resource 0, with a quantity of 0
+OSS: Request Received and Granted to process 5317 for resource 0, with a quantity of 1
+OSS: Request Received and Granted to process 5318 for resource 0, with a quantity of -3
+OSS: Request Received and Granted to process 5319 for resource 0, with a quantity of 0
+OSS: Message received, process 5317 is terminating and releasing its resources
+OSS: Current Allocation = <1,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 5318 is terminating and releasing its resources
+OSS: Current Allocation = <5,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 5319 is terminating and releasing its resources

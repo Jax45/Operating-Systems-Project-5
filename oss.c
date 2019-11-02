@@ -51,9 +51,11 @@ static int shmid;
 static int shmidPID;
 static int semid;
 static int shmidPCB;
+static int shmidRD;
 static struct Clock *shmclock;
 static struct PCB *shmpcb;
 static struct Dispatch *shmpid;       
+static struct RD *shmrd;
 //get message queue id
 int msgid;
                        
@@ -88,7 +90,7 @@ void exitSafe(int id){
 	//shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 	//fclose(fp);
         shmdt(shmpcb);
-
+	
 	//destroy msg queue
 	msgctl(msgid,IPC_RMID,NULL);
 	//detatch dispatch shm
@@ -96,7 +98,8 @@ void exitSafe(int id){
 	//destroy shared memory 
         shmctl(shmid,IPC_RMID,NULL);
         shmctl(shmidPCB,IPC_RMID,NULL);
-        shmctl(shmidPID,IPC_RMID,NULL);
+        shmctl(shmidRD,IPC_RMID,NULL);
+	shmctl(shmidPID,IPC_RMID,NULL);
 	int i;
 	//kill the children.
 	for(i = 0; i < 18; i++){
@@ -177,12 +180,34 @@ int main(int argc, char **argv){
 		shmpcb[x].CPU = 0;
 		shmpcb[x].system = 0;
 		shmpcb[x].burst = 0;
-		shmpcb[x].simPID = 0;	
+		shmpcb[x].simPID = 0;
+		int i;
+		for(i=0; i < 20; i++){
+			shmpcb[x].claims[i] = 0;
+                	shmpcb[x].taken[i] = 0;
+		}
 		shmpcb[x].priority = 0;
 		
 	}
         shmdt(shmpcb);
-	
+	//setup the shared memory for the Resource Descriptor
+	key_t rdkey = ftok("./oss", 'g');
+	size_t RDSize = sizeof(struct RD) * 20;
+	shmidRD = shmget(rdkey,RDSize,0666|IPC_CREAT);
+	if (shmidRD == -1 || errno){
+		perror("Error: oss: Failed to get shared memory");
+		exitSafe(1);
+	}
+	shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+	for(x = 0; x < 20; x++){
+		if((rand() % 100) <= 20){
+			//it is sharable
+			shmrd[x].sharable = true;
+		}
+		shmrd[x].total = rand() % 10 + 1;
+		shmrd[x].available = shmrd[x].total;	
+	}
+	shmdt(shmrd);	
 	//get the shared memory for the pid and quantum
 	key_t pidkey = ftok("./oss",'m');
 	if(errno){
@@ -275,6 +300,7 @@ int main(int argc, char **argv){
 			//printf("Finding a launch time\n");
 			lines++;
 			if(lines < 10000){
+				printf("Finding a launch time.\n");
 				fprintf(fp,"OSS: generating a new launch time.\n");
 			}//Create new launch time
 			if (r_semop(semid, semwait, 1) == -1){
@@ -324,7 +350,11 @@ int main(int argc, char **argv){
                                 		snprintf(disId, sizeof(disId), "%d", shmidPID);
 						char pcbID[20];
 						snprintf(pcbID, sizeof(pcbID), "%d", shmidPCB);
-                                		execl("./user","./user",arg,spid,msid,disId,pcbID,NULL);
+						char bitIndex[20];
+						snprintf(bitIndex, sizeof(bitIndex), "%d", lastPid);
+						char rdid[20];
+						snprintf(rdid, sizeof(rdid), "%d", shmidRD);
+                                		execl("./user","./user",arg,spid,msid,disId,pcbID,bitIndex,rdid,NULL);
                                 		perror("Error: oss: exec failed. ");
                                 		//fclose(fp);
 						exitSafe(1);
@@ -369,8 +399,117 @@ int main(int argc, char **argv){
 		//keep track of the current queue.	
 		int size = sizeOfQueue(priorityZero);
 		struct Node* n = deQueue(priorityZero);
-		//find the first filled queue.
-		//while the size's are not all 0.
+		//Look for message
+
+		//if msg received, run algorithm
+                if (msgrcv(msgid, &message, sizeof(message), 2, IPC_NOWAIT) != -1){
+			if((strcmp(message.mesg_text,"Done")) == 0){
+				int status = 0;
+				//printf("message received waiting on pid");
+				fprintf(fp,"OSS: Message received, process %lld is terminating and releasing its resources\n",message.pid);
+				fflush(fp);
+				waitpid(message.pid, &status, 0);
+				
+				int PCBindex = message.bitIndex;
+				//release resources
+				r_semop(semid, semwait, 1);
+			        shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+				shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
+				int i = 0;
+				//add resources back to available.
+				for(i=0; i<20; i++){
+					shmrd[i].available += shmpcb[PCBindex].taken[i];
+				}
+				fprintf(fp, "OSS: Current Allocation = <");
+                                int y = 0;
+                                for(y=0;y<20;y++){
+ 	                               fprintf(fp,"%d,",shmrd[y].available);
+                                }
+                                fprintf(fp, ">\n");
+
+				//clear pcb
+     			
+               			shmpcb[PCBindex].startTime.second = 0;
+              			shmpcb[PCBindex].startTime.nano = 0;
+               			shmpcb[PCBindex].endTime.second = 0;
+               			shmpcb[PCBindex].endTime.nano = 0;
+               			shmpcb[PCBindex].CPU = 0;
+               			shmpcb[PCBindex].system = 0;
+       			        shmpcb[PCBindex].burst = 0;
+       			        shmpcb[PCBindex].simPID = 0;
+       			        int a;
+       			        for(a=0; a < 20; a++){
+       			                shmpcb[PCBindex].claims[a] = 0;
+        		                shmpcb[PCBindex].taken[a] = 0;
+        		        }
+        			shmpcb[PCBindex].priority = 0;
+
+        				
+				shmdt(shmpcb);
+				shmdt(shmrd);
+				r_semop(semid, semsignal, 1);
+				//reset bit map
+				resetBit(bitMap,PCBindex);
+
+			}
+			else{
+				//not terminateing
+				if((strcmp(message.mesg_text,"Request")) == 0){
+					//run algorithm
+					
+					r_semop(semid, semwait, 1);
+					shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+		                        shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
+					if(shmrd[message.resourceClass].available > 0){
+						//take away from RD
+						shmrd[message.resourceClass].available -= message.quantity;				
+						
+						//Add to PCB	
+						shmpcb[message.bitIndex].taken[message.resourceClass] += message.quantity;
+						fprintf(fp, "OSS: Current Allocation = <");
+                                                int y = 0;
+                                                for(y=0;y<20;y++){
+                                                        fprintf(fp,"%d,",shmrd[y].available);
+                                                }
+                                                fprintf(fp, ">\n");
+
+					}
+					shmdt(shmpcb);
+                                        shmdt(shmrd);
+                                        r_semop(semid, semsignal, 1);
+
+					fprintf(fp,"OSS: Request Received and Granted to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
+					fflush(fp);
+					//send message back
+					message.mesg_type = 3;
+					msgsnd(msgid, &message, sizeof(message), 0);
+						
+				}
+
+				else{
+					//it is releasing resources
+					shmrd[message.resourceClass].available += message.quantity;
+				}
+
+
+			}
+				
+		}else{
+			errno = 0;
+		//	printf("No message Received increment clock and loop back\n");
+		}
+			//send verdict back to user
+			//and check again?
+			
+		//if not then just increment clock and loop back
+		incrementClock();	
+	}
+
+	return 0;
+}
+
+		/*
+
 		while(size > 0){
 			if (r_semop(semid, semwait, 1) == -1){
                 	        perror("Error: oss: Failed to lock semid. ");
@@ -491,7 +630,7 @@ int main(int argc, char **argv){
 	}
 	return 0;
 }
-
+*/
 //Calculate the average waiting time for a given queue.
 unsigned long long calcWait(const struct Queue * queue){
 	struct Node* n = queue->front;
