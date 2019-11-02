@@ -144,13 +144,13 @@ int main(int argc, char  **argv) {
 
 	//get random number
 	if(isFinished){
-		purpose = 0;// rand() % 4;
+		purpose =  rand() % 3;
 	}
 	else{
-		purpose = 1;// rand() % 3 + 1;
+		purpose =  rand() % 2 + 1;
 	}
-
-	//purpose = 1;
+	
+	//purpose = 2;
 	if (purpose == 0){
 		//terminate
 		message.pid = getpid();
@@ -183,6 +183,11 @@ int main(int argc, char  **argv) {
 		shmdt(shmpcb);
                 shmdt(shmrd);
                 r_semop(semid,semsignal,1);
+		message.pid = getpid();
+	        message.mesg_type = 2;
+	        message.bitIndex = bitIndex;
+	        msgsnd(msgid, &message, sizeof(message), 0);
+	        msgrcv(msgid, &message, sizeof(message), 3, 0);
 			
 	}
 	else if(purpose == 2){
@@ -192,22 +197,31 @@ int main(int argc, char  **argv) {
                 struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
 		sprintf(message.mesg_text, "Release");
 		int x = 0;
+		bool isReleasing = false;
 		for(x=0; x<20; x++){
 			if(shmpcb[bitIndex].taken[x] > 0){
 				message.resourceClass = x;
+	                        message.quantity = rand() % shmpcb[bitIndex].taken[x] + 1;
+				isReleasing = true;
 				break;
 			}
 		}
-		message.quantity = rand() % shmpcb[bitIndex].taken[x] + 1;
-		shmdt(shmpcb);
 		shmdt(shmrd);
-		r_semop(semid,semsignal,1);
+                shmdt(shmpcb);
+                r_semop(semid,semsignal,1);
+
+		if(!isReleasing){
+	                sprintf(message.mesg_text, "Nothing");
+	
+		}
+		//	message.quantity = rand() % shmpcb[bitIndex].taken[x] + 1;
+			message.pid = getpid();
+		        message.mesg_type = 2;
+	        	message.bitIndex = bitIndex;
+	        	msgsnd(msgid, &message, sizeof(message), 0);
+		        msgrcv(msgid, &message, sizeof(message), 3, 0);
+		
 	}
-        message.pid = getpid();
-        message.mesg_type = 2;
-	message.bitIndex = bitIndex;
-	msgsnd(msgid, &message, sizeof(message), 0);
-	msgrcv(msgid, &message, sizeof(message), 3, 0);
 	//continue back.	
     	//isFinished = true;
 	}

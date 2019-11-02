@@ -460,10 +460,12 @@ int main(int argc, char **argv){
 					r_semop(semid, semwait, 1);
 					shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
 		                        shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
-					if(shmrd[message.resourceClass].available > 0){
+					if(shmrd[message.resourceClass].available - message.quantity >= 0){
 						//take away from RD
 						shmrd[message.resourceClass].available -= message.quantity;				
-						
+						fprintf(fp,"OSS: Request Received and Granted to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
+	                                        fflush(fp);
+	
 						//Add to PCB	
 						shmpcb[message.bitIndex].taken[message.resourceClass] += message.quantity;
 						fprintf(fp, "OSS: Current Allocation = <");
@@ -474,21 +476,44 @@ int main(int argc, char **argv){
                                                 fprintf(fp, ">\n");
 
 					}
+					else{
+						fprintf(fp,"OSS: Request Received and Denied to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
+                                                fflush(fp);
+					}
 					shmdt(shmpcb);
                                         shmdt(shmrd);
                                         r_semop(semid, semsignal, 1);
 
-					fprintf(fp,"OSS: Request Received and Granted to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
-					fflush(fp);
 					//send message back
 					message.mesg_type = 3;
 					msgsnd(msgid, &message, sizeof(message), 0);
 						
 				}
-
+				else if ((strcmp(message.mesg_text,"Nothing")) == 0){
+					message.mesg_type = 3;
+                                        msgsnd(msgid, &message, sizeof(message), 0);
+				}
 				else{
 					//it is releasing resources
+					r_semop(semid, semwait, 1);
+                                        shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+                                        shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 					shmrd[message.resourceClass].available += message.quantity;
+					shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
+					fprintf(fp,"OSS: Process %lld Releasing %d of resource %d\n",message.pid,message.quantity,message.resourceClass);
+                                        fprintf(fp, "OSS: Current Allocation = <");
+                                        int y = 0;
+                                        for(y=0;y<20;y++){
+                                                fprintf(fp,"%d,",shmrd[y].available);
+                                        }
+                                        fprintf(fp, ">\n");
+					fflush(fp);
+					shmdt(shmpcb);
+                                        shmdt(shmrd);
+                                        r_semop(semid, semsignal, 1);
+                                        //send message back
+                                        message.mesg_type = 3;
+                                        msgsnd(msgid, &message, sizeof(message), 0);
 				}
 
 
@@ -651,7 +676,6 @@ unsigned long long calcWait(const struct Queue * queue){
 //Increment the clock after each iteration of the loop.
 //by 1.xx seconds with xx nanoseconds between 1-1000
 void incrementClock(){
-
 		if (r_semop(semid, semwait, 1) == -1){
                         perror("Error: oss: Failed to lock semid. ");
                         exitSafe(1);
