@@ -1,1082 +1,1480 @@
 OSS: generating a new launch time.
-OSS: Generating process 0 with pid 22093 and putting it in queue 0 at time 1:421
-OSS: generating a new launch time.
-OSS: Generating process 1 with pid 22094 and putting it in queue 0 at time 3:1538
-OSS: generating a new launch time.
-OSS: Generating process 2 with pid 22095 and putting it in queue 0 at time 5:2275
-OSS: generating a new launch time.
-OSS: Generating process 3 with pid 22096 and putting it in queue 0 at time 7:3757
-OSS: generating a new launch time.
-OSS: Generating process 4 with pid 22097 and putting it in queue 0 at time 9:5626
-OSS: generating a new launch time.
-OSS: Generating process 5 with pid 22098 and putting it in queue 0 at time 11:5991
-OSS: Request Received and Granted to process 22093 for resource 8, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,7,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22094 for resource 7, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,5,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 6 with pid 22099 and putting it in queue 0 at time 13:7164
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22093 for resource 7, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,2,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 7 with pid 22100 and putting it in queue 0 at time 15:8017
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22094 for resource 7, with a quantity of 0
-OSS: Current Allocation = <7,6,6,3,2,8,10,2,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 8 with pid 22101 and putting it in queue 0 at time 17:9726
-OSS: generating a new launch time.
-OSS: Generating process 9 with pid 22102 and putting it in queue 0 at time 19:10136
-OSS: generating a new launch time.
-OSS: Request Received and Denied to process 22100 for resource 8, with a quantity of 6
-OSS: Generating process 10 with pid 22103 and putting it in queue 0 at time 21:11162
-OSS: Request Received and Denied to process 22094 for resource 7, with a quantity of 3
-OSS: generating a new launch time.
-OSS: Generating process 11 with pid 22104 and putting it in queue 0 at time 23:11743
-OSS: Request Received and Granted to process 22101 for resource 0, with a quantity of 1
-OSS: Current Allocation = <6,6,6,3,2,8,10,2,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Generating process 12 with pid 22105 and putting it in queue 0 at time 25:13326
-OSS: generating a new launch time.
-OSS: Generating process 13 with pid 22106 and putting it in queue 0 at time 27:14125
-OSS: Request Received and Denied to process 22100 for resource 8, with a quantity of 6
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22094 for resource 7, with a quantity of 1
-OSS: Current Allocation = <6,6,6,3,2,8,10,1,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 14 with pid 22107 and putting it in queue 0 at time 29:14231
-OSS: generating a new launch time.
-OSS: Generating process 15 with pid 22108 and putting it in queue 0 at time 31:15204
-OSS: Process 22101 Releasing 1 of resource 0
-OSS: Current Allocation = <7,6,6,3,2,8,10,1,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22104 for resource 10, with a quantity of 4
-OSS: Current Allocation = <7,6,6,3,2,8,10,1,4,7,5,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 16 with pid 22109 and putting it in queue 0 at time 33:15679
-OSS: Request Received and Granted to process 22099 for resource 14, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,1,4,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22098 for resource 5, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,7,10,1,4,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: Generating process 17 with pid 22110 and putting it in queue 0 at time 35:17233
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22100 for resource 8, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,7,10,1,1,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22094 for resource 7, with a quantity of -1
-OSS: Current Allocation = <7,6,6,3,2,7,10,2,1,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22107 for resource 2, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,7,10,2,1,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: Message received, process 22096 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,7,10,2,1,7,5,10,1,4,4,3,9,8,7,3,>
-OSS: Generating process 18 with pid 22111 and putting it in queue 0 at time 43:21773
-OSS: generating a new launch time.
-OSS: Process 22104 Releasing 4 of resource 10
-OSS: Current Allocation = <7,6,5,3,2,7,10,2,1,7,9,10,1,4,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22099 for resource 13, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,7,10,2,1,7,9,10,1,3,4,3,9,8,7,3,>
-OSS: Process 22098 Releasing 1 of resource 5
-OSS: Current Allocation = <7,6,5,3,2,8,10,2,1,7,9,10,1,3,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22105 for resource 10, with a quantity of 3
-OSS: Current Allocation = <7,6,5,3,2,8,10,2,1,7,6,10,1,3,4,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22100 for resource 8, with a quantity of 2
-OSS: Request Received and Denied to process 22094 for resource 7, with a quantity of 3
-OSS: Request Received and Granted to process 22103 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,8,10,2,1,7,6,10,1,3,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22107 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,5,5,3,2,8,10,2,1,7,6,10,1,3,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22101 for resource 0, with a quantity of 1
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,1,7,6,10,1,3,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22108 for resource 11, with a quantity of 3
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,1,7,6,7,1,3,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22104 for resource 10, with a quantity of 4
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,1,7,2,7,1,3,4,2,9,8,7,3,>
-OSS: Process 22099 Releasing 1 of resource 13
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,1,7,2,7,1,4,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22105 for resource 10, with a quantity of -1
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,1,7,3,7,1,4,4,2,9,8,7,3,>
-OSS: Message received, process 22100 is terminating and releasing its resources
-OSS: Current Allocation = <6,5,5,3,2,8,10,2,4,7,3,7,1,4,4,2,9,8,7,3,>
-OSS: Generating process 19 with pid 22112 and putting it in queue 0 at time 67:35570
-OSS: generating a new launch time.
-OSS: Message received, process 22094 is terminating and releasing its resources
-OSS: Current Allocation = <6,5,5,3,2,8,10,4,4,7,3,7,1,4,4,2,9,8,7,3,>
-OSS: Generating process 20 with pid 22113 and putting it in queue 0 at time 69:36278
-OSS: Process 22103 Releasing 1 of resource 15
-OSS: Current Allocation = <6,5,5,3,2,8,10,4,4,7,3,7,1,4,4,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22107 for resource 1, with a quantity of 0
-OSS: Current Allocation = <6,5,5,3,2,8,10,4,4,7,3,7,1,4,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22101 for resource 0, with a quantity of 1
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,3,7,1,4,4,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22108 for resource 11, with a quantity of 2
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,3,5,1,4,4,3,9,8,7,3,>
-OSS: Process 22104 Releasing 2 of resource 10
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,5,5,1,4,4,3,9,8,7,3,>
-OSS: Message received, process 22099 is terminating and releasing its resources
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,5,5,1,4,6,3,9,8,7,3,>
-OSS: Generating process 21 with pid 22114 and putting it in queue 0 at time 75:39508
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22105 for resource 10, with a quantity of -1
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,6,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22102 for resource 12, with a quantity of 1
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,6,5,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22106 for resource 12, with a quantity of 1
-OSS: Message received, process 22103 is terminating and releasing its resources
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,4,7,6,5,0,4,6,3,9,8,7,3,>
-OSS: Generating process 22 with pid 22115 and putting it in queue 0 at time 82:42939
-OSS: Request Received and Granted to process 22113 for resource 8, with a quantity of 1
-OSS: Current Allocation = <5,5,5,3,2,8,10,4,3,7,6,5,0,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22107 Releasing 1 of resource 1
-OSS: Current Allocation = <5,6,5,3,2,8,10,4,3,7,6,5,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22101 for resource 0, with a quantity of 1
-OSS: Current Allocation = <4,6,5,3,2,8,10,4,3,7,6,5,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22108 for resource 11, with a quantity of 1
-OSS: Current Allocation = <4,6,5,3,2,8,10,4,3,7,6,4,0,4,6,3,9,8,7,3,>
-OSS: Process 22104 Releasing 1 of resource 10
-OSS: Current Allocation = <4,6,5,3,2,8,10,4,3,7,7,4,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22114 for resource 19, with a quantity of 1
-OSS: Current Allocation = <4,6,5,3,2,8,10,4,3,7,7,4,0,4,6,3,9,8,7,2,>
-OSS: Request Received and Granted to process 22098 for resource 5, with a quantity of 1
-OSS: Current Allocation = <4,6,5,3,2,7,10,4,3,7,7,4,0,4,6,3,9,8,7,2,>
-OSS: Process 22105 Releasing 1 of resource 10
-OSS: Current Allocation = <4,6,5,3,2,7,10,4,3,7,8,4,0,4,6,3,9,8,7,2,>
-OSS: Request Received and Granted to process 22102 for resource 11, with a quantity of 1
-OSS: Current Allocation = <4,6,5,3,2,7,10,4,3,7,8,3,0,4,6,3,9,8,7,2,>
-OSS: Request Received and Granted to process 22113 for resource 8, with a quantity of 0
-OSS: Current Allocation = <4,6,5,3,2,7,10,4,3,7,8,3,0,4,6,3,9,8,7,2,>
-OSS: Request Received and Granted to process 22115 for resource 18, with a quantity of 3
-OSS: Current Allocation = <4,6,5,3,2,7,10,4,3,7,8,3,0,4,6,3,9,8,4,2,>
-OSS: Message received, process 22107 is terminating and releasing its resources
-OSS: Current Allocation = <4,6,6,3,2,7,10,4,3,7,8,3,0,4,6,3,9,8,4,2,>
-OSS: Generating process 23 with pid 22116 and putting it in queue 0 at time 97:51274
-OSS: Message received, process 22101 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,7,10,4,3,7,8,3,0,4,6,3,9,8,4,2,>
-OSS: generating a new launch time.
-OSS: Process 22108 Releasing 4 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,7,10,4,3,7,8,7,0,4,6,3,9,8,4,2,>
-OSS: Generating process 24 with pid 22117 and putting it in queue 0 at time 99:52539
-OSS: Message received, process 22104 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,7,10,4,3,7,9,7,0,4,6,3,9,8,4,2,>
-OSS: generating a new launch time.
-OSS: Generating process 25 with pid 22118 and putting it in queue 0 at time 101:53169
-OSS: Request Received and Granted to process 22114 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,7,10,4,3,7,9,7,0,4,6,3,9,8,2,2,>
-OSS: generating a new launch time.
-OSS: Message received, process 22098 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,7,9,7,0,4,6,3,9,8,2,2,>
-OSS: Generating process 26 with pid 22119 and putting it in queue 0 at time 103:54105
-OSS: Message received, process 22105 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,7,9,7,0,4,6,3,9,8,2,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Denied to process 22110 for resource 11, with a quantity of 10
-OSS: Generating process 27 with pid 22120 and putting it in queue 0 at time 105:54892
-OSS: Request Received and Denied to process 22102 for resource 11, with a quantity of 8
-OSS: generating a new launch time.
-OSS: Message received, process 22106 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,7,9,7,0,4,6,3,9,8,2,2,>
-OSS: Generating process 28 with pid 22121 and putting it in queue 0 at time 107:55909
-OSS: Process 22113 Releasing 1 of resource 8
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,7,0,4,6,3,9,8,2,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22115 for resource 17, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,7,0,4,6,3,9,5,2,2,>
-OSS: Process 22108 Releasing 2 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,5,2,2,>
-OSS: Message received, process 22109 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,5,2,2,>
-OSS: Generating process 29 with pid 22122 and putting it in queue 0 at time 112:58985
-OSS: generating a new launch time.
-OSS: Process 22114 Releasing 1 of resource 18
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,5,3,2,>
-OSS: Message received, process 22110 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,5,3,2,>
-OSS: Generating process 30 with pid 22123 and putting it in queue 0 at time 116:61417
-OSS: Request Received and Granted to process 22119 for resource 13, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,0,2,6,3,9,5,3,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22102 for resource 11, with a quantity of 6
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,3,0,2,6,3,9,5,3,2,>
-OSS: Request Received and Granted to process 22113 for resource 8, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,3,2,>
-OSS: Request Received and Granted to process 22115 for resource 17, with a quantity of 0
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,3,2,>
-OSS: Request Received and Denied to process 22116 for resource 8, with a quantity of 4
-OSS: Message received, process 22108 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,3,2,>
-OSS: Generating process 31 with pid 22124 and putting it in queue 0 at time 123:65622
-OSS: Request Received and Granted to process 22117 for resource 0, with a quantity of 6
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,3,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22122 for resource 19, with a quantity of 2
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,3,0,>
-OSS: Request Received and Granted to process 22114 for resource 18, with a quantity of 1
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,2,7,9,3,0,2,6,3,9,5,2,0,>
-OSS: Request Received and Granted to process 22119 for resource 13, with a quantity of -1
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,2,7,9,3,0,3,6,3,9,5,2,0,>
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of 3
-OSS: Current Allocation = <1,6,3,3,2,8,10,4,2,7,9,3,0,3,6,3,9,5,2,0,>
-OSS: Message received, process 22102 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,3,3,2,8,10,4,2,7,9,10,1,3,6,3,9,5,2,0,>
-OSS: Generating process 32 with pid 22125 and putting it in queue 0 at time 130:68222
-OSS: generating a new launch time.
-OSS: Message received, process 22113 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,3,3,2,8,10,4,4,7,9,10,1,3,6,3,9,5,2,0,>
-OSS: Generating process 33 with pid 22126 and putting it in queue 0 at time 132:69188
-OSS: Request Received and Granted to process 22115 for resource 17, with a quantity of -2
-OSS: Current Allocation = <1,6,3,3,2,8,10,4,4,7,9,10,1,3,6,3,9,7,2,0,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22116 for resource 8, with a quantity of 4
-OSS: Current Allocation = <1,6,3,3,2,8,10,4,0,7,9,10,1,3,6,3,9,7,2,0,>
-OSS: Process 22117 Releasing 3 of resource 0
-OSS: Current Allocation = <4,6,3,3,2,8,10,4,0,7,9,10,1,3,6,3,9,7,2,0,>
-OSS: Request Received and Granted to process 22122 for resource 19, with a quantity of -1
-OSS: Current Allocation = <4,6,3,3,2,8,10,4,0,7,9,10,1,3,6,3,9,7,2,1,>
-OSS: Request Received and Granted to process 22114 for resource 17, with a quantity of 3
-OSS: Current Allocation = <4,6,3,3,2,8,10,4,0,7,9,10,1,3,6,3,9,4,2,1,>
-OSS: Process 22119 Releasing 1 of resource 13
-OSS: Current Allocation = <4,6,3,3,2,8,10,4,0,7,9,10,1,4,6,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of 1
-OSS: Current Allocation = <4,6,2,3,2,8,10,4,0,7,9,10,1,4,6,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22120 for resource 1, with a quantity of 3
-OSS: Current Allocation = <4,3,2,3,2,8,10,4,0,7,9,10,1,4,6,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22125 for resource 14, with a quantity of 1
-OSS: Current Allocation = <4,3,2,3,2,8,10,4,0,7,9,10,1,4,5,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22115 for resource 17, with a quantity of 0
-OSS: Current Allocation = <4,3,2,3,2,8,10,4,0,7,9,10,1,4,5,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22126 for resource 11, with a quantity of 4
-OSS: Current Allocation = <4,3,2,3,2,8,10,4,0,7,9,6,1,4,5,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22116 for resource 8, with a quantity of -2
-OSS: Current Allocation = <4,3,2,3,2,8,10,4,2,7,9,6,1,4,5,3,9,4,2,1,>
-OSS: Process 22117 Releasing 2 of resource 0
-OSS: Current Allocation = <6,3,2,3,2,8,10,4,2,7,9,6,1,4,5,3,9,4,2,1,>
-OSS: Request Received and Granted to process 22122 for resource 19, with a quantity of 1
-OSS: Current Allocation = <6,3,2,3,2,8,10,4,2,7,9,6,1,4,5,3,9,4,2,0,>
-OSS: Message received, process 22114 is terminating and releasing its resources
-OSS: Current Allocation = <6,3,2,3,2,8,10,4,2,7,9,6,1,4,5,3,9,7,4,1,>
-OSS: Generating process 34 with pid 22127 and putting it in queue 0 at time 150:79456
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22119 for resource 13, with a quantity of 1
-OSS: Current Allocation = <6,3,2,3,2,8,10,4,2,7,9,6,1,3,5,3,9,7,4,1,>
-OSS: Process 22123 Releasing 1 of resource 2
-OSS: Current Allocation = <6,3,3,3,2,8,10,4,2,7,9,6,1,3,5,3,9,7,4,1,>
-OSS: Process 22120 Releasing 2 of resource 1
-OSS: Current Allocation = <6,5,3,3,2,8,10,4,2,7,9,6,1,3,5,3,9,7,4,1,>
-OSS: Process 22125 Releasing 1 of resource 14
-OSS: Current Allocation = <6,5,3,3,2,8,10,4,2,7,9,6,1,3,6,3,9,7,4,1,>
-OSS: Process 22115 Releasing 1 of resource 17
-OSS: Current Allocation = <6,5,3,3,2,8,10,4,2,7,9,6,1,3,6,3,9,8,4,1,>
-OSS: Process 22126 Releasing 2 of resource 11
-OSS: Current Allocation = <6,5,3,3,2,8,10,4,2,7,9,8,1,3,6,3,9,8,4,1,>
-OSS: Process 22116 Releasing 1 of resource 8
-OSS: Current Allocation = <6,5,3,3,2,8,10,4,3,7,9,8,1,3,6,3,9,8,4,1,>
-OSS: Process 22117 Releasing 1 of resource 0
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,3,7,9,8,1,3,6,3,9,8,4,1,>
-OSS: Request Received and Granted to process 22124 for resource 8, with a quantity of 3
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,3,6,3,9,8,4,1,>
-OSS: Request Received and Granted to process 22122 for resource 19, with a quantity of 1
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,3,6,3,9,8,4,0,>
-OSS: Request Received and Granted to process 22118 for resource 17, with a quantity of 1
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,3,6,3,9,7,4,0,>
-OSS: Request Received and Granted to process 22127 for resource 16, with a quantity of 2
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,3,6,3,7,7,4,0,>
-OSS: Request Received and Granted to process 22119 for resource 13, with a quantity of 1
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,2,6,3,7,7,4,0,>
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of 0
-OSS: Current Allocation = <7,5,3,3,2,8,10,4,0,7,9,8,1,2,6,3,7,7,4,0,>
-OSS: Message received, process 22120 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,10,4,0,7,9,8,1,2,6,3,7,7,4,0,>
-OSS: Generating process 35 with pid 22128 and putting it in queue 0 at time 166:86636
-OSS: Request Received and Granted to process 22125 for resource 14, with a quantity of 2
-OSS: Current Allocation = <7,6,3,3,2,8,10,4,0,7,9,8,1,2,4,3,7,7,4,0,>
-OSS: generating a new launch time.
-OSS: Message received, process 22115 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,10,4,0,7,9,8,1,2,4,3,7,7,7,0,>
-OSS: Generating process 36 with pid 22129 and putting it in queue 0 at time 168:88539
-OSS: Process 22126 Releasing 1 of resource 11
-OSS: Current Allocation = <7,6,3,3,2,8,10,4,0,7,9,9,1,2,4,3,7,7,7,0,>
-OSS: generating a new launch time.
-OSS: Process 22116 Releasing 1 of resource 8
-OSS: Current Allocation = <7,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,7,7,7,0,>
-OSS: Request Received and Granted to process 22117 for resource 0, with a quantity of 1
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,7,7,7,0,>
-OSS: Request Received and Granted to process 22124 for resource 8, with a quantity of 0
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,7,7,7,0,>
-OSS: Request Received and Granted to process 22122 for resource 18, with a quantity of 3
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,7,7,4,0,>
-OSS: Request Received and Granted to process 22118 for resource 16, with a quantity of 4
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,3,7,4,0,>
-OSS: Request Received and Granted to process 22127 for resource 16, with a quantity of 2
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,2,4,3,1,7,4,0,>
-OSS: Process 22119 Releasing 2 of resource 13
-OSS: Current Allocation = <6,6,3,3,2,8,10,4,1,7,9,9,1,4,4,3,1,7,4,0,>
-OSS: Process 22123 Releasing 2 of resource 2
-OSS: Current Allocation = <6,6,5,3,2,8,10,4,1,7,9,9,1,4,4,3,1,7,4,0,>
-OSS: Process 22125 Releasing 2 of resource 14
-OSS: Current Allocation = <6,6,5,3,2,8,10,4,1,7,9,9,1,4,6,3,1,7,4,0,>
-OSS: Request Received and Granted to process 22126 for resource 11, with a quantity of 3
-OSS: Current Allocation = <6,6,5,3,2,8,10,4,1,7,9,6,1,4,6,3,1,7,4,0,>
-OSS: Request Received and Granted to process 22129 for resource 6, with a quantity of 6
-OSS: Current Allocation = <6,6,5,3,2,8,4,4,1,7,9,6,1,4,6,3,1,7,4,0,>
-OSS: Process 22117 Releasing 1 of resource 0
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,1,7,9,6,1,4,6,3,1,7,4,0,>
-OSS: Message received, process 22124 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,4,7,9,6,1,4,6,3,1,7,4,0,>
-OSS: Generating process 37 with pid 22130 and putting it in queue 0 at time 184:98024
-OSS: Message received, process 22122 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,4,7,9,6,1,4,6,3,1,7,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22118 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,4,7,9,6,1,4,6,3,5,8,7,3,>
-OSS: Generating process 38 with pid 22131 and putting it in queue 0 at time 186:98656
-OSS: Request Received and Granted to process 22127 for resource 16, with a quantity of -1
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,4,7,9,6,1,4,6,3,6,8,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22119 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,8,4,4,4,7,9,6,1,4,6,3,6,8,7,3,>
-OSS: Generating process 39 with pid 22132 and putting it in queue 0 at time 188:100348
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of 2
-OSS: Current Allocation = <7,6,3,3,2,8,4,4,4,7,9,6,1,4,6,3,6,8,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22125 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,4,4,4,7,9,6,1,4,6,3,6,8,7,3,>
-OSS: Generating process 40 with pid 22133 and putting it in queue 0 at time 190:100939
-OSS: generating a new launch time.
-OSS: Message received, process 22126 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,4,4,4,7,9,10,1,4,6,3,6,8,7,3,>
-OSS: Generating process 41 with pid 22134 and putting it in queue 0 at time 192:101296
-OSS: Process 22129 Releasing 4 of resource 6
-OSS: Current Allocation = <7,6,3,3,2,8,8,4,4,7,9,10,1,4,6,3,6,8,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22116 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,8,4,4,7,9,10,1,4,6,3,6,8,7,3,>
-OSS: Generating process 42 with pid 22135 and putting it in queue 0 at time 194:102219
-OSS: Message received, process 22117 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,3,2,8,8,4,4,7,9,10,1,4,6,3,6,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22130 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,3,3,2,8,8,4,4,7,9,10,0,4,6,3,6,8,7,3,>
-OSS: Generating process 43 with pid 22136 and putting it in queue 0 at time 196:102797
-OSS: Process 22127 Releasing 2 of resource 16
-OSS: Current Allocation = <7,6,3,3,2,8,8,4,4,7,9,10,0,4,6,3,8,8,7,3,>
-OSS: generating a new launch time.
-OSS: Generating process 44 with pid 22137 and putting it in queue 0 at time 198:103717
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of -2
-OSS: Current Allocation = <7,6,5,3,2,8,8,4,4,7,9,10,0,4,6,3,8,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,8,8,4,4,6,9,10,0,4,6,3,8,8,7,3,>
-OSS: Process 22129 Releasing 1 of resource 6
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,9,10,0,4,6,3,8,8,7,3,>
-OSS: Request Received and Granted to process 22134 for resource 10, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,0,4,6,3,8,8,7,3,>
-OSS: Request Received and Granted to process 22135 for resource 19, with a quantity of 1
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,0,4,6,3,8,8,7,2,>
-OSS: Process 22130 Releasing 1 of resource 12
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,8,8,7,2,>
-OSS: Message received, process 22127 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,9,8,7,2,>
-OSS: Generating process 45 with pid 22138 and putting it in queue 0 at time 207:109050
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22131 for resource 17, with a quantity of 8
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,9,0,7,2,>
-OSS: Request Received and Granted to process 22123 for resource 2, with a quantity of 0
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,9,0,7,2,>
-OSS: Request Received and Granted to process 22132 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,9,0,5,2,>
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 0
-OSS: Current Allocation = <7,6,5,3,2,8,9,4,4,6,8,10,1,4,6,3,9,0,5,2,>
-OSS: Request Received and Granted to process 22129 for resource 6, with a quantity of 3
-OSS: Current Allocation = <7,6,5,3,2,8,6,4,4,6,8,10,1,4,6,3,9,0,5,2,>
-OSS: Request Received and Granted to process 22134 for resource 10, with a quantity of 0
-OSS: Current Allocation = <7,6,5,3,2,8,6,4,4,6,8,10,1,4,6,3,9,0,5,2,>
-OSS: Request Received and Denied to process 22135 for resource 18, with a quantity of 6
-OSS: Process 22131 Releasing 7 of resource 17
-OSS: Current Allocation = <7,6,5,3,2,8,6,4,4,6,8,10,1,4,6,3,9,7,5,2,>
-OSS: Process 22123 Releasing 1 of resource 2
-OSS: Current Allocation = <7,6,6,3,2,8,6,4,4,6,8,10,1,4,6,3,9,7,5,2,>
-OSS: Request Received and Granted to process 22132 for resource 18, with a quantity of -1
-OSS: Current Allocation = <7,6,6,3,2,8,6,4,4,6,8,10,1,4,6,3,9,7,6,2,>
-OSS: Process 22133 Releasing 1 of resource 9
-OSS: Current Allocation = <7,6,6,3,2,8,6,4,4,7,8,10,1,4,6,3,9,7,6,2,>
-OSS: Message received, process 22129 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,8,10,1,4,6,3,9,7,6,2,>
-OSS: Generating process 46 with pid 22139 and putting it in queue 0 at time 227:118498
-OSS: Request Received and Granted to process 22134 for resource 10, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,1,4,6,3,9,7,6,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22135 for resource 18, with a quantity of 5
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,1,4,6,3,9,7,1,2,>
-OSS: Request Received and Granted to process 22130 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,0,4,6,3,9,7,1,2,>
-OSS: Request Received and Granted to process 22138 for resource 4, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,7,7,10,0,4,6,3,9,7,1,2,>
-OSS: Process 22131 Releasing 1 of resource 17
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,7,7,10,0,4,6,3,9,8,1,2,>
-OSS: Message received, process 22123 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,7,7,10,0,4,6,3,9,8,1,2,>
-OSS: Generating process 47 with pid 22140 and putting it in queue 0 at time 234:121520
-OSS: generating a new launch time.
-OSS: Request Received and Denied to process 22132 for resource 18, with a quantity of 2
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,6,7,10,0,4,6,3,9,8,1,2,>
-OSS: Request Received and Granted to process 22134 for resource 9, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,4,7,10,0,4,6,3,9,8,1,2,>
-OSS: Request Received and Granted to process 22135 for resource 18, with a quantity of -3
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,4,7,10,0,4,6,3,9,8,4,2,>
-OSS: Message received, process 22130 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,10,4,4,4,7,10,1,4,6,3,9,8,4,2,>
-OSS: Generating process 48 with pid 22141 and putting it in queue 0 at time 242:126439
-OSS: generating a new launch time.
-OSS: Process 22138 Releasing 1 of resource 4
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,4,7,10,1,4,6,3,9,8,4,2,>
-OSS: Request Received and Granted to process 22131 for resource 17, with a quantity of 7
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,4,7,10,1,4,6,3,9,1,4,2,>
-OSS: Request Received and Granted to process 22140 for resource 3, with a quantity of 3
-OSS: Current Allocation = <7,6,6,0,2,8,10,4,4,4,7,10,1,4,6,3,9,1,4,2,>
-OSS: Process 22132 Releasing 1 of resource 18
-OSS: Current Allocation = <7,6,6,0,2,8,10,4,4,4,7,10,1,4,6,3,9,1,5,2,>
-OSS: Request Received and Granted to process 22128 for resource 4, with a quantity of 1
-OSS: Current Allocation = <7,6,6,0,1,8,10,4,4,4,7,10,1,4,6,3,9,1,5,2,>
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 0
-OSS: Current Allocation = <7,6,6,0,1,8,10,4,4,4,7,10,1,4,6,3,9,1,5,2,>
-OSS: Message received, process 22134 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,1,8,10,4,4,6,9,10,1,4,6,3,9,1,5,2,>
-OSS: Generating process 49 with pid 22142 and putting it in queue 0 at time 251:131569
-OSS: Request Received and Granted to process 22135 for resource 18, with a quantity of 5
-OSS: Current Allocation = <7,6,6,0,1,8,10,4,4,6,9,10,1,4,6,3,9,1,0,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22136 for resource 7, with a quantity of 3
-OSS: Current Allocation = <7,6,6,0,1,8,10,1,4,6,9,10,1,4,6,3,9,1,0,2,>
-OSS: Message received, process 22131 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,1,8,10,1,4,6,9,10,1,4,6,3,9,8,0,2,>
-OSS: Generating process 50 with pid 22143 and putting it in queue 0 at time 257:134183
-OSS: Message received, process 22137 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,1,8,10,1,4,6,9,10,1,4,6,3,9,8,0,2,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22140 for resource 2, with a quantity of 3
-OSS: Current Allocation = <7,6,3,0,1,8,10,1,4,6,9,10,1,4,6,3,9,8,0,2,>
-OSS: Generating process 51 with pid 22144 and putting it in queue 0 at time 259:135923
-OSS: Request Received and Denied to process 22132 for resource 18, with a quantity of 3
-OSS: generating a new launch time.
-OSS: Message received, process 22128 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,0,2,8,10,1,4,6,9,10,1,4,6,3,9,8,0,2,>
-OSS: Generating process 52 with pid 22145 and putting it in queue 0 at time 261:136867
-OSS: Process 22133 Releasing 1 of resource 9
-OSS: Current Allocation = <7,6,3,0,2,8,10,1,4,7,9,10,1,4,6,3,9,8,0,2,>
-OSS: generating a new launch time.
-OSS: Message received, process 22135 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,0,2,8,10,1,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 53 with pid 22146 and putting it in queue 0 at time 263:137978
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22142 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,3,0,2,8,10,1,4,7,9,10,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22136 for resource 7, with a quantity of 3
-OSS: Request Received and Granted to process 22141 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,3,0,2,8,10,1,4,7,9,10,0,4,6,2,9,8,7,3,>
-OSS: Process 22140 Releasing 3 of resource 2
-OSS: Current Allocation = <7,6,6,0,2,8,10,1,4,7,9,10,0,4,6,2,9,8,7,3,>
-OSS: Message received, process 22132 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,2,8,10,1,4,7,9,10,0,4,6,2,9,8,7,3,>
-OSS: Generating process 54 with pid 22147 and putting it in queue 0 at time 270:142165
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,6,0,2,8,10,1,4,6,9,10,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22139 for resource 5, with a quantity of 2
-OSS: Current Allocation = <7,6,6,0,2,6,10,1,4,6,9,10,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22142 for resource 11, with a quantity of 1
-OSS: Current Allocation = <7,6,6,0,2,6,10,1,4,6,9,9,0,4,6,2,9,8,7,3,>
-OSS: Message received, process 22136 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,2,6,10,4,4,6,9,9,0,4,6,2,9,8,7,3,>
-OSS: Generating process 55 with pid 22148 and putting it in queue 0 at time 277:145400
-OSS: Message received, process 22138 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,2,6,10,4,4,6,9,9,0,4,6,2,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22141 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,0,2,6,10,4,4,6,9,9,0,4,6,1,9,8,7,3,>
-OSS: Generating process 56 with pid 22149 and putting it in queue 0 at time 279:146583
-OSS: Process 22140 Releasing 2 of resource 3
-OSS: Current Allocation = <7,6,6,2,2,6,10,4,4,6,9,9,0,4,6,1,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,6,10,4,4,5,9,9,0,4,6,1,9,8,7,3,>
-OSS: Request Received and Denied to process 22145 for resource 15, with a quantity of 2
-OSS: Message received, process 22139 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,5,9,9,0,4,6,1,9,8,7,3,>
-OSS: Generating process 57 with pid 22150 and putting it in queue 0 at time 285:149193
-OSS: Request Received and Denied to process 22146 for resource 15, with a quantity of 2
-OSS: generating a new launch time.
-OSS: Process 22142 Releasing 1 of resource 11
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,5,9,10,0,4,6,1,9,8,7,3,>
-OSS: Request Received and Granted to process 22141 for resource 15, with a quantity of -1
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,5,9,10,0,4,6,2,9,8,7,3,>
-OSS: Process 22140 Releasing 1 of resource 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,5,9,10,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22149 for resource 9, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,2,9,10,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of -1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,3,9,10,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22146 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,3,9,10,0,4,6,1,9,8,7,3,>
-OSS: Request Received and Granted to process 22150 for resource 16, with a quantity of 4
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,3,9,10,0,4,6,1,5,8,7,3,>
-OSS: Request Received and Granted to process 22142 for resource 11, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,3,9,9,0,4,6,1,5,8,7,3,>
-OSS: Request Received and Denied to process 22141 for resource 15, with a quantity of 2
-OSS: Request Received and Granted to process 22140 for resource 3, with a quantity of 2
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,4,3,9,9,0,4,6,1,5,8,7,3,>
-OSS: Request Received and Granted to process 22149 for resource 8, with a quantity of 2
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,2,3,9,9,0,4,6,1,5,8,7,3,>
-OSS: Request Received and Granted to process 22133 for resource 9, with a quantity of 2
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,2,1,9,9,0,4,6,1,5,8,7,3,>
-OSS: Request Received and Denied to process 22147 for resource 15, with a quantity of 3
-OSS: Request Received and Granted to process 22146 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,2,1,9,9,0,4,6,0,5,8,7,3,>
-OSS: Request Received and Granted to process 22150 for resource 16, with a quantity of 1
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,2,1,9,9,0,4,6,0,4,8,7,3,>
-OSS: Process 22142 Releasing 1 of resource 11
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,2,1,9,10,0,4,6,0,4,8,7,3,>
-OSS: Request Received and Denied to process 22141 for resource 15, with a quantity of 2
-OSS: Process 22140 Releasing 2 of resource 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,1,9,10,0,4,6,0,4,8,7,3,>
-OSS: Request Received and Granted to process 22149 for resource 8, with a quantity of -1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,1,9,10,0,4,6,0,4,8,7,3,>
-OSS: Message received, process 22144 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,1,9,10,0,4,6,0,4,8,7,3,>
-OSS: Generating process 58 with pid 22151 and putting it in queue 0 at time 311:159517
-OSS: Process 22133 Releasing 3 of resource 9
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,4,9,10,0,4,6,0,4,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Denied to process 22145 for resource 15, with a quantity of 1
-OSS: Message received, process 22146 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,4,9,10,0,4,6,2,4,8,7,3,>
-OSS: Generating process 59 with pid 22152 and putting it in queue 0 at time 315:161391
-OSS: Request Received and Granted to process 22150 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,4,9,10,0,4,6,1,4,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22142 Releasing 1 of resource 12
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,4,9,10,1,4,6,1,4,8,7,3,>
-OSS: Process 22141 Releasing 1 of resource 15
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,3,4,9,10,1,4,6,2,4,8,7,3,>
-OSS: Request Received and Granted to process 22140 for resource 3, with a quantity of 3
-OSS: Current Allocation = <7,6,6,0,2,8,10,4,3,4,9,10,1,4,6,2,4,8,7,3,>
-OSS: Process 22149 Releasing 1 of resource 8
-OSS: Current Allocation = <7,6,6,0,2,8,10,4,4,4,9,10,1,4,6,2,4,8,7,3,>
-OSS: Message received, process 22133 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,0,2,8,10,4,4,4,9,10,1,4,6,2,4,8,7,3,>
-OSS: Generating process 60 with pid 22153 and putting it in queue 0 at time 321:164348
-OSS: Request Received and Granted to process 22151 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,5,6,0,2,8,10,4,4,4,9,10,1,4,6,2,4,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22147 for resource 15, with a quantity of 2
-OSS: Current Allocation = <7,5,6,0,2,8,10,4,4,4,9,10,1,4,6,0,4,8,7,3,>
-OSS: Request Received and Denied to process 22145 for resource 15, with a quantity of 3
-OSS: Process 22150 Releasing 1 of resource 15
-OSS: Current Allocation = <7,5,6,0,2,8,10,4,4,4,9,10,1,4,6,1,4,8,7,3,>
-OSS: Message received, process 22142 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,0,2,8,10,4,4,4,9,10,1,4,6,1,4,8,7,3,>
-OSS: Generating process 61 with pid 22154 and putting it in queue 0 at time 326:167761
-OSS: Request Received and Denied to process 22141 for resource 15, with a quantity of 2
-OSS: generating a new launch time.
-OSS: Message received, process 22140 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,4,9,10,1,4,6,1,4,8,7,3,>
-OSS: Generating process 62 with pid 22155 and putting it in queue 0 at time 328:168894
-OSS: Message received, process 22149 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,9,10,1,4,6,1,4,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22151 Releasing 1 of resource 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,1,4,8,7,3,>
-OSS: Generating process 63 with pid 22156 and putting it in queue 0 at time 330:170145
-OSS: generating a new launch time.
-OSS: Message received, process 22147 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,4,8,7,3,>
-OSS: Generating process 64 with pid 22157 and putting it in queue 0 at time 332:171013
-OSS: Request Received and Granted to process 22145 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,2,4,8,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22150 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,2,9,8,7,3,>
-OSS: Generating process 65 with pid 22158 and putting it in queue 0 at time 334:172134
-OSS: Request Received and Granted to process 22141 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,1,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22156 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,1,9,8,5,3,>
-OSS: Message received, process 22145 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,2,9,8,5,3,>
-OSS: Generating process 66 with pid 22159 and putting it in queue 0 at time 340:174914
-OSS: Request Received and Granted to process 22157 for resource 17, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,2,9,6,5,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22141 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,6,5,3,>
-OSS: Generating process 67 with pid 22160 and putting it in queue 0 at time 342:175661
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22154 for resource 1, with a quantity of 3
-OSS: Current Allocation = <7,3,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,6,5,3,>
-OSS: Request Received and Granted to process 22151 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,2,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,6,5,3,>
-OSS: Request Received and Granted to process 22153 for resource 9, with a quantity of 6
-OSS: Current Allocation = <7,2,6,3,2,8,10,4,4,1,9,10,1,4,6,3,9,6,5,3,>
-OSS: Request Received and Granted to process 22156 for resource 17, with a quantity of 2
-OSS: Current Allocation = <7,2,6,3,2,8,10,4,4,1,9,10,1,4,6,3,9,4,5,3,>
-OSS: Process 22157 Releasing 1 of resource 17
-OSS: Current Allocation = <7,2,6,3,2,8,10,4,4,1,9,10,1,4,6,3,9,5,5,3,>
-OSS: Request Received and Granted to process 22159 for resource 0, with a quantity of 2
-OSS: Current Allocation = <5,2,6,3,2,8,10,4,4,1,9,10,1,4,6,3,9,5,5,3,>
-OSS: Request Received and Granted to process 22158 for resource 6, with a quantity of 1
-OSS: Current Allocation = <5,2,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,5,5,3,>
-OSS: Process 22154 Releasing 3 of resource 1
-OSS: Current Allocation = <5,5,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,5,5,3,>
-OSS: Request Received and Granted to process 22151 for resource 0, with a quantity of 1
-OSS: Current Allocation = <4,5,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,5,5,3,>
-OSS: Request Received and Denied to process 22153 for resource 8, with a quantity of 7
-OSS: Process 22156 Releasing 2 of resource 17
-OSS: Current Allocation = <4,5,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,7,5,3,>
-OSS: Process 22157 Releasing 1 of resource 17
-OSS: Current Allocation = <4,5,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22159 for resource 0, with a quantity of -1
-OSS: Current Allocation = <5,5,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22158 for resource 5, with a quantity of 2
-OSS: Current Allocation = <5,5,6,3,2,6,9,4,4,1,9,10,1,4,6,3,9,8,5,3,>
-OSS: Message received, process 22151 is terminating and releasing its resources
-OSS: Current Allocation = <6,6,6,3,2,6,9,4,4,1,9,10,1,4,6,3,9,8,5,3,>
-OSS: Generating process 68 with pid 22161 and putting it in queue 0 at time 361:185687
-OSS: Request Received and Denied to process 22153 for resource 8, with a quantity of 7
-OSS: generating a new launch time.
-OSS: Process 22156 Releasing 1 of resource 18
-OSS: Current Allocation = <6,6,6,3,2,6,9,4,4,1,9,10,1,4,6,3,9,8,6,3,>
-OSS: Request Received and Granted to process 22157 for resource 17, with a quantity of 3
-OSS: Current Allocation = <6,6,6,3,2,6,9,4,4,1,9,10,1,4,6,3,9,5,6,3,>
-OSS: Request Received and Granted to process 22159 for resource 0, with a quantity of 5
-OSS: Current Allocation = <1,6,6,3,2,6,9,4,4,1,9,10,1,4,6,3,9,5,6,3,>
-OSS: Process 22158 Releasing 2 of resource 5
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,1,9,10,1,4,6,3,9,5,6,3,>
-OSS: Request Received and Granted to process 22160 for resource 12, with a quantity of 1
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,1,9,10,0,4,6,3,9,5,6,3,>
-OSS: Message received, process 22154 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,1,9,10,0,4,6,3,9,5,6,3,>
-OSS: Generating process 69 with pid 22162 and putting it in queue 0 at time 368:188649
-OSS: Process 22153 Releasing 3 of resource 9
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,4,9,10,0,4,6,3,9,5,6,3,>
-OSS: generating a new launch time.
-OSS: Process 22156 Releasing 1 of resource 18
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,4,9,10,0,4,6,3,9,5,7,3,>
-OSS: Process 22157 Releasing 3 of resource 17
-OSS: Current Allocation = <1,6,6,3,2,8,9,4,4,4,9,10,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22159 for resource 0, with a quantity of 5
-OSS: Process 22158 Releasing 1 of resource 6
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,4,9,10,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22160 for resource 11, with a quantity of 1
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,4,9,9,0,4,6,3,9,8,7,3,>
-OSS: Process 22153 Releasing 3 of resource 9
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22161 for resource 8, with a quantity of 6
-OSS: Request Received and Granted to process 22156 for resource 18, with a quantity of 2
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,7,9,9,0,4,6,3,9,8,5,3,>
-OSS: Request Received and Denied to process 22159 for resource 0, with a quantity of 5
-OSS: Message received, process 22160 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: Generating process 70 with pid 22163 and putting it in queue 0 at time 383:197231
-OSS: Message received, process 22153 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Generating process 71 with pid 22164 and putting it in queue 0 at time 385:198497
-OSS: Request Received and Granted to process 22161 for resource 8, with a quantity of 3
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,1,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Process 22156 Releasing 1 of resource 18
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,1,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: Message received, process 22157 is terminating and releasing its resources
-OSS: Current Allocation = <1,6,6,3,2,8,10,4,1,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: Generating process 72 with pid 22165 and putting it in queue 0 at time 388:199469
-OSS: Process 22159 Releasing 3 of resource 0
-OSS: Current Allocation = <4,6,6,3,2,8,10,4,1,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22158 for resource 6, with a quantity of 1
-OSS: Current Allocation = <4,6,6,3,2,8,9,4,1,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: Request Received and Denied to process 22161 for resource 8, with a quantity of 4
-OSS: Request Received and Denied to process 22164 for resource 8, with a quantity of 2
-OSS: Process 22156 Releasing 1 of resource 18
-OSS: Current Allocation = <4,6,6,3,2,8,9,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22159 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,9,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 73 with pid 22166 and putting it in queue 0 at time 396:204239
-OSS: Request Received and Granted to process 22165 for resource 3, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,8,9,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22158 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 74 with pid 22167 and putting it in queue 0 at time 398:205725
-OSS: Request Received and Granted to process 22163 for resource 3, with a quantity of 1
-OSS: Current Allocation = <7,6,6,1,2,8,10,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22162 for resource 4, with a quantity of 1
-OSS: Current Allocation = <7,6,6,1,1,8,10,4,1,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22161 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,1,1,8,10,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 75 with pid 22168 and putting it in queue 0 at time 401:206288
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22156 for resource 18, with a quantity of 1
-OSS: Current Allocation = <7,6,6,1,1,8,10,4,4,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: Request Received and Granted to process 22165 for resource 2, with a quantity of 3
-OSS: Current Allocation = <7,6,3,1,1,8,10,4,4,7,9,10,1,4,6,3,9,8,6,3,>
-OSS: Request Received and Granted to process 22166 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,3,1,1,8,10,4,4,6,9,10,1,4,6,3,9,8,6,3,>
-OSS: Request Received and Granted to process 22163 for resource 2, with a quantity of 2
-OSS: Current Allocation = <7,6,1,1,1,8,10,4,4,6,9,10,1,4,6,3,9,8,6,3,>
-OSS: Message received, process 22162 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,1,1,2,8,10,4,4,6,9,10,1,4,6,3,9,8,6,3,>
-OSS: Generating process 76 with pid 22169 and putting it in queue 0 at time 408:209334
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22156 for resource 18, with a quantity of 1
-OSS: Current Allocation = <7,6,1,1,2,8,10,4,4,6,9,10,1,4,6,3,9,8,5,3,>
-OSS: Process 22165 Releasing 3 of resource 2
-OSS: Current Allocation = <7,6,4,1,2,8,10,4,4,6,9,10,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22166 for resource 9, with a quantity of 0
-OSS: Current Allocation = <7,6,4,1,2,8,10,4,4,6,9,10,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22163 for resource 1, with a quantity of 2
-OSS: Current Allocation = <7,4,4,1,2,8,10,4,4,6,9,10,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22167 for resource 11, with a quantity of 1
-OSS: Current Allocation = <7,4,4,1,2,8,10,4,4,6,9,9,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22168 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,4,4,1,2,8,10,4,4,6,9,9,1,4,6,3,9,8,3,3,>
-OSS: Process 22156 Releasing 2 of resource 18
-OSS: Current Allocation = <7,4,4,1,2,8,10,4,4,6,9,9,1,4,6,3,9,8,5,3,>
-OSS: Process 22165 Releasing 1 of resource 3
-OSS: Current Allocation = <7,4,4,2,2,8,10,4,4,6,9,9,1,4,6,3,9,8,5,3,>
-OSS: Process 22166 Releasing 1 of resource 9
-OSS: Current Allocation = <7,4,4,2,2,8,10,4,4,7,9,9,1,4,6,3,9,8,5,3,>
-OSS: Message received, process 22163 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,9,1,4,6,3,9,8,5,3,>
-OSS: Generating process 77 with pid 22170 and putting it in queue 0 at time 421:215655
-OSS: Process 22167 Releasing 1 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22168 for resource 17, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,5,5,3,>
-OSS: Request Received and Granted to process 22156 for resource 18, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,5,4,3,>
-OSS: Request Received and Granted to process 22166 for resource 9, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,6,9,10,1,4,6,3,9,5,4,3,>
-OSS: Message received, process 22164 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,6,9,10,1,4,6,3,9,5,4,3,>
-OSS: Generating process 78 with pid 22171 and putting it in queue 0 at time 430:220262
-OSS: Process 22168 Releasing 2 of resource 17
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,6,9,10,1,4,6,3,9,7,4,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22156 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,6,9,10,1,4,6,3,9,7,5,3,>
-OSS: Generating process 79 with pid 22172 and putting it in queue 0 at time 432:220641
-OSS: Request Received and Granted to process 22165 for resource 3, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,6,9,10,1,4,6,3,9,7,5,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22166 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,9,10,1,4,6,3,9,7,5,3,>
-OSS: Generating process 80 with pid 22173 and putting it in queue 0 at time 434:220724
-OSS: Request Received and Granted to process 22167 for resource 11, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,9,9,1,4,6,3,9,7,5,3,>
-OSS: generating a new launch time.
-OSS: Process 22168 Releasing 1 of resource 17
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,9,9,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22165 for resource 2, with a quantity of 4
-OSS: Current Allocation = <7,6,2,2,2,8,10,4,4,7,9,9,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22172 for resource 11, with a quantity of 3
-OSS: Current Allocation = <7,6,2,2,2,8,10,4,4,7,9,6,1,4,6,3,9,8,5,3,>
-OSS: Message received, process 22167 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,2,2,2,8,10,4,4,7,9,7,1,4,6,3,9,8,5,3,>
-OSS: Generating process 81 with pid 22174 and putting it in queue 0 at time 441:223486
-OSS: generating a new launch time.
-OSS: Message received, process 22168 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,2,2,2,8,10,4,4,7,9,7,1,4,6,3,9,8,7,3,>
-OSS: Generating process 82 with pid 22175 and putting it in queue 0 at time 444:226010
-OSS: Request Received and Granted to process 22171 for resource 10, with a quantity of 1
-OSS: Current Allocation = <7,6,2,2,2,8,10,4,4,7,8,7,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22165 Releasing 4 of resource 2
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,8,7,1,4,6,3,9,8,7,3,>
-OSS: Process 22172 Releasing 2 of resource 11
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,8,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22173 for resource 8, with a quantity of 2
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,2,7,8,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22171 for resource 10, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,2,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22175 for resource 13, with a quantity of 3
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,2,7,7,9,1,1,6,3,9,8,7,3,>
-OSS: Process 22165 Releasing 1 of resource 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,7,7,9,1,1,6,3,9,8,7,3,>
-OSS: Process 22172 Releasing 1 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,2,7,7,10,1,1,6,3,9,8,7,3,>
-OSS: Process 22173 Releasing 2 of resource 8
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,1,1,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22174 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,0,1,6,3,9,8,7,3,>
-OSS: Message received, process 22170 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,7,10,0,1,6,3,9,8,7,3,>
-OSS: Generating process 83 with pid 22176 and putting it in queue 0 at time 457:233697
-OSS: Request Received and Granted to process 22171 for resource 9, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,4,7,10,0,1,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22175 for resource 13, with a quantity of -1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,4,7,10,0,2,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22165 for resource 3, with a quantity of 1
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,4,7,10,0,2,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22172 for resource 11, with a quantity of 2
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,4,7,8,0,2,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22174 for resource 11, with a quantity of 5
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,4,7,3,0,2,6,3,9,8,7,3,>
-OSS: Message received, process 22171 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,9,3,0,2,6,3,9,8,7,3,>
-OSS: Generating process 84 with pid 22177 and putting it in queue 0 at time 464:237162
-OSS: Request Received and Denied to process 22176 for resource 12, with a quantity of 1
-OSS: generating a new launch time.
-OSS: Process 22175 Releasing 2 of resource 13
-OSS: Current Allocation = <7,6,6,2,2,8,10,4,4,7,9,3,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22165 for resource 2, with a quantity of 1
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,4,7,9,3,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22172 for resource 11, with a quantity of 3
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,4,7,9,0,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22173 for resource 8, with a quantity of 4
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,0,7,9,0,0,4,6,3,9,8,7,3,>
-OSS: Process 22174 Releasing 4 of resource 11
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,0,7,9,4,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22177 for resource 15, with a quantity of 1
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,0,7,9,4,0,4,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22175 for resource 13, with a quantity of 1
-OSS: Current Allocation = <7,6,5,2,2,8,10,4,0,7,9,4,0,3,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22165 for resource 2, with a quantity of 2
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,0,7,9,4,0,3,6,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22172 for resource 10, with a quantity of 5
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,0,7,4,4,0,3,6,2,9,8,7,3,>
-OSS: Message received, process 22173 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,4,7,4,4,0,3,6,2,9,8,7,3,>
-OSS: Generating process 85 with pid 22178 and putting it in queue 0 at time 476:245701
-OSS: Message received, process 22174 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,4,7,4,5,1,3,6,2,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22176 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,4,7,4,5,0,3,6,2,9,8,7,3,>
-OSS: Generating process 86 with pid 22179 and putting it in queue 0 at time 478:246080
-OSS: Request Received and Granted to process 22177 for resource 14, with a quantity of 2
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,4,7,4,5,0,3,4,2,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22175 Releasing 1 of resource 13
-OSS: Current Allocation = <7,6,3,2,2,8,10,4,4,7,4,5,0,4,4,2,9,8,7,3,>
-OSS: Message received, process 22165 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,4,5,0,4,4,2,9,8,7,3,>
-OSS: Generating process 87 with pid 22180 and putting it in queue 0 at time 481:247515
-OSS: Process 22172 Releasing 1 of resource 10
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,5,5,0,4,4,2,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22178 for resource 5, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,4,7,5,5,0,4,4,2,9,8,7,3,>
-OSS: Process 22176 Releasing 1 of resource 12
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,4,7,5,5,1,4,4,2,9,8,7,3,>
-OSS: Process 22177 Releasing 1 of resource 14
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,4,7,5,5,1,4,5,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22179 for resource 8, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,3,7,5,5,1,4,5,2,9,8,7,3,>
-OSS: Message received, process 22175 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,3,7,5,5,1,4,5,2,9,8,7,3,>
-OSS: Generating process 88 with pid 22181 and putting it in queue 0 at time 487:250635
-OSS: Request Received and Granted to process 22172 for resource 10, with a quantity of 0
-OSS: Current Allocation = <7,6,6,3,2,5,10,4,3,7,5,5,1,4,5,2,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22178 for resource 5, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,2,10,4,3,7,5,5,1,4,5,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22177 for resource 14, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,2,10,4,3,7,5,5,1,4,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22179 for resource 8, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,2,10,4,2,7,5,5,1,4,4,2,9,8,7,3,>
-OSS: Process 22172 Releasing 4 of resource 10
-OSS: Current Allocation = <7,6,6,3,2,2,10,4,2,7,9,5,1,4,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,2,10,4,2,7,8,5,1,4,4,2,9,8,7,3,>
-OSS: Process 22178 Releasing 2 of resource 5
-OSS: Current Allocation = <7,6,6,3,2,4,10,4,2,7,8,5,1,4,4,2,9,8,7,3,>
-OSS: Request Received and Granted to process 22176 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,4,10,4,2,7,8,5,0,4,4,2,9,8,7,3,>
-OSS: Message received, process 22177 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,4,10,4,2,7,8,5,0,4,6,3,9,8,7,3,>
-OSS: Generating process 89 with pid 22182 and putting it in queue 0 at time 499:255638
-OSS: Request Received and Granted to process 22179 for resource 7, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,4,10,1,2,7,8,5,0,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22172 Releasing 4 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,4,10,1,2,7,8,9,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,4,10,1,2,7,5,9,0,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22178 for resource 5, with a quantity of 3
-OSS: Current Allocation = <7,6,6,3,2,1,10,1,2,7,5,9,0,4,6,3,9,8,7,3,>
-OSS: Message received, process 22176 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,1,10,1,2,7,5,9,1,4,6,3,9,8,7,3,>
-OSS: Generating process 90 with pid 22183 and putting it in queue 0 at time 505:259027
-OSS: Request Received and Granted to process 22179 for resource 7, with a quantity of -2
-OSS: Current Allocation = <7,6,6,3,2,1,10,3,2,7,5,9,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22182 for resource 1, with a quantity of 4
-OSS: Current Allocation = <7,2,6,3,2,1,10,3,2,7,5,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22172 for resource 11, with a quantity of 4
-OSS: Current Allocation = <7,2,6,3,2,1,10,3,2,7,5,5,1,4,6,3,9,8,7,3,>
-OSS: Process 22181 Releasing 2 of resource 10
-OSS: Current Allocation = <7,2,6,3,2,1,10,3,2,7,7,5,1,4,6,3,9,8,7,3,>
-OSS: Process 22178 Releasing 3 of resource 5
-OSS: Current Allocation = <7,2,6,3,2,4,10,3,2,7,7,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22179 for resource 7, with a quantity of 2
-OSS: Current Allocation = <7,2,6,3,2,4,10,1,2,7,7,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22183 for resource 8, with a quantity of 1
-OSS: Current Allocation = <7,2,6,3,2,4,10,1,1,7,7,5,1,4,6,3,9,8,7,3,>
-OSS: Process 22182 Releasing 2 of resource 1
-OSS: Current Allocation = <7,4,6,3,2,4,10,1,1,7,7,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Denied to process 22172 for resource 10, with a quantity of 8
-OSS: Process 22181 Releasing 2 of resource 10
-OSS: Current Allocation = <7,4,6,3,2,4,10,1,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22180 is terminating and releasing its resources
-OSS: Current Allocation = <7,4,6,3,2,4,10,1,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: Generating process 91 with pid 22184 and putting it in queue 0 at time 517:265117
-OSS: Process 22178 Releasing 3 of resource 5
-OSS: Current Allocation = <7,4,6,3,2,7,10,1,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Process 22179 Releasing 3 of resource 7
-OSS: Current Allocation = <7,4,6,3,2,7,10,4,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22183 for resource 7, with a quantity of 2
-OSS: Current Allocation = <7,4,6,3,2,7,10,2,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22182 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,3,6,3,2,7,10,2,1,7,9,5,1,4,6,3,9,8,7,3,>
-OSS: Process 22172 Releasing 4 of resource 11
-OSS: Current Allocation = <7,3,6,3,2,7,10,2,1,7,9,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 2
-OSS: Current Allocation = <7,3,6,3,2,7,10,2,1,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22178 is terminating and releasing its resources
-OSS: Current Allocation = <7,3,6,3,2,8,10,2,1,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Generating process 92 with pid 22185 and putting it in queue 0 at time 524:269966
-OSS: generating a new launch time.
-OSS: Process 22179 Releasing 1 of resource 8
-OSS: Current Allocation = <7,3,6,3,2,8,10,2,2,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Process 22183 Releasing 1 of resource 7
-OSS: Current Allocation = <7,3,6,3,2,8,10,3,2,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22182 for resource 1, with a quantity of -2
-OSS: Current Allocation = <7,5,6,3,2,8,10,3,2,7,7,9,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22172 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,3,2,8,10,3,2,7,7,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 93 with pid 22186 and putting it in queue 0 at time 529:273285
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 0
-OSS: Current Allocation = <7,5,6,3,2,8,10,3,2,7,7,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22179 for resource 8, with a quantity of 0
-OSS: Current Allocation = <7,5,6,3,2,8,10,3,2,7,7,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22183 for resource 7, with a quantity of 0
-OSS: Current Allocation = <7,5,6,3,2,8,10,3,2,7,7,10,1,4,6,3,9,8,7,3,>
-OSS: Process 22182 Releasing 1 of resource 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,3,2,7,7,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,3,2,7,5,10,1,4,6,3,9,8,7,3,>
-OSS: Process 22179 Releasing 1 of resource 8
-OSS: Current Allocation = <7,6,6,3,2,8,10,3,3,7,5,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22183 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,5,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 94 with pid 22187 and putting it in queue 0 at time 541:277207
-OSS: Request Received and Granted to process 22182 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,5,10,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of -1
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,6,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22185 for resource 1, with a quantity of 1
-OSS: Current Allocation = <7,4,6,3,2,8,10,4,4,7,6,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22182 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,6,10,1,4,6,3,9,8,7,3,>
-OSS: Generating process 95 with pid 22188 and putting it in queue 0 at time 548:280885
-OSS: generating a new launch time.
-OSS: Process 22181 Releasing 3 of resource 10
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22186 for resource 11, with a quantity of 3
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,9,7,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22184 is terminating and releasing its resources
-OSS: Current Allocation = <7,5,6,3,2,8,10,4,4,7,9,7,1,4,6,3,9,8,7,3,>
-OSS: Generating process 96 with pid 22189 and putting it in queue 0 at time 552:281803
-OSS: Process 22185 Releasing 1 of resource 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,7,1,4,6,3,9,8,7,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22188 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,7,1,4,6,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22186 for resource 11, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,5,1,4,6,3,9,8,5,3,>
-OSS: Message received, process 22185 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,5,1,4,6,3,9,8,5,3,>
-OSS: Generating process 97 with pid 22190 and putting it in queue 0 at time 559:284844
-OSS: Request Received and Granted to process 22189 for resource 6, with a quantity of 8
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,9,5,1,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Message received, process 22179 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,9,5,1,4,6,3,9,8,5,3,>
-OSS: Generating process 98 with pid 22191 and putting it in queue 0 at time 561:286250
-OSS: Request Received and Granted to process 22187 for resource 12, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,9,5,0,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Process 22188 Releasing 1 of resource 18
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,9,5,0,4,6,3,9,8,6,3,>
-OSS: Request Received and Granted to process 22181 for resource 10, with a quantity of 7
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,2,5,0,4,6,3,9,8,6,3,>
-OSS: Process 22186 Releasing 5 of resource 11
-OSS: Current Allocation = <7,6,6,3,2,8,2,4,4,7,2,10,0,4,6,3,9,8,6,3,>
-OSS: Process 22189 Releasing 8 of resource 6
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,2,10,0,4,6,3,9,8,6,3,>
-OSS: Process 22187 Releasing 1 of resource 12
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,2,10,1,4,6,3,9,8,6,3,>
-OSS: Process 22188 Releasing 1 of resource 18
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,2,10,1,4,6,3,9,8,7,3,>
-OSS: Process 22181 Releasing 2 of resource 10
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,4,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22189 for resource 6, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,9,4,4,7,4,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22191 for resource 4, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,9,4,4,7,4,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22188 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,1,8,9,4,4,7,4,10,1,4,6,3,9,8,5,3,>
-OSS: Message received, process 22181 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,9,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: Generating process 99 with pid 22192 and putting it in queue 0 at time 578:295743
-OSS: Message received, process 22186 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,9,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: generating a new launch time.
-OSS: Request Received and Granted to process 22189 for resource 6, with a quantity of 8
-OSS: Current Allocation = <7,6,6,3,1,8,1,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: Process 22191 Releasing 1 of resource 4
-OSS: Current Allocation = <7,6,6,3,2,8,1,4,4,7,9,10,1,4,6,3,9,8,5,3,>
-OSS: Process 22188 Releasing 2 of resource 18
-OSS: Current Allocation = <7,6,6,3,2,8,1,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Process 22189 Releasing 4 of resource 6
-OSS: Current Allocation = <7,6,6,3,2,8,5,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22190 for resource 4, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22187 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22189 for resource 6, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,4,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22190 for resource 4, with a quantity of 0
-OSS: Current Allocation = <7,6,6,3,1,8,4,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Message received, process 22191 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,1,8,4,4,4,7,9,10,1,4,6,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22192 for resource 14, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,1,8,4,4,4,7,9,10,1,4,5,3,9,8,7,3,>
-OSS: Process 22189 Releasing 1 of resource 6
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,5,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22190 for resource 4, with a quantity of 0
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,5,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22188 for resource 18, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,5,3,9,8,5,3,>
-OSS: Request Received and Granted to process 22192 for resource 14, with a quantity of 2
-OSS: Current Allocation = <7,6,6,3,1,8,5,4,4,7,9,10,1,4,3,3,9,8,5,3,>
-OSS: Process 22189 Releasing 2 of resource 6
-OSS: Current Allocation = <7,6,6,3,1,8,7,4,4,7,9,10,1,4,3,3,9,8,5,3,>
-OSS: Message received, process 22190 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,7,4,4,7,9,10,1,4,3,3,9,8,5,3,>
-OSS: Process 22188 Releasing 2 of resource 18
-OSS: Current Allocation = <7,6,6,3,2,8,7,4,4,7,9,10,1,4,3,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22192 for resource 13, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,7,4,4,7,9,10,1,3,3,3,9,8,7,3,>
-OSS: Message received, process 22189 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,3,3,3,9,8,7,3,>
-OSS: Request Received and Granted to process 22192 for resource 13, with a quantity of 1
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,2,3,3,9,8,7,3,>
-OSS: Message received, process 22188 is terminating and releasing its resources
-OSS: Current Allocation = <7,6,6,3,2,8,10,4,4,7,9,10,1,2,3,3,9,8,7,3,>
-OSS: Message received, process 22192 is terminating and releasing its resources
+OSS: Generating process 0 with pid 13173 and putting it in queue 0 at time 1:5105771
+OSS: generating a new launch time.
+OSS: Generating process 1 with pid 13174 and putting it in queue 0 at time 1:15106454
+OSS: generating a new launch time.
+OSS: Request for resources from process 13173 has been granted.
+OSS: New Allocation after request:
+< 4,4,4,2,0,7,8,6,5,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13173 has been granted.
+OSS: New Allocation after request:
+< 3,3,4,2,0,7,5,6,5,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13174 has been granted.
+OSS: New Allocation after request:
+< 1,2,3,1,-1,5,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Request for resources from process 13173 has been granted.
+OSS: New Allocation after request:
+< 1,2,3,1,-1,4,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Request for resources from process 13174 has been granted.
+OSS: New Allocation after request:
+< 1,0,3,0,-2,3,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Process 13174 Releasing 2 of resource 0
+OSS: Current Allocation = <3,0,3,0,-2,3,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Request for resources from process 13173 has been granted.
+OSS: New Allocation after request:
+< 3,-3,3,0,-2,3,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Process 13174 Releasing 2 of resource 1
+OSS: Current Allocation = <3,-1,3,0,-2,3,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Process 13174 Releasing 3 of resource 1
+OSS: Current Allocation = <3,2,3,0,-2,3,3,5,4,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Message received, process 13173 is terminating and releasing its resources
+OSS: Current Allocation = <7,8,5,1,0,5,8,6,6,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Process 13174 Releasing 1 of resource 1
+OSS: Current Allocation = <7,9,5,1,0,5,8,6,6,4,8,8,0,3,6,3,9,8,7,3,>
+OSS: Message received, process 13174 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 2 with pid 13175 and putting it in queue 0 at time 2:20210847
+OSS: generating a new launch time.
+OSS: Generating process 3 with pid 13176 and putting it in queue 0 at time 2:30212100
+OSS: generating a new launch time.
+OSS: Request for resources from process 13175 has been granted.
+OSS: New Allocation after request:
+< 4,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13175 has been granted.
+OSS: New Allocation after request:
+< 4,2,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13176 has been granted.
+OSS: New Allocation after request:
+< 3,1,5,2,1,5,4,4,3,3,4,9,0,1,5,2,8,7,5,2,>
+OSS: Process 13175 Releasing 2 of resource 0
+OSS: Current Allocation = <5,1,5,2,1,5,4,4,3,3,4,9,0,1,5,2,8,7,5,2,>
+OSS: Request for resources from process 13175 has been granted.
+OSS: New Allocation after request:
+< 4,1,5,2,1,5,4,4,3,3,4,9,0,1,5,2,8,7,5,2,>
+OSS: Request for resources from process 13176 has been granted.
+OSS: New Allocation after request:
+< 4,1,5,0,0,4,4,4,3,3,4,9,0,1,2,2,8,5,4,2,>
+OSS: Message received, process 13175 is terminating and releasing its resources
+OSS: Current Allocation = <6,5,5,0,0,4,4,4,3,3,4,9,0,1,2,2,8,5,4,2,>
+OSS: Process 13176 Releasing 1 of resource 0
+OSS: Current Allocation = <7,5,5,0,0,4,4,4,3,3,4,9,0,1,2,2,8,5,4,2,>
+OSS: Process 13176 Releasing 1 of resource 0
+OSS: Current Allocation = <8,5,5,0,0,4,4,4,3,3,4,9,0,1,2,2,8,5,4,2,>
+OSS: Message received, process 13176 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 4 with pid 13177 and putting it in queue 0 at time 3:35307434
+OSS: generating a new launch time.
+OSS: Request for resources from process 13177 has been granted.
+OSS: New Allocation after request:
+< 2,5,4,1,1,3,7,6,6,0,8,6,0,3,5,2,8,2,4,2,>
+OSS: Process 13177 Releasing 5 of resource 0
+OSS: Current Allocation = <7,5,4,1,1,3,7,6,6,0,8,6,0,3,5,2,8,2,4,2,>
+OSS: Process 13177 Releasing 1 of resource 1
+OSS: Current Allocation = <7,6,4,1,1,3,7,6,6,0,8,6,0,3,5,2,8,2,4,2,>
+OSS: Request for resources from process 13177 has been granted.
+OSS: New Allocation after request:
+< 3,6,4,1,1,3,7,6,3,0,8,6,0,3,5,2,7,2,0,1,>
+OSS: Request for resources from process 13177 has been granted.
+OSS: New Allocation after request:
+< 3,3,4,1,1,3,7,5,3,0,8,2,0,3,5,2,6,2,0,1,>
+OSS: Message received, process 13177 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 5 with pid 13178 and putting it in queue 0 at time 4:40404196
+OSS: generating a new launch time.
+OSS: Generating process 6 with pid 13179 and putting it in queue 0 at time 4:50404917
+OSS: generating a new launch time.
+OSS: Request for resources from process 13178 has been granted.
+OSS: New Allocation after request:
+< 5,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Process 13178 Releasing 2 of resource 0
+OSS: Current Allocation = <7,5,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13178 has been granted.
+OSS: New Allocation after request:
+< 4,4,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13179 has been granted.
+OSS: New Allocation after request:
+< -2,3,1,1,1,4,4,1,2,6,7,7,0,3,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 4 of resource 0
+OSS: Current Allocation = <2,3,1,1,1,4,4,1,2,6,7,7,0,3,3,2,9,8,7,3,>
+OSS: Process 13178 Releasing 1 of resource 0
+OSS: Current Allocation = <3,3,1,1,1,4,4,1,2,6,7,7,0,3,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 2 of resource 0
+OSS: Current Allocation = <5,3,1,1,1,4,4,1,2,6,7,7,0,3,3,2,9,8,7,3,>
+OSS: Process 13178 Releasing 2 of resource 0
+OSS: Current Allocation = <7,3,1,1,1,4,4,1,2,6,7,7,0,3,3,2,9,8,7,3,>
+OSS: Request for resources from process 13179 has been granted.
+OSS: New Allocation after request:
+< 4,-2,1,1,1,4,4,1,2,4,4,7,0,1,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 2 of resource 0
+OSS: Current Allocation = <6,-2,1,1,1,4,4,1,2,4,4,7,0,1,3,2,9,8,7,3,>
+OSS: Message received, process 13178 is terminating and releasing its resources
+OSS: Current Allocation = <6,0,1,1,1,4,4,1,2,4,4,7,0,1,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 1 of resource 0
+OSS: Current Allocation = <7,0,1,1,1,4,4,1,2,4,4,7,0,1,3,2,9,8,7,3,>
+OSS: Request for resources from process 13179 has been granted.
+OSS: New Allocation after request:
+< 6,0,1,1,1,4,4,1,2,4,4,3,0,1,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 1 of resource 0
+OSS: Current Allocation = <7,0,1,1,1,4,4,1,2,4,4,3,0,1,3,2,9,8,7,3,>
+OSS: Process 13179 Releasing 1 of resource 0
+OSS: Current Allocation = <8,0,1,1,1,4,4,1,2,4,4,3,0,1,3,2,9,8,7,3,>
+OSS: Message received, process 13179 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 7 with pid 13180 and putting it in queue 0 at time 5:55507074
+OSS: generating a new launch time.
+OSS: Generating process 8 with pid 13181 and putting it in queue 0 at time 5:65508679
+OSS: generating a new launch time.
+OSS: Process 13180 Chose to release but did not have any resources.
+OSS: Process 13180 Chose to release but did not have any resources.
+OSS: Process 13181 Chose to release but did not have any resources.
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< 5,1,5,2,1,2,9,3,5,5,5,9,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13181 has been granted.
+OSS: New Allocation after request:
+< 4,0,3,1,0,-1,9,3,5,5,5,9,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< 2,0,3,1,-1,-1,9,3,4,5,5,8,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13181 has been granted.
+OSS: New Allocation after request:
+< 1,-1,3,1,-2,-1,9,3,4,5,5,8,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< 1,-1,3,1,-2,-1,9,3,2,5,5,8,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13181 has been granted.
+OSS: New Allocation after request:
+< -2,-1,3,1,-2,-1,9,3,2,5,5,8,0,3,4,2,9,8,7,3,>
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< -2,-1,3,1,-2,-2,8,3,2,4,2,8,0,3,3,2,9,8,7,3,>
+OSS: Message received, process 13181 is terminating and releasing its resources
+OSS: Current Allocation = <3,1,5,2,0,1,8,3,2,4,2,8,0,3,3,2,9,8,7,3,>
+OSS: Process 13180 Releasing 2 of resource 0
+OSS: Current Allocation = <5,1,5,2,0,1,8,3,2,4,2,8,0,3,3,2,9,8,7,3,>
+OSS: Process 13180 Releasing 2 of resource 0
+OSS: Current Allocation = <7,1,5,2,0,1,8,3,2,4,2,8,0,3,3,2,9,8,7,3,>
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< 5,1,5,2,0,1,8,3,2,4,2,8,0,3,3,1,9,8,7,3,>
+OSS: Process 13180 Releasing 4 of resource 0
+OSS: Current Allocation = <9,1,5,2,0,1,8,3,2,4,2,8,0,3,3,1,9,8,7,3,>
+OSS: Request for resources from process 13180 has been granted.
+OSS: New Allocation after request:
+< 2,1,5,2,0,1,8,3,2,3,2,8,0,3,3,1,9,8,7,3,>
+OSS: Message received, process 13180 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 9 with pid 13182 and putting it in queue 0 at time 6:70606503
+OSS: generating a new launch time.
+OSS: Generating process 10 with pid 13183 and putting it in queue 0 at time 6:80607950
+OSS: generating a new launch time.
+OSS: Generating process 11 with pid 13184 and putting it in queue 0 at time 6:90609066
+OSS: generating a new launch time.
+OSS: Request for resources from process 13182 has been granted.
+OSS: New Allocation after request:
+< 6,5,3,2,1,7,8,6,6,6,8,8,0,1,6,3,9,8,7,3,>
+OSS: Request for resources from process 13183 has been granted.
+OSS: New Allocation after request:
+< 5,1,2,0,0,6,3,3,5,2,5,-2,-1,0,5,0,9,8,7,3,>
+OSS: Request for resources from process 13182 has been granted.
+OSS: New Allocation after request:
+< 3,1,2,0,-1,6,3,0,4,-2,3,-2,-1,0,5,0,9,8,7,3,>
+OSS: Process 13183 Releasing 1 of resource 0
+OSS: Current Allocation = <4,1,2,0,-1,6,3,0,4,-2,3,-2,-1,0,5,0,9,8,7,3,>
+OSS: Request for resources from process 13183 has been granted.
+OSS: New Allocation after request:
+< 3,1,2,0,-1,6,3,0,3,-3,3,-2,-1,0,0,0,9,8,7,3,>
+OSS: Process 13182 Releasing 1 of resource 0
+OSS: Current Allocation = <4,1,2,0,-1,6,3,0,3,-3,3,-2,-1,0,0,0,9,8,7,3,>
+OSS: Request for resources from process 13183 has been granted.
+OSS: New Allocation after request:
+< 2,1,2,0,-1,6,0,0,3,-3,2,-2,-1,0,0,0,9,8,7,3,>
+OSS: Process 13182 Releasing 1 of resource 0
+OSS: Current Allocation = <3,1,2,0,-1,6,0,0,3,-3,2,-2,-1,0,0,0,9,8,7,3,>
+OSS: Request for resources from process 13182 has been granted.
+OSS: New Allocation after request:
+< 3,1,2,0,-1,6,-1,0,3,-3,2,-2,-1,0,0,0,9,8,7,3,>
+OSS: Request for resources from process 13184 has been granted.
+OSS: New Allocation after request:
+< 2,-1,1,-2,-3,0,-2,-2,1,-5,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Process 13183 Releasing 3 of resource 0
+OSS: Current Allocation = <5,-1,1,-2,-3,0,-2,-2,1,-5,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Request for resources from process 13183 has been granted.
+OSS: New Allocation after request:
+< 5,-2,0,-2,-4,0,-2,-2,1,-5,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Process 13182 Releasing 1 of resource 0
+OSS: Current Allocation = <6,-2,0,-2,-4,0,-2,-2,1,-5,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Request for resources from process 13184 has been granted.
+OSS: New Allocation after request:
+< 6,-2,0,-2,-4,0,-4,-3,1,-6,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Process 13182 Releasing 1 of resource 0
+OSS: Current Allocation = <7,-2,0,-2,-4,0,-4,-3,1,-6,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Process 13184 Releasing 1 of resource 0
+OSS: Current Allocation = <8,-2,0,-2,-4,0,-4,-3,1,-6,-2,-3,-1,0,0,0,9,8,7,3,>
+OSS: Message received, process 13182 is terminating and releasing its resources
+OSS: Current Allocation = <7,-1,3,-1,-2,1,-1,1,3,-1,1,-1,0,3,0,0,9,8,7,3,>
+OSS: Process 13183 Releasing 2 of resource 1
+OSS: Current Allocation = <7,1,3,-1,-2,1,-1,1,3,-1,1,-1,0,3,0,0,9,8,7,3,>
+OSS: Message received, process 13183 is terminating and releasing its resources
+OSS: Current Allocation = <7,4,5,1,0,2,7,4,5,4,5,9,1,4,6,3,9,8,7,3,>
+OSS: Process 13184 Releasing 1 of resource 0
+OSS: Current Allocation = <8,4,5,1,0,2,7,4,5,4,5,9,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 13184 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 12 with pid 13185 and putting it in queue 0 at time 7:95710860
+OSS: generating a new launch time.
+OSS: Generating process 13 with pid 13186 and putting it in queue 0 at time 7:105711809
+OSS: generating a new launch time.
+OSS: Request for resources from process 13185 has been granted.
+OSS: New Allocation after request:
+< 6,0,3,0,0,5,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Process 13186 Chose to release but did not have any resources.
+OSS: Request for resources from process 13185 has been granted.
+OSS: New Allocation after request:
+< 6,0,3,0,0,3,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Process 13186 Chose to release but did not have any resources.
+OSS: Process 13186 Chose to release but did not have any resources.
+OSS: Process 13185 Releasing 1 of resource 0
+OSS: Current Allocation = <7,0,3,0,0,3,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13185 has been granted.
+OSS: New Allocation after request:
+< 6,0,3,0,0,3,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Process 13185 Releasing 1 of resource 0
+OSS: Current Allocation = <7,0,3,0,0,3,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13185 has been granted.
+OSS: New Allocation after request:
+< 6,0,3,0,0,3,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13186 has been granted.
+OSS: New Allocation after request:
+< 5,-5,2,-2,-1,2,9,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 13185 is terminating and releasing its resources
+OSS: Current Allocation = <6,1,5,1,1,7,9,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Process 13186 Releasing 1 of resource 0
+OSS: Current Allocation = <7,1,5,1,1,7,9,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 13186 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 14 with pid 13187 and putting it in queue 0 at time 8:110819150
+OSS: generating a new launch time.
+OSS: Request for resources from process 13187 has been granted.
+OSS: New Allocation after request:
+< 4,4,5,0,0,4,5,5,3,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13187 has been granted.
+OSS: New Allocation after request:
+< 3,2,5,0,0,4,5,3,3,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Request for resources from process 13187 has been granted.
+OSS: New Allocation after request:
+< 3,2,5,0,0,4,2,1,3,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Message received, process 13187 is terminating and releasing its resources
+OSS: Current Allocation = <7,6,6,3,2,8,10,7,7,7,9,10,1,4,6,3,9,8,7,3,>
+OSS: Generating process 15 with pid 13188 and putting it in queue 0 at time 9:115919370
+OSS: generating a new launch time.
+OSS: Generating process 16 with pid 13189 and putting it in queue 0 at time 9:125920255
+OSS: generating a new launch time.
+OSS: Generating process 17 with pid 13190 and putting it in queue 0 at time 9:135920872
+OSS: generating a new launch time.
+OSS: Generating process 18 with pid 13191 and putting it in queue 0 at time 9:145922340
+OSS: generating a new launch time.
+OSS: Process 13188 Chose to release but did not have any resources.
+OSS: Generating process 19 with pid 13192 and putting it in queue 0 at time 9:155923070
+OSS: Process 13188 Chose to release but did not have any resources.
+OSS: Request for resources from process 13191 has been granted.
+OSS: New Allocation after request:
+< 1,2,1,2,1,7,4,3,6,6,6,2,0,3,0,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Process 13188 Chose to release but did not have any resources.
+OSS: Request for resources from process 13189 has been granted.
+OSS: New Allocation after request:
+< 0,-1,-3,1,0,3,0,1,4,5,6,2,0,3,0,3,9,8,7,3,>
+OSS: Generating process 20 with pid 13193 and putting it in queue 0 at time 9:165923808
+OSS: Process 13192 Chose to release but did not have any resources.
+OSS: Request for resources from process 13191 has been granted.
+OSS: New Allocation after request:
+< 0,-1,-3,1,-1,2,0,1,4,5,1,1,0,3,0,3,9,8,7,3,>
+OSS: generating a new launch time.
+OSS: Process 13191 Releasing 6 of resource 0
+OSS: Current Allocation = <6,-1,-3,1,-1,2,0,1,4,5,1,1,0,3,0,3,9,8,7,3,>
+OSS: Request for resources from process 13192 has been granted.
+OSS: New Allocation after request:
+< 5,-1,-3,1,-1,2,0,1,4,5,1,1,0,3,0,3,9,8,7,3,>
+OSS: Process 13189 Releasing 1 of resource 0
+OSS: Current Allocation = <6,-1,-3,1,-1,2,0,1,4,5,1,1,0,3,0,3,9,8,7,3,>
+OSS: Request for resources from process 13188 has been granted.
+OSS: New Allocation after request:
+< 3,-2,-6,-1,-2,1,-5,-1,3,0,-1,-2,-1,1,-1,1,4,5,7,3,>
+OSS: Process 13189 Releasing 1 of resource 0
+OSS: Current Allocation = <4,-2,-6,-1,-2,1,-5,-1,3,0,-1,-2,-1,1,-1,1,4,5,7,3,>
+OSS: Request for resources from process 13193 has been granted.
+OSS: New Allocation after request:
+< 3,-3,-8,-2,-2,1,-5,-1,3,0,-1,-2,-1,1,-1,1,4,5,7,3,>
+OSS: Process 13192 Releasing 1 of resource 0
+OSS: Current Allocation = <4,-3,-8,-2,-2,1,-5,-1,3,0,-1,-2,-1,1,-1,1,4,5,7,3,>
+OSS: Request for resources from process 13192 has been granted.
+OSS: New Allocation after request:
+< 3,-3,-8,-2,-2,1,-5,-1,3,0,-1,-2,-1,1,-1,1,4,5,7,3,>
+OSS: Process 13193 Chose to release but did not have any resources.
+OSS: Request for resources from process 13188 has been granted.
+OSS: New Allocation after request:
+< 3,-3,-8,-3,-2,1,-5,-1,1,0,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13192 Releasing 1 of resource 0
+OSS: Current Allocation = <4,-3,-8,-3,-2,1,-5,-1,1,0,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Request for resources from process 13189 has been granted.
+OSS: New Allocation after request:
+< 4,-3,-8,-3,-3,-2,-5,-6,1,-1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Request for resources from process 13190 has been granted.
+OSS: New Allocation after request:
+< 3,-4,-9,-5,-4,-9,-9,-7,0,-1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Message received, process 13189 is terminating and releasing its resources
+OSS: Current Allocation = <2,-1,-5,-4,-2,-2,-5,0,2,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13190 Releasing 1 of resource 0
+OSS: Current Allocation = <3,-1,-5,-4,-2,-2,-5,0,2,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13190 Releasing 1 of resource 0
+OSS: Current Allocation = <4,-1,-5,-4,-2,-2,-5,0,2,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13190 Releasing 1 of resource 1
+OSS: Current Allocation = <4,0,-5,-4,-2,-2,-5,0,2,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Request for resources from process 13190 has been granted.
+OSS: New Allocation after request:
+< 1,0,-5,-4,-2,-2,-5,-2,1,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Generating process 21 with pid 13194 and putting it in queue 0 at time 10:171029052
+OSS: generating a new launch time.
+OSS: Request for resources from process 13190 has been granted.
+OSS: New Allocation after request:
+< 1,-1,-5,-4,-2,-2,-7,-2,1,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Request for resources from process 13194 has been granted.
+OSS: New Allocation after request:
+< 0,-3,-6,-5,-3,-5,-8,-5,-3,-3,-6,-5,-2,-2,-7,0,1,4,7,3,>
+OSS: Message received, process 13190 is terminating and releasing its resources
+OSS: Current Allocation = <2,-2,-5,-3,-2,2,-2,-2,-1,-3,-6,-5,-2,-2,-7,0,1,4,7,3,>
+OSS: Process 13194 Releasing 1 of resource 0
+OSS: Current Allocation = <3,-2,-5,-3,-2,2,-2,-2,-1,-3,-6,-5,-2,-2,-7,0,1,4,7,3,>
+OSS: Process 13194 Releasing 1 of resource 0
+OSS: Current Allocation = <4,-2,-5,-3,-2,2,-2,-2,-1,-3,-6,-5,-2,-2,-7,0,1,4,7,3,>
+OSS: Process 13194 Releasing 1 of resource 1
+OSS: Current Allocation = <4,-1,-5,-3,-2,2,-2,-2,-1,-3,-6,-5,-2,-2,-7,0,1,4,7,3,>
+OSS: Request for resources from process 13194 has been granted.
+OSS: New Allocation after request:
+< 2,-5,-6,-5,-2,2,-11,-2,-1,-3,-6,-7,-2,-2,-7,-1,1,4,7,3,>
+OSS: Generating process 22 with pid 13195 and putting it in queue 0 at time 11:176132418
+OSS: generating a new launch time.
+OSS: Generating process 23 with pid 13196 and putting it in queue 0 at time 12:181226421
+OSS: generating a new launch time.
+OSS: Generating process 24 with pid 13197 and putting it in queue 0 at time 12:191227566
+OSS: generating a new launch time.
+OSS: Generating process 25 with pid 13198 and putting it in queue 0 at time 12:201229346
+OSS: generating a new launch time.
+OSS: Process 13194 Releasing 1 of resource 0
+OSS: Current Allocation = <3,-5,-6,-5,-2,2,-11,-2,-1,-3,-6,-7,-2,-2,-7,-1,1,4,7,3,>
+OSS: Message received, process 13194 is terminating and releasing its resources
+OSS: Current Allocation = <3,0,-4,-2,-1,5,-1,1,3,1,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13195 Chose to release but did not have any resources.
+OSS: Process 13198 Chose to release but did not have any resources.
+OSS: Request for resources from process 13195 has been granted.
+OSS: New Allocation after request:
+< 1,-2,-6,-5,-2,0,-2,-1,2,0,-3,-2,-1,1,-4,1,4,4,7,3,>
+OSS: Process 13196 Chose to release but did not have any resources.
+OSS: Request for resources from process 13196 has been granted.
+OSS: New Allocation after request:
+< -1,-3,-7,-7,-4,-3,-5,-2,0,-4,-4,-4,-2,0,-8,-1,0,4,7,3,>
+OSS: Process 13197 Chose to release but did not have any resources.
+OSS: Request for resources from process 13197 has been granted.
+OSS: New Allocation after request:
+< -2,-4,-11,-9,-5,-4,-12,-3,-2,-5,-6,-7,-3,-4,-9,-1,0,4,7,3,>
+OSS: Process 13198 Chose to release but did not have any resources.
+OSS: Request for resources from process 13198 has been granted.
+OSS: New Allocation after request:
+< -3,-6,-13,-10,-6,-6,-20,-7,-7,-7,-7,-8,-4,-5,-10,-2,-6,3,7,3,>
+OSS: Process 13198 Chose to release but did not have any resources.
+OSS: Generating process 26 with pid 13199 and putting it in queue 0 at time 13:206325612
+OSS: generating a new launch time.
+OSS: Generating process 27 with pid 13200 and putting it in queue 0 at time 13:216327192
+OSS: generating a new launch time.
+OSS: Generating process 28 with pid 13201 and putting it in queue 0 at time 14:221424384
+OSS: generating a new launch time.
+OSS: Message received, process 13198 is terminating and releasing its resources
+OSS: Current Allocation = <-2,-4,-11,-9,-5,-4,-12,-3,-2,-5,-6,-7,-3,-4,-9,-1,0,4,7,3,>
+OSS: Generating process 29 with pid 13202 and putting it in queue 0 at time 15:226524998
+OSS: generating a new launch time.
+OSS: Generating process 30 with pid 13203 and putting it in queue 0 at time 15:236525572
+OSS: generating a new launch time.
+OSS: Process 13199 Chose to release but did not have any resources.
+OSS: Request for resources from process 13200 has been granted.
+OSS: New Allocation after request:
+< -5,-5,-15,-10,-6,-4,-12,-3,-2,-5,-6,-7,-3,-4,-9,-1,0,4,7,3,>
+OSS: Request for resources from process 13199 has been granted.
+OSS: New Allocation after request:
+< -8,-9,-16,-13,-7,-9,-15,-4,-6,-11,-7,-9,-4,-6,-12,-2,-3,3,6,3,>
+OSS: Process 13203 Chose to release but did not have any resources.
+OSS: Request for resources from process 13200 has been granted.
+OSS: New Allocation after request:
+< -8,-9,-17,-13,-7,-9,-15,-4,-6,-11,-7,-9,-4,-6,-12,-2,-3,3,6,3,>
+OSS: Request for resources from process 13201 has been granted.
+OSS: New Allocation after request:
+< -10,-10,-20,-14,-8,-12,-18,-5,-7,-13,-10,-10,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13202 has been granted.
+OSS: New Allocation after request:
+< -17,-14,-21,-15,-9,-13,-19,-8,-8,-18,-14,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13203 has been granted.
+OSS: New Allocation after request:
+< -22,-15,-22,-16,-11,-16,-20,-11,-13,-21,-16,-14,-6,-11,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13203 has been granted.
+OSS: New Allocation after request:
+< -22,-16,-22,-17,-11,-16,-20,-11,-13,-21,-16,-17,-6,-11,-14,-3,-5,-2,3,0,>
+OSS: Generating process 31 with pid 13206 and putting it in queue 0 at time 16:241622986
+OSS: generating a new launch time.
+OSS: Generating process 32 with pid 13207 and putting it in queue 0 at time 16:251624565
+OSS: generating a new launch time.
+OSS: Generating process 33 with pid 13208 and putting it in queue 0 at time 16:261624991
+OSS: generating a new launch time.
+OSS: Generating process 34 with pid 13209 and putting it in queue 0 at time 17:266724936
+OSS: generating a new launch time.
+OSS: Request for resources from process 13203 has been granted.
+OSS: New Allocation after request:
+< -22,-16,-22,-18,-11,-16,-23,-11,-13,-21,-16,-20,-6,-11,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Chose to release but did not have any resources.
+OSS: Process 13207 Chose to release but did not have any resources.
+OSS: Request for resources from process 13206 has been granted.
+OSS: New Allocation after request:
+< -23,-18,-24,-19,-12,-16,-23,-11,-13,-21,-16,-20,-6,-11,-14,-3,-5,-2,3,0,>
+OSS: Message received, process 13203 is terminating and releasing its resources
+OSS: Current Allocation = <-18,-16,-23,-16,-10,-13,-19,-8,-8,-18,-14,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13207 has been granted.
+OSS: New Allocation after request:
+< -20,-18,-24,-17,-12,-16,-22,-9,-10,-18,-14,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Process 13209 Chose to release but did not have any resources.
+OSS: Request for resources from process 13208 has been granted.
+OSS: New Allocation after request:
+< -22,-19,-25,-19,-13,-21,-23,-11,-11,-19,-15,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Process 13208 Chose to release but did not have any resources.
+OSS: Request for resources from process 13209 has been granted.
+OSS: New Allocation after request:
+< -25,-20,-30,-21,-14,-26,-26,-14,-15,-22,-22,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Releasing 1 of resource 0
+OSS: Current Allocation = <-24,-20,-30,-21,-14,-26,-26,-14,-15,-22,-22,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13208 has been granted.
+OSS: New Allocation after request:
+< -24,-22,-33,-21,-15,-26,-29,-17,-15,-24,-22,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Releasing 1 of resource 0
+OSS: Current Allocation = <-23,-22,-33,-21,-15,-26,-29,-17,-15,-24,-22,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13208 has been granted.
+OSS: New Allocation after request:
+< -23,-22,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Releasing 1 of resource 0
+OSS: Current Allocation = <-22,-22,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13206 has been granted.
+OSS: New Allocation after request:
+< -24,-23,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Releasing 2 of resource 1
+OSS: Current Allocation = <-24,-21,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13209 Releasing 2 of resource 0
+OSS: Current Allocation = <-22,-21,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13206 has been granted.
+OSS: New Allocation after request:
+< -23,-25,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13206 Releasing 1 of resource 1
+OSS: Current Allocation = <-23,-24,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Process 13209 Releasing 1 of resource 0
+OSS: Current Allocation = <-22,-24,-33,-21,-15,-27,-35,-17,-15,-25,-23,-15,-6,-10,-14,-3,-5,-2,3,0,>
+OSS: Message received, process 13209 is terminating and releasing its resources
+OSS: Current Allocation = <-22,-23,-28,-19,-14,-22,-32,-14,-11,-22,-16,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Message received, process 13208 is terminating and releasing its resources
+OSS: Current Allocation = <-20,-20,-24,-17,-12,-16,-22,-9,-10,-18,-14,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Generating process 35 with pid 13210 and putting it in queue 0 at time 18:271819277
+OSS: generating a new launch time.
+OSS: Generating process 36 with pid 13211 and putting it in queue 0 at time 19:276919239
+OSS: generating a new launch time.
+OSS: Generating process 37 with pid 13212 and putting it in queue 0 at time 19:286919616
+OSS: generating a new launch time.
+OSS: Process 13206 Releasing 1 of resource 0
+OSS: Current Allocation = <-19,-20,-24,-17,-12,-16,-22,-9,-10,-18,-14,-13,-5,-9,-14,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13210 has been granted.
+OSS: New Allocation after request:
+< -21,-23,-25,-18,-13,-19,-23,-10,-12,-19,-19,-17,-6,-11,-15,-3,-5,-2,3,0,>
+OSS: Message received, process 13206 is terminating and releasing its resources
+OSS: Current Allocation = <-21,-19,-23,-17,-12,-19,-23,-10,-12,-19,-19,-17,-6,-11,-15,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13211 has been granted.
+OSS: New Allocation after request:
+< -24,-22,-23,-17,-12,-19,-23,-10,-12,-19,-19,-17,-6,-11,-15,-3,-5,-2,3,0,>
+OSS: Process 13212 Chose to release but did not have any resources.
+OSS: Request for resources from process 13212 has been granted.
+OSS: New Allocation after request:
+< -25,-25,-28,-18,-13,-20,-24,-10,-12,-19,-19,-17,-6,-11,-15,-3,-5,-2,3,0,>
+OSS: Generating process 38 with pid 13213 and putting it in queue 0 at time 20:292017688
+OSS: generating a new launch time.
+OSS: Generating process 39 with pid 13214 and putting it in queue 0 at time 20:302018776
+OSS: generating a new launch time.
+OSS: Generating process 40 with pid 13215 and putting it in queue 0 at time 21:307118770
+OSS: generating a new launch time.
+OSS: Request for resources from process 13212 has been granted.
+OSS: New Allocation after request:
+< -25,-25,-29,-18,-13,-21,-24,-10,-12,-19,-19,-17,-6,-11,-15,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13214 has been granted.
+OSS: New Allocation after request:
+< -26,-26,-32,-19,-14,-24,-25,-11,-15,-23,-21,-19,-7,-12,-17,-3,-5,-2,3,0,>
+OSS: Process 13213 Chose to release but did not have any resources.
+OSS: Request for resources from process 13212 has been granted.
+OSS: New Allocation after request:
+< -26,-26,-32,-21,-15,-24,-26,-11,-15,-23,-21,-19,-7,-12,-17,-3,-5,-2,3,0,>
+OSS: Process 13213 Chose to release but did not have any resources.
+OSS: Request for resources from process 13215 has been granted.
+OSS: New Allocation after request:
+< -32,-27,-33,-23,-15,-24,-26,-11,-15,-23,-21,-19,-7,-12,-17,-3,-5,-2,3,0,>
+OSS: Process 13214 Releasing 1 of resource 0
+OSS: Current Allocation = <-31,-27,-33,-23,-15,-24,-26,-11,-15,-23,-21,-19,-7,-12,-17,-3,-5,-2,3,0,>
+OSS: Request for resources from process 13213 has been granted.
+OSS: New Allocation after request:
+< -32,-28,-37,-24,-16,-26,-29,-13,-16,-26,-22,-23,-8,-16,-18,-4,-6,-2,3,0,>
+OSS: Process 13214 Releasing 1 of resource 0
+OSS: Current Allocation = <-31,-28,-37,-24,-16,-26,-29,-13,-16,-26,-22,-23,-8,-16,-18,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13214 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-39,-25,-16,-26,-29,-13,-16,-26,-23,-25,-8,-16,-18,-4,-6,-2,3,0,>
+OSS: Process 13214 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-28,-39,-25,-16,-26,-29,-13,-16,-26,-23,-25,-8,-16,-18,-4,-6,-2,3,0,>
+OSS: Process 13214 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-39,-25,-16,-26,-29,-13,-16,-26,-23,-25,-8,-16,-18,-4,-6,-2,3,0,>
+OSS: Message received, process 13214 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 41 with pid 13216 and putting it in queue 0 at time 25:667551436
+OSS: generating a new launch time.
+OSS: Process 13216 Chose to release but did not have any resources.
+OSS: Request for resources from process 13216 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13216 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13216 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 42 with pid 13219 and putting it in queue 0 at time 30:908088031
+OSS: generating a new launch time.
+OSS: Process 13219 Chose to release but did not have any resources.
+OSS: Request for resources from process 13219 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13219 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-29,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13219 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-28,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13219 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13219 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-26,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13219 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-36,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13219 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 43 with pid 13221 and putting it in queue 0 at time 34:443432239
+OSS: generating a new launch time.
+OSS: Request for resources from process 13221 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13221 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13221 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13221 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13221 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 44 with pid 13222 and putting it in queue 0 at time 43:304318446
+OSS: generating a new launch time.
+OSS: Process 13222 Chose to release but did not have any resources.
+OSS: Process 13222 Chose to release but did not have any resources.
+OSS: Request for resources from process 13222 has been granted.
+OSS: New Allocation after request:
+< -39,-28,-35,-25,-16,-26,-29,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13222 has been granted.
+OSS: New Allocation after request:
+< -39,-29,-35,-26,-16,-26,-32,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13222 has been granted.
+OSS: New Allocation after request:
+< -39,-29,-36,-26,-16,-26,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13222 Releasing 7 of resource 0
+OSS: Current Allocation = <-32,-29,-36,-26,-16,-26,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13222 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-28,-36,-26,-16,-26,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13222 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-36,-26,-16,-26,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13222 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 45 with pid 13224 and putting it in queue 0 at time 55:305502456
+OSS: generating a new launch time.
+OSS: Request for resources from process 13224 has been granted.
+OSS: New Allocation after request:
+< -37,-29,-38,-25,-16,-24,-31,-13,-18,-23,-23,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13224 has been granted.
+OSS: New Allocation after request:
+< -37,-29,-38,-25,-16,-25,-31,-13,-18,-26,-24,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13224 Releasing 4 of resource 0
+OSS: Current Allocation = <-33,-29,-38,-25,-16,-25,-31,-13,-18,-26,-24,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13224 has been granted.
+OSS: New Allocation after request:
+< -36,-30,-38,-25,-16,-25,-36,-13,-18,-26,-24,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13224 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 46 with pid 13226 and putting it in queue 0 at time 58:785838721
+OSS: generating a new launch time.
+OSS: Request for resources from process 13226 has been granted.
+OSS: New Allocation after request:
+< -37,-32,-37,-25,-16,-30,-32,-15,-14,-27,-21,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13226 Releasing 4 of resource 0
+OSS: Current Allocation = <-33,-32,-37,-25,-16,-30,-32,-15,-14,-27,-21,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13226 Releasing 4 of resource 0
+OSS: Current Allocation = <-29,-32,-37,-25,-16,-30,-32,-15,-14,-27,-21,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13226 Releasing 1 of resource 0
+OSS: Current Allocation = <-28,-32,-37,-25,-16,-30,-32,-15,-14,-27,-21,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13226 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 47 with pid 13227 and putting it in queue 0 at time 64:131376205
+OSS: generating a new launch time.
+OSS: Process 13227 Chose to release but did not have any resources.
+OSS: Process 13227 Chose to release but did not have any resources.
+OSS: Process 13227 Chose to release but did not have any resources.
+OSS: Request for resources from process 13227 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13227 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-31,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13227 Releasing 3 of resource 1
+OSS: Current Allocation = <-32,-28,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13227 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 48 with pid 13228 and putting it in queue 0 at time 68:421810001
+OSS: generating a new launch time.
+OSS: Request for resources from process 13228 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-36,-24,-16,-27,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13228 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-36,-24,-16,-27,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13228 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-38,-24,-16,-27,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13228 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 49 with pid 13230 and putting it in queue 0 at time 72:7165437
+OSS: generating a new launch time.
+OSS: Request for resources from process 13230 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-36,-25,-16,-25,-33,-13,-19,-26,-21,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13230 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-36,-25,-16,-27,-33,-13,-19,-26,-22,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13230 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-37,-25,-16,-27,-34,-13,-19,-26,-22,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13230 Releasing 2 of resource 0
+OSS: Current Allocation = <-33,-28,-37,-25,-16,-27,-34,-13,-19,-26,-22,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13230 has been granted.
+OSS: New Allocation after request:
+< -36,-28,-37,-25,-16,-27,-34,-13,-19,-27,-24,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13230 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 50 with pid 13232 and putting it in queue 0 at time 84:398410164
+OSS: generating a new launch time.
+OSS: Request for resources from process 13232 has been granted.
+OSS: New Allocation after request:
+< -38,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13232 Releasing 1 of resource 0
+OSS: Current Allocation = <-37,-28,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13232 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 51 with pid 13233 and putting it in queue 0 at time 87:913766623
+OSS: generating a new launch time.
+OSS: Request for resources from process 13233 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-35,-24,-17,-24,-34,-17,-15,-24,-21,-22,-8,-18,-17,-5,-7,-7,3,0,>
+OSS: Request for resources from process 13233 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-36,-24,-17,-24,-34,-17,-15,-24,-21,-23,-8,-18,-19,-6,-7,-7,3,0,>
+OSS: Request for resources from process 13233 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-36,-25,-17,-24,-34,-17,-18,-24,-21,-23,-8,-18,-19,-7,-11,-7,3,0,>
+OSS: Process 13233 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-36,-25,-17,-24,-34,-17,-18,-24,-21,-23,-8,-18,-19,-7,-11,-7,3,0,>
+OSS: Process 13233 Releasing 1 of resource 0
+OSS: Current Allocation = <-31,-28,-36,-25,-17,-24,-34,-17,-18,-24,-21,-23,-8,-18,-19,-7,-11,-7,3,0,>
+OSS: Request for resources from process 13233 has been granted.
+OSS: New Allocation after request:
+< -32,-28,-36,-25,-17,-24,-34,-17,-18,-24,-21,-23,-8,-18,-19,-7,-11,-7,3,0,>
+OSS: Message received, process 13233 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 52 with pid 13236 and putting it in queue 0 at time 97:374714292
+OSS: generating a new launch time.
+OSS: Process 13236 Chose to release but did not have any resources.
+OSS: Process 13236 Chose to release but did not have any resources.
+OSS: Process 13236 Chose to release but did not have any resources.
+OSS: Process 13236 Chose to release but did not have any resources.
+OSS: Request for resources from process 13236 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-35,-24,-16,-28,-35,-14,-15,-23,-23,-22,-8,-17,-20,-5,-11,-4,2,0,>
+OSS: Process 13236 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-35,-24,-16,-28,-35,-14,-15,-23,-23,-22,-8,-17,-20,-5,-11,-4,2,0,>
+OSS: Request for resources from process 13236 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-24,-17,-28,-35,-15,-19,-23,-23,-22,-8,-17,-20,-5,-12,-4,2,0,>
+OSS: Request for resources from process 13236 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-24,-17,-28,-35,-15,-19,-23,-23,-22,-8,-17,-20,-5,-12,-4,1,0,>
+OSS: Message received, process 13236 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 53 with pid 13237 and putting it in queue 0 at time 99:179897511
+OSS: generating a new launch time.
+OSS: Request for resources from process 13237 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-39,-24,-16,-24,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13237 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-39,-24,-16,-28,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13237 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-39,-25,-16,-30,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13237 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-31,-39,-25,-16,-30,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13237 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-39,-25,-16,-30,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13237 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 54 with pid 13238 and putting it in queue 0 at time 112:456203830
+OSS: generating a new launch time.
+OSS: Process 13238 Chose to release but did not have any resources.
+OSS: Request for resources from process 13238 has been granted.
+OSS: New Allocation after request:
+< -37,-31,-35,-24,-16,-24,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13238 Releasing 4 of resource 0
+OSS: Current Allocation = <-33,-31,-35,-24,-16,-24,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13238 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-37,-24,-16,-24,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13238 has been granted.
+OSS: New Allocation after request:
+< -38,-31,-37,-24,-16,-26,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13238 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 55 with pid 13239 and putting it in queue 0 at time 121:722109029
+OSS: generating a new launch time.
+OSS: Request for resources from process 13239 has been granted.
+OSS: New Allocation after request:
+< -35,-29,-35,-24,-16,-28,-30,-13,-15,-25,-23,-24,-8,-17,-21,-7,-6,-2,3,0,>
+OSS: Process 13239 Releasing 1 of resource 0
+OSS: Current Allocation = <-34,-29,-35,-24,-16,-28,-30,-13,-15,-25,-23,-24,-8,-17,-21,-7,-6,-2,3,0,>
+OSS: Process 13239 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-29,-35,-24,-16,-28,-30,-13,-15,-25,-23,-24,-8,-17,-21,-7,-6,-2,3,0,>
+OSS: Request for resources from process 13239 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-36,-24,-16,-28,-36,-13,-16,-25,-24,-24,-8,-17,-21,-7,-6,-2,3,0,>
+OSS: Message received, process 13239 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 56 with pid 13241 and putting it in queue 0 at time 127:92634602
+OSS: generating a new launch time.
+OSS: Request for resources from process 13241 has been granted.
+OSS: New Allocation after request:
+< -39,-29,-38,-24,-16,-24,-31,-14,-18,-26,-26,-22,-8,-17,-19,-6,-7,-5,-2,-3,>
+OSS: Request for resources from process 13241 has been granted.
+OSS: New Allocation after request:
+< -39,-30,-38,-25,-17,-24,-31,-14,-18,-26,-26,-22,-8,-17,-19,-6,-7,-5,-2,-3,>
+OSS: Process 13241 Releasing 1 of resource 0
+OSS: Current Allocation = <-38,-30,-38,-25,-17,-24,-31,-14,-18,-26,-26,-22,-8,-17,-19,-6,-7,-5,-2,-3,>
+OSS: Request for resources from process 13241 has been granted.
+OSS: New Allocation after request:
+< -38,-30,-38,-25,-17,-24,-31,-14,-18,-26,-26,-22,-8,-17,-19,-6,-7,-9,-2,-3,>
+OSS: Request for resources from process 13241 has been granted.
+OSS: New Allocation after request:
+< -39,-31,-38,-25,-17,-26,-31,-14,-19,-26,-26,-22,-8,-17,-19,-6,-7,-9,-2,-3,>
+OSS: Message received, process 13241 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 57 with pid 13243 and putting it in queue 0 at time 137:518665780
+OSS: generating a new launch time.
+OSS: Process 13243 Chose to release but did not have any resources.
+OSS: Process 13243 Chose to release but did not have any resources.
+OSS: Process 13243 Chose to release but did not have any resources.
+OSS: Request for resources from process 13243 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-35,-24,-17,-24,-32,-13,-16,-24,-22,-22,-8,-17,-18,-5,-6,-2,3,0,>
+OSS: Process 13243 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-30,-35,-24,-17,-24,-32,-13,-16,-24,-22,-22,-8,-17,-18,-5,-6,-2,3,0,>
+OSS: Request for resources from process 13243 has been granted.
+OSS: New Allocation after request:
+< -33,-30,-35,-24,-17,-24,-32,-13,-17,-25,-25,-23,-8,-17,-18,-5,-6,-2,3,0,>
+OSS: Message received, process 13243 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 58 with pid 13244 and putting it in queue 0 at time 144:639387645
+OSS: generating a new launch time.
+OSS: Request for resources from process 13244 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-36,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13244 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-37,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13244 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-30,-37,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13244 has been granted.
+OSS: New Allocation after request:
+< -35,-30,-37,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13244 Releasing 3 of resource 0
+OSS: Current Allocation = <-32,-30,-37,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13244 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 59 with pid 13245 and putting it in queue 0 at time 148:1004816239
+OSS: generating a new launch time.
+OSS: Request for resources from process 13245 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-39,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13245 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-29,-39,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13245 has been granted.
+OSS: New Allocation after request:
+< -33,-30,-39,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13245 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-30,-39,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13245 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 60 with pid 13246 and putting it in queue 0 at time 153:70230920
+OSS: generating a new launch time.
+OSS: Process 13246 Chose to release but did not have any resources.
+OSS: Request for resources from process 13246 has been granted.
+OSS: New Allocation after request:
+< -35,-29,-35,-24,-16,-24,-29,-13,-14,-27,-22,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13246 has been granted.
+OSS: New Allocation after request:
+< -35,-29,-37,-26,-16,-25,-30,-14,-16,-27,-22,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13246 has been granted.
+OSS: New Allocation after request:
+< -36,-29,-37,-26,-16,-30,-30,-14,-16,-27,-22,-26,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13246 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 61 with pid 13247 and putting it in queue 0 at time 156:610583082
+OSS: generating a new launch time.
+OSS: Process 13247 Chose to release but did not have any resources.
+OSS: Request for resources from process 13247 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-35,-24,-16,-24,-30,-14,-14,-23,-21,-22,-8,-16,-21,-5,-7,-2,3,0,>
+OSS: Request for resources from process 13247 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-36,-24,-16,-25,-30,-15,-14,-23,-21,-23,-8,-16,-21,-5,-7,-2,3,0,>
+OSS: Request for resources from process 13247 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-37,-24,-16,-25,-30,-19,-14,-23,-21,-24,-8,-16,-21,-6,-7,-2,3,0,>
+OSS: Request for resources from process 13247 has been granted.
+OSS: New Allocation after request:
+< -34,-33,-37,-25,-16,-25,-30,-19,-15,-23,-21,-24,-8,-16,-21,-6,-7,-2,3,0,>
+OSS: Process 13247 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-33,-37,-25,-16,-25,-30,-19,-15,-23,-21,-24,-8,-16,-21,-6,-7,-2,3,0,>
+OSS: Message received, process 13247 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 62 with pid 13249 and putting it in queue 0 at time 158:435767812
+OSS: generating a new launch time.
+OSS: Request for resources from process 13249 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-37,-24,-17,-25,-32,-15,-15,-27,-22,-27,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13249 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-37,-24,-17,-25,-38,-15,-15,-27,-22,-27,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13249 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-38,-24,-17,-31,-38,-18,-15,-27,-22,-27,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13249 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-38,-24,-17,-31,-38,-18,-15,-27,-23,-27,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13249 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 63 with pid 13252 and putting it in queue 0 at time 168:616786694
+OSS: generating a new launch time.
+OSS: Request for resources from process 13252 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-37,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13252 has been granted.
+OSS: New Allocation after request:
+< -33,-33,-38,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13252 has been granted.
+OSS: New Allocation after request:
+< -33,-33,-40,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13252 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-33,-40,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13252 has been granted.
+OSS: New Allocation after request:
+< -33,-33,-40,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13252 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 64 with pid 13253 and putting it in queue 0 at time 172:977241355
+OSS: generating a new launch time.
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Request for resources from process 13253 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-24,-17,-24,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13253 Chose to release but did not have any resources.
+OSS: Request for resources from process 13253 has been granted.
+OSS: New Allocation after request:
+< -33,-33,-36,-24,-17,-24,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13253 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-33,-36,-24,-17,-24,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13253 has been granted.
+OSS: New Allocation after request:
+< -33,-33,-36,-25,-17,-24,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13253 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 65 with pid 13254 and putting it in queue 0 at time 176:462594701
+OSS: generating a new launch time.
+OSS: Process 13254 Chose to release but did not have any resources.
+OSS: Process 13254 Chose to release but did not have any resources.
+OSS: Request for resources from process 13254 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-36,-24,-16,-24,-34,-16,-15,-24,-25,-23,-8,-16,-18,-6,-7,-3,0,-1,>
+OSS: Request for resources from process 13254 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-37,-24,-16,-24,-34,-16,-16,-24,-25,-23,-8,-16,-18,-7,-8,-3,0,-1,>
+OSS: Message received, process 13254 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 66 with pid 13256 and putting it in queue 0 at time 179:907949126
+OSS: generating a new launch time.
+OSS: Process 13256 Chose to release but did not have any resources.
+OSS: Process 13256 Chose to release but did not have any resources.
+OSS: Request for resources from process 13256 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-36,-25,-16,-27,-31,-15,-17,-23,-22,-23,-8,-16,-17,-5,-8,-5,-3,-1,>
+OSS: Request for resources from process 13256 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-37,-25,-16,-30,-32,-17,-17,-24,-22,-23,-8,-16,-17,-6,-8,-7,-3,-1,>
+OSS: Request for resources from process 13256 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-38,-25,-16,-30,-32,-17,-17,-24,-22,-27,-8,-16,-17,-6,-8,-7,-3,-1,>
+OSS: Request for resources from process 13256 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-38,-25,-16,-30,-32,-18,-17,-24,-22,-27,-8,-16,-19,-6,-8,-7,-3,-1,>
+OSS: Process 13256 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-30,-38,-25,-16,-30,-32,-18,-17,-24,-22,-27,-8,-16,-19,-6,-8,-7,-3,-1,>
+OSS: Process 13256 Releasing 2 of resource 0
+OSS: Current Allocation = <-30,-30,-38,-25,-16,-30,-32,-18,-17,-24,-22,-27,-8,-16,-19,-6,-8,-7,-3,-1,>
+OSS: Request for resources from process 13256 has been granted.
+OSS: New Allocation after request:
+< -32,-30,-38,-25,-16,-30,-32,-18,-17,-24,-22,-30,-8,-16,-19,-6,-8,-7,-3,-1,>
+OSS: Process 13256 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-29,-38,-25,-16,-30,-32,-18,-17,-24,-22,-30,-8,-16,-19,-6,-8,-7,-3,-1,>
+OSS: Message received, process 13256 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 67 with pid 13257 and putting it in queue 0 at time 195:374499459
+OSS: generating a new launch time.
+OSS: Process 13257 Chose to release but did not have any resources.
+OSS: Request for resources from process 13257 has been granted.
+OSS: New Allocation after request:
+< -36,-28,-35,-24,-16,-29,-31,-14,-15,-25,-22,-22,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13257 has been granted.
+OSS: New Allocation after request:
+< -36,-28,-36,-24,-16,-29,-31,-14,-20,-26,-23,-24,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13257 Releasing 3 of resource 0
+OSS: Current Allocation = <-33,-28,-36,-24,-16,-29,-31,-14,-20,-26,-23,-24,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13257 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 68 with pid 13258 and putting it in queue 0 at time 200:675025382
+OSS: generating a new launch time.
+OSS: Process 13258 Chose to release but did not have any resources.
+OSS: Request for resources from process 13258 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-36,-26,-16,-25,-29,-13,-17,-25,-24,-25,-8,-16,-17,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13258 has been granted.
+OSS: New Allocation after request:
+< -35,-32,-37,-26,-16,-25,-30,-17,-17,-26,-24,-25,-8,-16,-17,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13258 has been granted.
+OSS: New Allocation after request:
+< -36,-32,-37,-26,-16,-25,-30,-17,-17,-29,-28,-25,-8,-16,-17,-4,-6,-2,3,0,>
+OSS: Message received, process 13258 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 69 with pid 13261 and putting it in queue 0 at time 210:706017269
+OSS: generating a new launch time.
+OSS: Request for resources from process 13261 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-38,-24,-16,-25,-33,-14,-15,-23,-24,-28,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13261 Chose to release but did not have any resources.
+OSS: Process 13261 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-29,-38,-24,-16,-25,-33,-14,-15,-23,-24,-28,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13261 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-28,-38,-24,-16,-25,-33,-14,-15,-23,-24,-28,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13261 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-38,-24,-16,-25,-33,-14,-15,-23,-24,-28,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13261 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-26,-38,-24,-16,-25,-33,-14,-15,-23,-24,-28,-8,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13261 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 70 with pid 13262 and putting it in queue 0 at time 216:71542767
+OSS: generating a new launch time.
+OSS: Process 13262 Chose to release but did not have any resources.
+OSS: Process 13262 Chose to release but did not have any resources.
+OSS: Process 13262 Chose to release but did not have any resources.
+OSS: Request for resources from process 13262 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13262 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13262 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13262 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13262 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13262 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13262 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13262 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13262 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13262 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13262 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 71 with pid 13263 and putting it in queue 0 at time 220:401963476
+OSS: generating a new launch time.
+OSS: Process 13263 Chose to release but did not have any resources.
+OSS: Process 13263 Chose to release but did not have any resources.
+OSS: Process 13263 Chose to release but did not have any resources.
+OSS: Process 13263 Chose to release but did not have any resources.
+OSS: Request for resources from process 13263 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-35,-24,-17,-25,-29,-13,-14,-23,-21,-23,-8,-16,-20,-5,-14,-3,-1,0,>
+OSS: Request for resources from process 13263 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-24,-17,-26,-29,-13,-14,-23,-21,-23,-8,-16,-20,-5,-14,-5,-3,0,>
+OSS: Request for resources from process 13263 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-35,-24,-17,-26,-29,-13,-15,-24,-23,-23,-8,-16,-20,-5,-14,-5,-3,0,>
+OSS: Message received, process 13263 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 72 with pid 13264 and putting it in queue 0 at time 230:758033686
+OSS: generating a new launch time.
+OSS: Process 13264 Chose to release but did not have any resources.
+OSS: Process 13264 Chose to release but did not have any resources.
+OSS: Process 13264 Chose to release but did not have any resources.
+OSS: Process 13264 Chose to release but did not have any resources.
+OSS: Process 13264 Chose to release but did not have any resources.
+OSS: Request for resources from process 13264 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-37,-24,-16,-26,-29,-13,-15,-24,-21,-25,-8,-16,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13264 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 73 with pid 13266 and putting it in queue 0 at time 236:33548328
+OSS: generating a new launch time.
+OSS: Request for resources from process 13266 has been granted.
+OSS: New Allocation after request:
+< -38,-31,-37,-24,-17,-24,-30,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13266 Releasing 3 of resource 0
+OSS: Current Allocation = <-35,-31,-37,-24,-17,-24,-30,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13266 has been granted.
+OSS: New Allocation after request:
+< -35,-31,-37,-25,-17,-24,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13266 Releasing 3 of resource 0
+OSS: Current Allocation = <-32,-31,-37,-25,-17,-24,-34,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13266 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 74 with pid 13267 and putting it in queue 0 at time 239:428889938
+OSS: generating a new launch time.
+OSS: Request for resources from process 13267 has been granted.
+OSS: New Allocation after request:
+< -37,-30,-35,-25,-17,-24,-34,-14,-14,-24,-22,-28,-8,-16,-17,-6,-12,-7,3,0,>
+OSS: Request for resources from process 13267 has been granted.
+OSS: New Allocation after request:
+< -37,-31,-35,-25,-17,-24,-34,-15,-14,-24,-22,-28,-8,-16,-20,-6,-13,-7,3,0,>
+OSS: Request for resources from process 13267 has been granted.
+OSS: New Allocation after request:
+< -37,-32,-35,-25,-17,-24,-34,-15,-14,-24,-23,-28,-8,-16,-21,-6,-13,-7,3,0,>
+OSS: Process 13267 Releasing 2 of resource 0
+OSS: Current Allocation = <-35,-32,-35,-25,-17,-24,-34,-15,-14,-24,-23,-28,-8,-16,-21,-6,-13,-7,3,0,>
+OSS: Process 13267 Releasing 1 of resource 0
+OSS: Current Allocation = <-34,-32,-35,-25,-17,-24,-34,-15,-14,-24,-23,-28,-8,-16,-21,-6,-13,-7,3,0,>
+OSS: Message received, process 13267 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 75 with pid 13268 and putting it in queue 0 at time 246:534595342
+OSS: generating a new launch time.
+OSS: Request for resources from process 13268 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-35,-24,-16,-25,-29,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13268 has been granted.
+OSS: New Allocation after request:
+< -34,-32,-35,-24,-16,-25,-29,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13268 has been granted.
+OSS: New Allocation after request:
+< -34,-32,-35,-24,-17,-26,-31,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13268 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-32,-35,-24,-17,-26,-31,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13268 has been granted.
+OSS: New Allocation after request:
+< -32,-32,-35,-24,-17,-26,-33,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13268 Releasing 2 of resource 1
+OSS: Current Allocation = <-32,-30,-35,-24,-17,-26,-33,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13268 Releasing 3 of resource 1
+OSS: Current Allocation = <-32,-27,-35,-24,-17,-26,-33,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13268 Releasing 3 of resource 1
+OSS: Current Allocation = <-32,-24,-35,-24,-17,-26,-33,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13268 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 76 with pid 13270 and putting it in queue 0 at time 257:285652201
+OSS: generating a new launch time.
+OSS: Request for resources from process 13270 has been granted.
+OSS: New Allocation after request:
+< -35,-29,-36,-24,-17,-25,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13270 has been granted.
+OSS: New Allocation after request:
+< -35,-32,-36,-24,-17,-27,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13270 has been granted.
+OSS: New Allocation after request:
+< -35,-32,-36,-24,-17,-30,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13270 has been granted.
+OSS: New Allocation after request:
+< -36,-32,-36,-24,-17,-30,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13270 has been granted.
+OSS: New Allocation after request:
+< -36,-32,-36,-24,-17,-31,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13270 Releasing 3 of resource 0
+OSS: Current Allocation = <-33,-32,-36,-24,-17,-31,-34,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13270 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 77 with pid 13271 and putting it in queue 0 at time 262:596192976
+OSS: generating a new launch time.
+OSS: Request for resources from process 13271 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-37,-24,-16,-24,-31,-13,-14,-25,-22,-26,-8,-17,-17,-7,-7,-4,2,0,>
+OSS: Process 13271 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-31,-37,-24,-16,-24,-31,-13,-14,-25,-22,-26,-8,-17,-17,-7,-7,-4,2,0,>
+OSS: Request for resources from process 13271 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-37,-24,-16,-25,-31,-13,-14,-25,-23,-26,-8,-18,-18,-7,-9,-4,-1,0,>
+OSS: Request for resources from process 13271 has been granted.
+OSS: New Allocation after request:
+< -34,-32,-37,-24,-16,-25,-31,-13,-14,-25,-23,-26,-8,-18,-19,-7,-9,-4,-1,0,>
+OSS: Request for resources from process 13271 has been granted.
+OSS: New Allocation after request:
+< -34,-32,-39,-24,-16,-26,-31,-14,-14,-26,-29,-26,-8,-18,-19,-7,-9,-6,-1,0,>
+OSS: Message received, process 13271 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 78 with pid 13272 and putting it in queue 0 at time 266:71550463
+OSS: generating a new launch time.
+OSS: Process 13272 Chose to release but did not have any resources.
+OSS: Process 13272 Chose to release but did not have any resources.
+OSS: Process 13272 Chose to release but did not have any resources.
+OSS: Request for resources from process 13272 has been granted.
+OSS: New Allocation after request:
+< -36,-28,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13272 has been granted.
+OSS: New Allocation after request:
+< -36,-29,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13272 Releasing 3 of resource 0
+OSS: Current Allocation = <-33,-29,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13272 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-29,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13272 Releasing 2 of resource 1
+OSS: Current Allocation = <-32,-27,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13272 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-26,-37,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13272 Releasing 2 of resource 2
+OSS: Current Allocation = <-32,-26,-35,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13272 has been granted.
+OSS: New Allocation after request:
+< -34,-30,-36,-25,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13272 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 79 with pid 13274 and putting it in queue 0 at time 276:627602808
+OSS: generating a new launch time.
+OSS: Request for resources from process 13274 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-26,-17,-26,-34,-14,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13274 Releasing 5 of resource 0
+OSS: Current Allocation = <-32,-28,-35,-26,-17,-26,-34,-14,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13274 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-35,-26,-17,-26,-34,-14,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13274 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-35,-26,-17,-27,-34,-14,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13274 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 80 with pid 13277 and putting it in queue 0 at time 283:723284884
+OSS: generating a new launch time.
+OSS: Process 13277 Chose to release but did not have any resources.
+OSS: Request for resources from process 13277 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-38,-25,-16,-24,-30,-15,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13277 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-38,-25,-16,-29,-32,-17,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13277 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-38,-25,-16,-29,-32,-17,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13277 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-38,-25,-16,-29,-32,-17,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13277 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-26,-38,-25,-16,-29,-32,-17,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13277 has been granted.
+OSS: New Allocation after request:
+< -33,-27,-38,-25,-16,-29,-32,-17,-18,-29,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13277 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 81 with pid 13278 and putting it in queue 0 at time 288:1003820670
+OSS: generating a new launch time.
+OSS: Request for resources from process 13278 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-36,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13278 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-36,-24,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13278 has been granted.
+OSS: New Allocation after request:
+< -37,-29,-36,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13278 Releasing 4 of resource 0
+OSS: Current Allocation = <-33,-29,-36,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13278 Releasing 4 of resource 0
+OSS: Current Allocation = <-29,-29,-36,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13278 Releasing 1 of resource 0
+OSS: Current Allocation = <-28,-29,-36,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13278 has been granted.
+OSS: New Allocation after request:
+< -38,-30,-37,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13278 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 82 with pid 13279 and putting it in queue 0 at time 297:814695725
+OSS: generating a new launch time.
+OSS: Process 13279 Chose to release but did not have any resources.
+OSS: Request for resources from process 13279 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-35,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13279 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-25,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13279 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13279 Releasing 3 of resource 0
+OSS: Current Allocation = <-34,-28,-35,-25,-17,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13279 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 83 with pid 13282 and putting it in queue 0 at time 300:244941921
+OSS: generating a new launch time.
+OSS: Request for resources from process 13282 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-24,-16,-26,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13282 Releasing 3 of resource 0
+OSS: Current Allocation = <-34,-28,-35,-24,-16,-26,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13282 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-39,-24,-16,-26,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13282 has been granted.
+OSS: New Allocation after request:
+< -36,-31,-39,-24,-16,-27,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13282 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 84 with pid 13283 and putting it in queue 0 at time 303:840306586
+OSS: generating a new launch time.
+OSS: Process 13283 Chose to release but did not have any resources.
+OSS: Request for resources from process 13283 has been granted.
+OSS: New Allocation after request:
+< -33,-30,-36,-25,-17,-24,-32,-13,-15,-25,-23,-28,-8,-16,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13283 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-37,-25,-17,-26,-34,-18,-17,-26,-24,-28,-8,-16,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13283 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-37,-25,-17,-26,-34,-18,-19,-26,-24,-28,-8,-16,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13283 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 85 with pid 13284 and putting it in queue 0 at time 305:620492011
+OSS: generating a new launch time.
+OSS: Request for resources from process 13284 has been granted.
+OSS: New Allocation after request:
+< -36,-29,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13284 Releasing 4 of resource 0
+OSS: Current Allocation = <-32,-29,-35,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13284 has been granted.
+OSS: New Allocation after request:
+< -35,-29,-37,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13284 Releasing 3 of resource 0
+OSS: Current Allocation = <-32,-29,-37,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13284 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-28,-37,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13284 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 86 with pid 13285 and putting it in queue 0 at time 310:956021195
+OSS: generating a new launch time.
+OSS: Request for resources from process 13285 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-36,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13285 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13285 has been granted.
+OSS: New Allocation after request:
+< -37,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 2 of resource 0
+OSS: Current Allocation = <-35,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 2 of resource 0
+OSS: Current Allocation = <-33,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-31,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13285 Releasing 3 of resource 1
+OSS: Current Allocation = <-32,-28,-37,-24,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13285 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 87 with pid 13288 and putting it in queue 0 at time 318:231745039
+OSS: generating a new launch time.
+OSS: Process 13288 Chose to release but did not have any resources.
+OSS: Process 13288 Chose to release but did not have any resources.
+OSS: Request for resources from process 13288 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-37,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13288 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-28,-37,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13288 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-37,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13288 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-31,-37,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13288 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-38,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13288 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-31,-38,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13288 Releasing 3 of resource 1
+OSS: Current Allocation = <-32,-28,-38,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13288 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-39,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Process 13288 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-28,-39,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13288 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-39,-26,-16,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13288 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 88 with pid 13290 and putting it in queue 0 at time 321:447075244
+OSS: generating a new launch time.
+OSS: Request for resources from process 13290 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-35,-25,-16,-31,-32,-13,-20,-24,-24,-24,-8,-18,-17,-5,-6,-2,3,0,>
+OSS: Process 13290 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-32,-35,-25,-16,-31,-32,-13,-20,-24,-24,-24,-8,-18,-17,-5,-6,-2,3,0,>
+OSS: Request for resources from process 13290 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-35,-25,-16,-31,-32,-15,-20,-24,-24,-30,-8,-18,-18,-5,-6,-2,3,0,>
+OSS: Request for resources from process 13290 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-35,-25,-16,-31,-32,-15,-20,-25,-24,-30,-8,-18,-18,-6,-6,-2,3,0,>
+OSS: Process 13290 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-32,-35,-25,-16,-31,-32,-15,-20,-25,-24,-30,-8,-18,-18,-6,-6,-2,3,0,>
+OSS: Request for resources from process 13290 has been granted.
+OSS: New Allocation after request:
+< -33,-32,-35,-25,-16,-31,-32,-15,-20,-25,-24,-30,-8,-18,-18,-6,-6,-2,3,0,>
+OSS: Message received, process 13290 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 89 with pid 13291 and putting it in queue 0 at time 326:727592577
+OSS: generating a new launch time.
+OSS: Request for resources from process 13291 has been granted.
+OSS: New Allocation after request:
+< -34,-31,-36,-24,-16,-25,-35,-15,-20,-23,-24,-30,-8,-16,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13291 has been granted.
+OSS: New Allocation after request:
+< -36,-31,-37,-24,-17,-28,-35,-15,-20,-23,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13291 has been granted.
+OSS: New Allocation after request:
+< -36,-32,-37,-24,-17,-29,-36,-15,-20,-23,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Process 13291 Releasing 2 of resource 0
+OSS: Current Allocation = <-34,-32,-37,-24,-17,-29,-36,-15,-20,-23,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Process 13291 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-32,-37,-24,-17,-29,-36,-15,-20,-23,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Process 13291 Releasing 1 of resource 0
+OSS: Current Allocation = <-32,-32,-37,-24,-17,-29,-36,-15,-20,-23,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13291 has been granted.
+OSS: New Allocation after request:
+< -34,-32,-37,-24,-17,-29,-36,-15,-20,-26,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Process 13291 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-32,-37,-24,-17,-29,-36,-15,-20,-26,-24,-30,-8,-17,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13291 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 90 with pid 13294 and putting it in queue 0 at time 331:1003127465
+OSS: generating a new launch time.
+OSS: Process 13294 Chose to release but did not have any resources.
+OSS: Process 13294 Chose to release but did not have any resources.
+OSS: Request for resources from process 13294 has been granted.
+OSS: New Allocation after request:
+< -35,-28,-35,-24,-16,-31,-30,-15,-15,-25,-21,-22,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13294 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-24,-16,-31,-30,-15,-15,-25,-21,-23,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13294 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-35,-24,-16,-31,-30,-17,-15,-26,-21,-23,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Message received, process 13294 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 91 with pid 13295 and putting it in queue 0 at time 341:959137626
+OSS: generating a new launch time.
+OSS: Request for resources from process 13295 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-36,-26,-17,-24,-35,-13,-15,-23,-22,-24,-8,-17,-21,-5,-6,-2,3,0,>
+OSS: Request for resources from process 13295 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-36,-26,-17,-24,-35,-13,-15,-23,-25,-24,-8,-17,-21,-6,-6,-2,3,0,>
+OSS: Request for resources from process 13295 has been granted.
+OSS: New Allocation after request:
+< -37,-28,-36,-26,-17,-24,-35,-13,-15,-23,-26,-24,-8,-17,-21,-6,-6,-2,3,0,>
+OSS: Process 13295 Releasing 2 of resource 0
+OSS: Current Allocation = <-35,-28,-36,-26,-17,-24,-35,-13,-15,-23,-26,-24,-8,-17,-21,-6,-6,-2,3,0,>
+OSS: Message received, process 13295 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 92 with pid 13296 and putting it in queue 0 at time 345:529485727
+OSS: generating a new launch time.
+OSS: Request for resources from process 13296 has been granted.
+OSS: New Allocation after request:
+< -33,-29,-37,-25,-17,-24,-34,-13,-17,-26,-25,-25,-8,-16,-21,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13296 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-37,-26,-17,-25,-34,-14,-17,-26,-25,-27,-8,-16,-21,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13296 has been granted.
+OSS: New Allocation after request:
+< -38,-29,-37,-26,-17,-25,-34,-14,-17,-29,-27,-27,-8,-17,-21,-4,-6,-2,3,0,>
+OSS: Process 13296 Releasing 5 of resource 0
+OSS: Current Allocation = <-33,-29,-37,-26,-17,-25,-34,-14,-17,-29,-27,-27,-8,-17,-21,-4,-6,-2,3,0,>
+OSS: Message received, process 13296 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 93 with pid 13298 and putting it in queue 0 at time 356:225541097
+OSS: generating a new launch time.
+OSS: Process 13298 Chose to release but did not have any resources.
+OSS: Request for resources from process 13298 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-35,-25,-16,-24,-30,-13,-15,-23,-28,-28,-8,-17,-21,-6,-8,-7,3,0,>
+OSS: Request for resources from process 13298 has been granted.
+OSS: New Allocation after request:
+< -34,-28,-35,-25,-16,-24,-30,-13,-16,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Process 13298 Releasing 2 of resource 0
+OSS: Current Allocation = <-32,-28,-35,-25,-16,-24,-30,-13,-16,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Process 13298 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-27,-35,-25,-16,-24,-30,-13,-16,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Process 13298 Releasing 1 of resource 1
+OSS: Current Allocation = <-32,-26,-35,-25,-16,-24,-30,-13,-16,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Request for resources from process 13298 has been granted.
+OSS: New Allocation after request:
+< -33,-28,-35,-26,-16,-25,-31,-13,-17,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Request for resources from process 13298 has been granted.
+OSS: New Allocation after request:
+< -34,-29,-35,-26,-16,-25,-31,-13,-17,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Process 13298 Releasing 1 of resource 0
+OSS: Current Allocation = <-33,-29,-35,-26,-16,-25,-31,-13,-17,-24,-28,-28,-8,-18,-21,-7,-8,-7,3,0,>
+OSS: Message received, process 13298 is terminating and releasing its resources
+OSS: Current Allocation = <-32,-27,-34,-23,-15,-23,-28,-12,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Generating process 94 with pid 13299 and putting it in queue 0 at time 359:925910981
+OSS: generating a new launch time.
+OSS: Request for resources from process 13299 has been granted.
+OSS: New Allocation after request:
+< -33,-30,-36,-24,-16,-25,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>
+OSS: Request for resources from process 13299 has been granted.
+OSS: New Allocation after request:
+< -33,-31,-36,-24,-17,-25,-35,-16,-13,-22,-20,-21,-7,-15,-16,-4,-6,-2,3,0,>

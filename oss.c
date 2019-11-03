@@ -440,42 +440,15 @@ int main(int argc, char **argv){
 				//not terminateing
 				if((strcmp(message.mesg_text,"Request")) == 0){
 					//run algorithm
-					
-					r_semop(semid, semwait, 1);
-					shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
-		                        shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
-					if(shmrd[message.resourceClass].available - message.quantity >= 0){
-						//take away from RD
-						shmrd[message.resourceClass].available -= message.quantity;				
-						fprintf(fp,"OSS: Request Received and Granted to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
-	                                        fflush(fp);
-	
-						//Add to PCB	
-						shmpcb[message.bitIndex].taken[message.resourceClass] += message.quantity;
-						fprintf(fp, "OSS: Current Allocation = <");
-                                                int y = 0;
-                                                for(y=0;y<20;y++){
-                                                        fprintf(fp,"%d,",shmrd[y].available);
-                                                }
-                                                fprintf(fp, ">\n");
-
-					}
-					else{
-						fprintf(fp,"OSS: Request Received and Denied to process %lld for resource %d, with a quantity of %d\n",message.pid,message.resourceClass,message.quantity);
-                                                fflush(fp);
-					}
-					shmdt(shmpcb);
-                                        shmdt(shmrd);
-                                        r_semop(semid, semsignal, 1);
-
-					//send message back
-					message.mesg_type = 3;
-					msgsnd(msgid, &message, sizeof(message), 0);
 						
 				}
 				else if ((strcmp(message.mesg_text,"Nothing")) == 0){
-					message.mesg_type = 3;
-                                        msgsnd(msgid, &message, sizeof(message), 0);
+					printf("Releasing nothing\n");
+					fprintf(fp,"OSS: Process %lld Chose to release but did not have any resources.\n",message.pid);
+					fflush(fp);
+					fflush(stdout);
+					//message.mesg_type = 2;
+                                       // msgsnd(msgid, &message, sizeof(message), 0);
 				}
 				else{
 					//it is releasing resources
@@ -485,19 +458,24 @@ int main(int argc, char **argv){
 					shmrd[message.resourceClass].available += message.quantity;
 					shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
 					fprintf(fp,"OSS: Process %lld Releasing %d of resource %d\n",message.pid,message.quantity,message.resourceClass);
-                                        fprintf(fp, "OSS: Current Allocation = <");
+                                        printf("OSS: Process %lld Releasing %d of resource %d\n",message.pid,message.quantity,message.resourceClass);
+					fprintf(fp, "OSS: Current Allocation = <");
                                         int y = 0;
                                         for(y=0;y<20;y++){
                                                 fprintf(fp,"%d,",shmrd[y].available);
                                         }
                                         fprintf(fp, ">\n");
+					fflush(stdout);
 					fflush(fp);
+					pid_t child = shmpcb[message.bitIndex].simPID;
 					shmdt(shmpcb);
                                         shmdt(shmrd);
                                         r_semop(semid, semsignal, 1);
-                                        //send message back
-                                        message.mesg_type = 3;
-                                        msgsnd(msgid, &message, sizeof(message), 0);
+
+					//send message back
+                                        //message.mesg_type = 2;
+					//message.pid = child;
+                                        //msgsnd(msgid, &message, (sizeof(struct mesg_buffer)), 0);
 				}
 
 
@@ -509,7 +487,50 @@ int main(int argc, char **argv){
 		}
 			//send verdict back to user
 			//and check again?
+		//sprintf(message.mesg_text,"WOOP");
+		//message.mesg_type = 3;
+                //msgsnd(msgid, &message, sizeof(message), IPC_NOWAIT);
+		r_semop(semid,semwait,1);
+                shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
+                shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+		shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
+		int c,d;
+		bool flag = false;
+		for(c=0;c<18;c++){
+			flag = false;
+			for(d=0;d<20;d++){
+				if(shmpcb[c].needs[d] > 0){
+					
+					flag = true;
+					shmpcb[c].taken[d] += shmpcb[c].needs[d];
+					shmrd[d].available -= shmpcb[c].needs[d];
+					shmpcb[c].needs[d] = 0;
+				}
+			}
 			
+			if(flag){
+                                fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",shmpcb[c].simPID);
+                                printf("OSS: Request for resources from process %lld has been granted.\n",shmpcb[c].simPID);
+
+ 				fprintf(fp,"OSS: New Allocation after request:\n< ");
+                                int y = 0;
+                                for(y=0;y<20;y++){
+                                       fprintf(fp,"%d,",shmrd[y].available);
+                                }
+                                fprintf(fp, ">\n");
+                                fflush(fp);
+				fflush(stdout);
+                                pid_t child = shmpcb[c].simPID;
+
+				shmpid->pid = child;
+				break;
+				
+			}
+		}
+		shmdt(shmpcb);
+		shmdt(shmrd);
+		shmdt(shmpid);
+		r_semop(semid,semsignal,1);
 		//if not then just increment clock and loop back
 		incrementClock();	
 	}
@@ -517,129 +538,6 @@ int main(int argc, char **argv){
 	return 0;
 }
 
-		/*
-
-		while(size > 0){
-			if (r_semop(semid, semwait, 1) == -1){
-                	        perror("Error: oss: Failed to lock semid. ");
-                	        exitSafe(1);
-       	        	}
-                    
-                     	shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
-                     	shmclock = (struct Clock*) shmat(shmid, (void*)0,0);
-                     	//printf("n->key = %d\n",n->key);
-		     	fflush(stdout);
-		     	int k = n->key;
-		     	//n = n->next;  
-			//dispatch that process
-		       	printf("OSS: Dispatching process with PID %lld from queue at time %d:%d\n",(long long)shmpcb[k].simPID,shmclock->second,shmclock->nano);
-		       	lines++;
-			if(lines <= 10000){
-			fprintf(fp,"OSS: Dispatching process with PID %lld from queue at Index %d at time %d:%d\n",(long long)shmpcb[k].simPID,k,shmclock->second,shmclock->nano);
-		       	}
-			fflush(fp);
-			unsigned int quantum = rand() % 50000000 + 10;
-			
-			pid_t tempPid = shmpcb[k].simPID;	
-                       	shmdt(shmpcb);
-			shmdt(shmclock);
-			//release semaphore
-		   	if (r_semop(semid, semsignal, 1) == -1) {
-        	       		    perror("Error: oss: failed to signal Semaphore. ");
-	                           exitSafe(1);
-     		   	}
-				
-			message.mesg_type = 1;
-			message.pid = tempPid;
-				
-			sprintf(message.mesg_text,"Test");
-			r_semop(semid, semwait, 1);	
-			shmpid->index = k;
-		       	shmpid->quantum = quantum; // rand() % 10 + 1;
-                       	shmpid->pid = tempPid;
-			r_semop(semid, semsignal, 1);
-			//msgsnd(msgid, &message, sizeof(message), 0);
-			//wait for child to send message back
-                	bool msgREC = false;
-			while(!msgREC){
-				message.mesg_type = 2;	
-              			if (msgrcv(msgid, &message, sizeof(message), 2, IPC_NOWAIT) != -1){
-					//printf("Message: %s,%ld,%d\n",message.mesg_text,message.mesg_type,message.pid);
-			        	msgREC = true;
-					shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
-	                        	printf("OSS: Receiving that process with PID %lld ran for %lld nanoseconds\n",(long long)tempPid, shmpcb[k].duration);
-	                        	lines++;
-					if(lines <= 10000){
-						fprintf(fp,"OSS: Receiving that process with PID %lld total CPU time is %lld nanoseconds\n",(long long)tempPid,shmpcb[k].CPU);
-	                        	}  
-					//if the process is done wait and do not enqueue
-					if(message.pid == getpid()){
-						//printf("lower process is done");
-						lines++;
-						if(lines <= 10000){
-						fprintf(fp, "OSS: process with PID %lld has terminated and had %lld CPU time\n",(long long)shmpcb[k].simPID, shmpcb[k].CPU);			
-						}
-						//Wait on the terminated process
-						int status = 0;
-					        if(waitpid(tempPid, &status, 0) == -1){
-					            perror("OSS: Waiting on pid failed");
-						    exitSafe(1);
-					        }			
-					   	//shmpid->pid = 0;
-	                        	   	resetBit(bitMap,k);
-		
-						//pidArray[k] = 0;
-						shmpcb[k].startTime.second = 0;
-        	        			shmpcb[k].startTime.nano = 0;
-        	        			shmpcb[k].endTime.second = 0;
-       	        				shmpcb[k].endTime.nano = 0;
-        	        			shmpcb[k].CPU = 0;
-                				shmpcb[k].system = 0;
-                				shmpcb[k].burst = 0;
-                				shmpcb[k].simPID = 0;
-					        shmpcb[k].priority = 0;
-                                                shmdt(shmpcb);
-
-
-					}
-					else{
-						//process not done yet
-						//fprintf(fp,"OSS: Process %lld used up %d CPU time\n",shmpcb[k].simPID, shmpcb[k].CPU);
-						lines++;
-						if(lines < 10000){
-						fprintf(fp, "OSS: %s\n",message.mesg_text);
-						}
-						fflush(fp);
-	                                        shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
-						//determine which queue to enqueue to.
-						enQueue(priorityZero,k);
-						lines++;
-						if(lines < 10000){
-						fprintf(fp,"OSS: Placing PID %lld in queue \n",(long long)shmpcb[k].simPID);	
-						}
-						fflush(fp);
-						shmdt(shmpcb);
-					}
-					//move to next node
-					size--;
-                                        if(size > 0){
-                                        	n = deQueue(priorityZero);
-                                        	
-                                        }
-				}	
-				else if(errno){
-			 	   errno = 0;
-				    //increment clock
-				    incrementClock();
-				}	
-			}	    
-		}
-		//increment the clock
-		incrementClock();
-	}
-	return 0;
-}
-*/	
 
 //Increment the clock after each iteration of the loop.
 //by 1.xx seconds with xx nanoseconds between 1-1000
@@ -651,7 +549,7 @@ void incrementClock(){
                 else{
 			/*make sure we convert the nanoseconds to seconds after it gets large enough*/
 			shmclock = (struct Clock*) shmat(shmid, (void*)0,0);
-                        unsigned int increment = (unsigned int)rand() % 1000;
+                        unsigned int increment = (unsigned int)rand() % 1000 + 5000000;
                         if(shmclock->nano >= 1000000000 - increment){
                                 shmclock->second += (unsigned int)(shmclock->nano / (unsigned int)1000000000);
                                 shmclock->nano = (shmclock->nano % (unsigned int)1000000000) + increment;
@@ -662,8 +560,6 @@ void incrementClock(){
 			if(processes < 100){
 				passedTime = (shmclock->second) + (double)(shmclock->nano / 1000000000);
                         }
-			/*add a second!*/
-                        shmclock->second += 1;
                         shmdt(shmclock);
                         if (r_semop(semid, semsignal, 1) == -1) {
                                 perror("Error: oss: failed to signal Semaphore. ");
