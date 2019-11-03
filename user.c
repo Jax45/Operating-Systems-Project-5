@@ -175,11 +175,14 @@ int main(int argc, char  **argv) {
 
 		for(x=0; x<20; x++){
                         if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
-                                message.resourceClass = x;
-                                break;
+                                shmpcb[bitIndex].needs[x] = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
+				
+				message.resourceClass = x;
+                                //break;
+                                message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
                         }
                 }
-		message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
+		//message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
 		shmdt(shmpcb);
                 shmdt(shmrd);
                 r_semop(semid,semsignal,1);

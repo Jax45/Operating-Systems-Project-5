@@ -14,16 +14,11 @@ struct Clock{
 
 //Structure for the Process Control Block
 struct PCB{
-        struct Clock startTime;
-        struct Clock endTime;
         unsigned long long int CPU;
-        unsigned long long int  system;
-	unsigned long long int duration;
         short claims[20];
 	short taken[20];
-	int burst;
+	short needs[20];
         pid_t simPID;
-        int priority;
 };
 //Struct for the Resource Descriptor
 struct RD{

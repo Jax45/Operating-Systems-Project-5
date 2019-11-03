@@ -173,21 +173,14 @@ int main(int argc, char **argv){
         shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
         int x;
 	for(x = 0; x < 18; x++){
-		shmpcb[x].startTime.second = 0;
-		shmpcb[x].startTime.nano = 0;
-		shmpcb[x].endTime.second = 0;
-		shmpcb[x].endTime.nano = 0;
 		shmpcb[x].CPU = 0;
-		shmpcb[x].system = 0;
-		shmpcb[x].burst = 0;
 		shmpcb[x].simPID = 0;
 		int i;
 		for(i=0; i < 20; i++){
 			shmpcb[x].claims[i] = 0;
                 	shmpcb[x].taken[i] = 0;
+			shmpcb[x].needs[i] = 0;
 		}
-		shmpcb[x].priority = 0;
-		
 	}
         shmdt(shmpcb);
 	//setup the shared memory for the Resource Descriptor
@@ -378,8 +371,6 @@ int main(int argc, char **argv){
                        		        //Setting up the PCB
                        		        shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
                        		        shmpcb[lastPid].simPID = pid;
-					shmpcb[lastPid].startTime.second = shmclock->second;
-					shmpcb[lastPid].startTime.nano = shmclock->nano;
 					//set the bit to 1.		
 					setBit(bitMap,lastPid);
                         	        shmdt(shmpcb);
@@ -429,20 +420,13 @@ int main(int argc, char **argv){
 
 				//clear pcb
      			
-               			shmpcb[PCBindex].startTime.second = 0;
-              			shmpcb[PCBindex].startTime.nano = 0;
-               			shmpcb[PCBindex].endTime.second = 0;
-               			shmpcb[PCBindex].endTime.nano = 0;
                			shmpcb[PCBindex].CPU = 0;
-               			shmpcb[PCBindex].system = 0;
-       			        shmpcb[PCBindex].burst = 0;
        			        shmpcb[PCBindex].simPID = 0;
        			        int a;
        			        for(a=0; a < 20; a++){
        			                shmpcb[PCBindex].claims[a] = 0;
         		                shmpcb[PCBindex].taken[a] = 0;
         		        }
-        			shmpcb[PCBindex].priority = 0;
 
         				
 				shmdt(shmpcb);
@@ -655,23 +639,7 @@ int main(int argc, char **argv){
 	}
 	return 0;
 }
-*/
-//Calculate the average waiting time for a given queue.
-unsigned long long calcWait(const struct Queue * queue){
-	struct Node* n = queue->front;
-	unsigned long long sum = 0;
-	if(n == NULL){
-		return 0;
-	}
-	shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
-	while(n != NULL){
-		sum += shmpcb[n->key].system - shmpcb[n->key].CPU; 			
-		n = n->next;
-	}
-	shmdt(shmpcb);
-	return (unsigned long long)(sum/(unsigned long long)sizeOfQueue(queue));	
-}
-	
+*/	
 
 //Increment the clock after each iteration of the loop.
 //by 1.xx seconds with xx nanoseconds between 1-1000
