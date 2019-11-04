@@ -39,7 +39,7 @@ int processes = 0;
 
 //prototype for exit safe
 void exitSafe(int);
-bool isSafe(int);
+bool isSafe(int,FILE*);
 //Global option values
 int maxChildren = 10;
 char* logFile = "log.txt";
@@ -511,7 +511,7 @@ shmdt(shmrd);
 			flag = false;
 			for(d=0;d<20;d++){
 				if(shmpcb[c].needs[d] > 0){
-					fprintf(fp,"OSS: %lld Requests:\n < ",shmpcb[c].simPID);
+				/*	fprintf(fp,"OSS: %lld Requests:\n < ",shmpcb[c].simPID);
 					int y = 0;
                                         for(y=0;y<20;y++){
 	                                        fprintf(fp,"%d,",shmpcb[c].needs[y]);
@@ -522,7 +522,8 @@ shmdt(shmrd);
                                                 fprintf(fp,"%d,",shmrd[y].available);
                                         }
 					fprintf(fp,">\n\n");
-					if(isSafe(c)){
+				*/
+					if(isSafe(c,fp)){
 						flag = true;
 						int e = 0;
 						for(e=0;e<20;e++){
@@ -534,7 +535,7 @@ shmdt(shmrd);
 					}
 					else{
 						//fprintf(fp,"OSS: Request for resources from process %lld has been Denied\n",shmpcb[c].simPID);
-		                                printf("OSS: Request for resources from process %lld has been Denied.\n",shmpcb[c].simPID);
+		                //                printf("OSS: Request for resources from process %lld has been Denied.\n",shmpcb[c].simPID);
 		
                                 		//fprintf(fp,"OSS: New Allocation after request:\n< ");
                                 		//int y = 0;
@@ -584,11 +585,11 @@ bool req_lt_avail ( const int * req, const int * avail, const int pnum, const in
 }
 
 
-bool isSafe(int index){
+bool isSafe(int index, FILE *fp){
 	//shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 	//shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
 	//shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
-	short max[20][18], need[20][18], alloc[20][18], available[20],request[20];//completed[20], safe[18];
+	short max[18][20], need[18][20], alloc[18][20], available[20],request[20];//completed[20], safe[18];
 	//18 processes 0-17, and 20 resources 0-19
 	//
 	//init the 2d arrays with double for loop
@@ -606,10 +607,47 @@ bool isSafe(int index){
 		request[x] = shmpcb[index].needs[x];
 		available[x] = shmrd[x].available;
 	}
+	//FILE* fp;
+	//fp = fopen("test.txt" "w");
+	for(x = 0; x < 5; x ++){
+		if(x == 0){
+			fprintf(fp,"\n%lld's Request vector:\n<",(long long)shmpcb[index].simPID);
+			for(y=0;y<20;y++){
+	                        fprintf(fp,"%2d/%-2d,",request[y],shmpcb[index].needs[y]);//request[x]);
+	                }
+		}
+		else if(x == 1){
+                        fprintf(fp,"MaxClaim vector:\n<");
+                        for(y=0;y<20;y++){
+                                fprintf(fp,"%2d/%-2d,",max[index][y],shmpcb[index].claims[y]);
+                        }
+                }
+		else if(x == 2){
+                        fprintf(fp,"taken/Allocated vector:\n<");
+                        for(y=0;y<20;y++){
+                                fprintf(fp,"%2d/%-2d,",alloc[index][y],shmpcb[index].taken[y]);
+                        }
+                }
+
+		else if(x == 3){
+                        fprintf(fp,"MaxClaim-taken or NEED vector:\n<");
+			for(y=0;y<20;y++){
+        	                fprintf(fp,"%2d/%-2d,",need[index][y],(shmpcb[x].claims[y] - shmpcb[x].taken[y]));
+	                }
+		}
+		else{
+                        fprintf(fp,"Available vector:\n<");
+			for(y=0;y<20;y++){
+				fprintf(fp,"%2d/%-2d,",available[y],shmrd[y].available);
+			}
+		}
+		fprintf(fp,">\n");
+	}
+
 	for(x=0; x<20; x++){
         	//check that it is not asking for more than it will ever need.
         	if(need[index][x] < request[x]){
-        	        printf("Asked for more than initial max request\n");
+        	        //printf("Asked for more than initial max request\n");
         	        return false;
         	}
         	if(request[x] <= available[x]){

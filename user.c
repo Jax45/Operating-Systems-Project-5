@@ -64,11 +64,15 @@ int main(int argc, char  **argv) {
 	r_semop(semid, semwait, 1);
 	struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
 	struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+	bool done = false;
 	for(x=0;x<numClasses;x++){
-		for(y=0;y<20;y++){
+		//for(y=0;done == false;y = rand() % 20 + 1){
+		while(done == false){
+			y = rand() % 20 + 1;
 			if(shmpcb[bitIndex].claims[y] == 0){
-				shmpcb[bitIndex].claims[y] = rand() % shmrd[y].total + 1;
-				break;
+				shmpcb[bitIndex].claims[y] = rand() % (shmrd[y].total + 1);
+				done = true;
+				
 			}
 		}	
 	}
@@ -144,13 +148,13 @@ int main(int argc, char  **argv) {
 
 	//get random number
 	if(isFinished){
-		purpose =  rand() % 3;
+		purpose =  rand() % 2;//3;
 	}
 	else{
-		purpose =  rand() % 2 + 1;
+		purpose =  1;//rand() % 2 + 1;
 	}
 	
-	purpose = 1;
+	//purpose = 1;
 	if (purpose == 0){
 		//terminate
 		message.pid = getpid();
@@ -175,10 +179,12 @@ int main(int argc, char  **argv) {
 		bool isRequesting = false;
 		for(x=0; x<20; x++){
                         if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
-				shmpcb[bitIndex].needs[x] = rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x]) + 1;
-                        	if(shmpcb[bitIndex].needs[x] > 0){
-	                                isRequesting = true;
-
+				if((shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x]) > 0){
+					shmpcb[bitIndex].needs[x] = rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x] + 1);
+                        		if(shmpcb[bitIndex].needs[x] > 0){
+	                        	        isRequesting = true;
+	
+					}
 				}
 			}
                 }
