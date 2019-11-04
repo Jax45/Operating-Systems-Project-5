@@ -150,7 +150,7 @@ int main(int argc, char  **argv) {
 		purpose =  rand() % 2 + 1;
 	}
 	
-	//purpose = 2;
+	purpose = 1;
 	if (purpose == 0){
 		//terminate
 		message.pid = getpid();
@@ -175,7 +175,7 @@ int main(int argc, char  **argv) {
 		bool isRequesting = false;
 		for(x=0; x<20; x++){
                         if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
-				shmpcb[bitIndex].needs[x] = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
+				shmpcb[bitIndex].needs[x] = rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x]) + 1;
                         	if(shmpcb[bitIndex].needs[x] > 0){
 	                                isRequesting = true;
 
