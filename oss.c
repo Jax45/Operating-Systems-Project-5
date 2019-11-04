@@ -679,7 +679,7 @@ bool isSafe(int index, FILE *fp){
 			if(finish[process] == false){
 				int j;
 				for(j = 0;j<m;j++){
-					if(need[process][j] > available[j]){
+					if(need[process][j] > available[j] && !shmrd[j].sharable){
 						break;
 					}
 				}

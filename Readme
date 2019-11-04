@@ -1,8 +1,10 @@
 Name: Jackson Hoenig
 Class: CMP-SCI 4760-001
+Project 5
 
 Description: 
 -------------------------------------------------------------------------
+	In this program, the Operating system simulator starts by allocating shared memory for the Resource Descriptor array of 20. about 20% of those are then declared sharable and each class gets a total number of 1-10 that can be used.
 
 --------------------------------------------------------------------------
 
@@ -15,6 +17,7 @@ Ending situations:
 
 Assumptions:
 -----------------------------------------------------------------------------
+
 -----------------------------------------------------------------------------
 How to run:
 

@@ -148,10 +148,10 @@ int main(int argc, char  **argv) {
 
 	//get random number
 	if(isFinished){
-		purpose =  rand() % 2;//3;
+		purpose =  rand() % 3;
 	}
 	else{
-		purpose =  1;//rand() % 2 + 1;
+		purpose =  rand() % 2 + 1;
 	}
 	
 	//purpose = 1;
