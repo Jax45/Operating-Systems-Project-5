@@ -36,7 +36,7 @@
 
 //global var.
 int processes = 0;
-
+bool verbose = false;
 //prototype for exit safe
 void exitSafe(int);
 bool isSafe(int,FILE*);
@@ -64,11 +64,11 @@ int pidArray[20];
 char unsigned bitMap[3];
 //function is called when the alarm signal comes back.
 void timerHandler(int sig){
-	long double througput = passedTime / processes;
-	printf("Process has ended due to timeout, Processses finished: %d, time passed: %Lf\n",processes,passedTime);
-	printf("OSS: it takes about %Lf seconds to generate and finish one process \n",througput);
-	printf("OSS: throughput = %Lf\n",processes / passedTime);
-	fflush(stdout);
+	//long double througput = passedTime / processes;
+	//printf("Process has ended due to timeout, Processses finished: %d, time passed: %Lf\n",processes,passedTime);
+	//printf("OSS: it takes about %Lf seconds to generate and finish one process \n",througput);
+	//printf("OSS: throughput = %Lf\n",processes / passedTime);
+	//fflush(stdout);
 	//get the pids so we can kill the children
 	int i = 0;
 	shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
@@ -112,7 +112,6 @@ void exitSafe(int id){
 	exit(0);
 }
 
-unsigned long long calcWait(const struct Queue * queue);
 void incrementClock();
 //Global for increment clock
 struct sembuf semwait[1];
@@ -124,7 +123,7 @@ int main(int argc, char **argv){
 	//const int BETA = 1;
 	int opt;
 	//get the options from the user.
-	while((opt = getopt (argc, argv, "ht:")) != -1){
+	while((opt = getopt (argc, argv, "ht:v:")) != -1){
 		switch(opt){
 			case 'h':
 				printf("Usage: ./oss [-t [timeout in seconds]]\n");
@@ -132,7 +131,9 @@ int main(int argc, char **argv){
 			case 't':
 				timeout = atoi(optarg);
 				break;
-			
+			case 'v':
+				verbose = true;
+				break;
 			default:
 				printf("Wrong Option used.\nUsage: ./oss [-t [timeout in seconds]]\n");
 				exit(1);
@@ -273,18 +274,16 @@ int abc = 0;
 for(abc = 0; abc < 20; abc++){
 	fprintf(fp,"%d,",shmrd[abc].total);
 }
-fprintf(fp,"\n\n");
+fprintf(fp,">\n\n");
 shmdt(shmrd);
 
 	
-	//Create the queues
-	struct Queue* priorityZero = createQueue();
 		
 
 	//for limit purposes.
 	int lines = 0;
 	processes = 0;
-
+	int grantedRequests = 0;
 	const int maxTimeBetweenNewProcsNS = 10;
 	const int maxTimeBetweenNewProcsSecs = 2;
 	shmpid = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
@@ -370,12 +369,10 @@ shmdt(shmrd);
                         		//printf("forked child %d\n",pid);
                         		lines++;
 					if(lines < 10000){
-                        		fprintf(fp,"OSS: Generating process %d with pid %lld and putting it in queue 0 at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
+                        		fprintf(fp,"OSS: Generating process %d with pid %lld at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
 					}
 					fflush(fp);	
-					printf("OSS: Generating process %d with pid %lld and putting it in queue 0 at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
-					//place in queue
-					enQueue(priorityZero,lastPid);
+					printf("OSS: Generating process %d with pid %lld at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
 					processes++;
 					//printf("Queue size: %d \n",sizeOfQueue(priorityZero));
 					
@@ -399,16 +396,14 @@ shmdt(shmrd);
 		//dispatch the ready process
 		//check queue 0
 		//keep track of the current queue.	
-		int size = sizeOfQueue(priorityZero);
-		struct Node* n = deQueue(priorityZero);
-		//Look for message
+		 //Look for message
 
 		//if msg received, run algorithm
                 if (msgrcv(msgid, &message, sizeof(message), 2, IPC_NOWAIT) != -1){
 			if((strcmp(message.mesg_text,"Done")) == 0){
 				int status = 0;
 				//printf("message received waiting on pid");
-				fprintf(fp,"OSS: Message received, process %lld is terminating and releasing its resources\n",message.pid);
+				fprintf(fp,"OSS: Message received, process %lld is terminating and releasing its resources\n",(long long)message.pid);
 				fflush(fp);
 				waitpid(message.pid, &status, 0);
 				
@@ -454,10 +449,10 @@ shmdt(shmrd);
 						
 				}
 				else if ((strcmp(message.mesg_text,"Nothing")) == 0){
-					printf("Releasing nothing\n");
-					fprintf(fp,"OSS: Process %lld Chose to release but did not have any resources.\n",message.pid);
+					//printf("Releasing nothing\n");
+					fprintf(fp,"OSS: Process %lld Chose to release but did not have any resources.\n",(long long)message.pid);
 					fflush(fp);
-					fflush(stdout);
+					//fflush(stdout);
 					//message.mesg_type = 2;
                                        // msgsnd(msgid, &message, sizeof(message), 0);
 				}
@@ -468,8 +463,8 @@ shmdt(shmrd);
                                         shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 					shmrd[message.resourceClass].available += message.quantity;
 					shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
-					fprintf(fp,"OSS: Process %lld Releasing %d of resource %d\n",message.pid,message.quantity,message.resourceClass);
-                                        printf("OSS: Process %lld Releasing %d of resource %d\n",message.pid,message.quantity,message.resourceClass);
+					fprintf(fp,"OSS: Process %lld Releasing %d of resource %d\n",(long long)message.pid,message.quantity,message.resourceClass);
+                                        printf("OSS: Process %lld Releasing %d of resource %d\n",(long long)message.pid,message.quantity,message.resourceClass);
 					fprintf(fp, "OSS: Current Allocation = <");
                                         int y = 0;
                                         for(y=0;y<20;y++){
@@ -478,7 +473,7 @@ shmdt(shmrd);
                                         fprintf(fp, ">\n");
 					fflush(stdout);
 					fflush(fp);
-					pid_t child = shmpcb[message.bitIndex].simPID;
+					//pid_t child = shmpcb[message.bitIndex].simPID;
 					shmdt(shmpcb);
                                         shmdt(shmrd);
                                         r_semop(semid, semsignal, 1);
@@ -548,9 +543,9 @@ shmdt(shmrd);
 			}
 			
 			if(flag){
-                                fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",shmpcb[c].simPID);
-                                printf("OSS: Request for resources from process %lld has been granted.\n",shmpcb[c].simPID);
-
+                                fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
+                                printf("OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
+				grantedRequests++;
  				fprintf(fp,"OSS: New Allocation after request:\n\n< ");
                                 int y = 0;
                                 for(y=0;y<20;y++){
@@ -669,7 +664,7 @@ bool isSafe(int index, FILE *fp){
 	for(i = 0; i < p; finish[i++] = false );
 	
 	//get the safe sequence
-	int safeSeq[p];
+	//int safeSeq[p];
 	
 	int count = 0;
 	while (count < p){
@@ -690,7 +685,8 @@ bool isSafe(int index, FILE *fp){
 						//back to available
 						available[k] += alloc[process][k]; 
 					}
-					safeSeq[count++] = process;
+					count++;
+					//safeSeq[count++] = process;
 					
 					finish[process] = true;
 					

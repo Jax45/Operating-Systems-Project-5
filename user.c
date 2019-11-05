@@ -37,7 +37,7 @@ int main(int argc, char  **argv) {
 	//signal(SIGKILL,sigHandler);
 	struct sembuf semsignal[1];
 	struct sembuf semwait[1];
-	int error;	
+	//int error;	
 	//get IPC data.	
 	int shmid = atoi(argv[1]);	
 	int semid = atoi(argv[2]);
@@ -80,7 +80,7 @@ int main(int argc, char  **argv) {
 	shmdt(shmrd);
 	r_semop(semid, semsignal, 1);
 
-	printf("after the rd stuff\n");
+	//printf("after the rd stuff\n");
 
     while(1){	
 
@@ -162,8 +162,8 @@ int main(int argc, char  **argv) {
                 /*send back what time you calculated to end on.*/
                 sprintf(message.mesg_text, "Done");
 		message.bitIndex = bitIndex;
-		printf("Sending message back to OSS\n");
-		fflush(stdout);
+	//	printf("Sending message back to OSS\n");
+	//	fflush(stdout);
                 msgsnd(msgid, &message, sizeof(message), 0);
 		//shmdt(shmpcb);
 	//	shmdt(dispatch);
@@ -188,7 +188,7 @@ int main(int argc, char  **argv) {
 				}
 			}
                 }
-		pid_t myPid = shmpcb[bitIndex].simPID;
+		//pid_t myPid = shmpcb[bitIndex].simPID;
 		//message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
 		shmdt(shmpcb);
                 shmdt(shmrd);
