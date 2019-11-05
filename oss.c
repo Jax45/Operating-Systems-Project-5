@@ -112,6 +112,7 @@ void exitSafe(int id){
 	exit(0);
 }
 
+void printTable(FILE *fp);
 void incrementClock();
 //Global for increment clock
 struct sembuf semwait[1];
@@ -557,7 +558,9 @@ shmdt(shmrd);
                                 pid_t child = shmpcb[c].simPID;
 
 				shmpid->pid = child;
-				
+				if((grantedRequests % 20) == 0){
+					printTable(fp);
+				}	
 			}
 		}
 		shmdt(shmpcb);
@@ -569,6 +572,38 @@ shmdt(shmrd);
 	}
 
 	return 0;
+}
+void printTable(FILE *fp){
+	int x = 0, y = 0;
+	//print allocated
+	fprintf(fp,"Currently Allocated: \n");
+	for(x=0;x<18;x++){
+		fprintf(fp,"P%2d: <",x);
+		for(y=0;y<20;y++){
+			fprintf(fp,"%2d,",shmpcb[x].taken[y]);
+		}
+		fprintf(fp,">\n");
+	}
+	fprintf(fp,"\n");
+	//print max claim
+	fprintf(fp,"Max Claims: \n");
+        for(x=0;x<18;x++){
+                fprintf(fp,"P%2d: <",x);
+                for(y=0;y<20;y++){
+                        fprintf(fp,"%2d,",shmpcb[x].claims[y]);
+                }
+                fprintf(fp,">\n");
+        }
+        fprintf(fp,"\n");
+
+	//print available
+	fprintf(fp,"Currently Available: \n");
+	fprintf(fp,"     <");
+        for(x=0;x<20;x++){
+              fprintf(fp,"%2d,",shmrd[x].available);
+        }
+        fprintf(fp,"\n");
+
 }
 bool req_lt_avail ( const int * req, const int * avail, const int pnum, const int num_res )
 {
@@ -608,32 +643,32 @@ bool isSafe(int index, FILE *fp){
 		if(x == 0){
 			fprintf(fp,"\n%lld's Request vector:\n<",(long long)shmpcb[index].simPID);
 			for(y=0;y<20;y++){
-	                        fprintf(fp,"%2d/%-2d,",request[y],shmpcb[index].needs[y]);//request[x]);
+	                        fprintf(fp,"%2d,",request[y]);//,shmpcb[index].needs[y]);//request[x]);
 	                }
 		}
 		else if(x == 1){
                         fprintf(fp,"MaxClaim vector:\n<");
                         for(y=0;y<20;y++){
-                                fprintf(fp,"%2d/%-2d,",max[index][y],shmpcb[index].claims[y]);
+                                fprintf(fp,"%2d,",max[index][y]);//,shmpcb[index].claims[y]);
                         }
                 }
 		else if(x == 2){
                         fprintf(fp,"taken/Allocated vector:\n<");
                         for(y=0;y<20;y++){
-                                fprintf(fp,"%2d/%-2d,",alloc[index][y],shmpcb[index].taken[y]);
+                                fprintf(fp,"%2d,",alloc[index][y]);//,shmpcb[index].taken[y]);
                         }
                 }
 
 		else if(x == 3){
                         fprintf(fp,"MaxClaim-taken or NEED vector:\n<");
 			for(y=0;y<20;y++){
-        	                fprintf(fp,"%2d/%-2d,",need[index][y],(shmpcb[x].claims[y] - shmpcb[x].taken[y]));
+        	                fprintf(fp,"%2d,",need[index][y]);//,(shmpcb[x].claims[y] - shmpcb[x].taken[y]));
 	                }
 		}
 		else{
                         fprintf(fp,"Available vector:\n<");
 			for(y=0;y<20;y++){
-				fprintf(fp,"%2d/%-2d,",available[y],shmrd[y].available);
+				fprintf(fp,"%2d,",available[y]);//,shmrd[y].available);
 			}
 		}
 		fprintf(fp,">\n");
