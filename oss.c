@@ -523,10 +523,13 @@ shmdt(shmrd);
 						flag = true;
 						int e = 0;
 						for(e=0;e<20;e++){
+
+							if(!shmrd[e].sharable){
 							shmpcb[c].taken[e] += shmpcb[c].needs[e];
                                                 	shmrd[e].available -= shmpcb[c].needs[e];
-                                                	shmpcb[c].needs[e] = 0;
-
+                                                	}
+							shmpcb[c].needs[e] = 0;
+							
 						}
 					}
 					else{
