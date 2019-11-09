@@ -18,6 +18,7 @@ struct PCB{
         short claims[20];
 	short taken[20];
 	short needs[20];
+	short release[20];
         pid_t simPID;
 };
 //Struct for the Resource Descriptor

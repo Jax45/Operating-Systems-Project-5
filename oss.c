@@ -182,6 +182,7 @@ int main(int argc, char **argv){
 			shmpcb[x].claims[i] = 0;
                 	shmpcb[x].taken[i] = 0;
 			shmpcb[x].needs[i] = 0;
+			shmpcb[x].release[i] = 0;
 		}
 	}
         shmdt(shmpcb);
@@ -416,7 +417,9 @@ shmdt(shmrd);
 				int i = 0;
 				//add resources back to available.
 				for(i=0; i<20; i++){
-					shmrd[i].available += shmpcb[PCBindex].taken[i];
+					if(!shmrd[i].sharable){
+						shmrd[i].available += shmpcb[PCBindex].taken[i];
+					}
 				}
 				fprintf(fp, "OSS: Current Allocation = <");
                                 int y = 0;
@@ -457,19 +460,41 @@ shmdt(shmrd);
 					//message.mesg_type = 2;
                                        // msgsnd(msgid, &message, sizeof(message), 0);
 				}
-				else{
+				else if ((strcmp(message.mesg_text,"Release")) == 0){
 					//it is releasing resources
 					r_semop(semid, semwait, 1);
                                         shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
                                         shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
-					shmrd[message.resourceClass].available += message.quantity;
-					shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
-					fprintf(fp,"OSS: Process %lld Releasing %d of resource %d\n",(long long)message.pid,message.quantity,message.resourceClass);
-                                        printf("OSS: Process %lld Releasing %d of resource %d\n",(long long)message.pid,message.quantity,message.resourceClass);
-					fprintf(fp, "OSS: Current Allocation = <");
-                                        int y = 0;
+					//shmrd[message.resourceClass].available += message.quantity;
+					//shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
+					int i = 0;
+					bool isReleasing = false;
+					for(i=0;i<20;i++){
+						if(shmpcb[message.bitIndex].release[i] > 0){
+							isReleasing = true;
+							break;
+						}
+					}
+					fprintf(fp,"OSS: Process %lld Releasing some Resources:\n<",(long long)message.pid);
+                                        printf("OSS: Process %lld Releasing some Resources\n",(long long)message.pid);
+					
+                                        
+					i = 0;
+                                        for(i=0;i<20;i++){
+						fprintf(fp,"%2d,",shmpcb[message.bitIndex].release[i]);
+                                                
+						shmpcb[message.bitIndex].taken[i] -= shmpcb[message.bitIndex].release[i];
+                                                if(!shmrd[i].sharable){
+							shmrd[i].available += shmpcb[message.bitIndex].release[i];
+                                                }
+						shmpcb[message.bitIndex].release[i] = 0;
+                                        }
+					pid_t child = shmpcb[message.bitIndex].simPID;
+					fprintf(fp,">\n");
+					fprintf(fp,"Available Now:\n<");
+					int y = 0;
                                         for(y=0;y<20;y++){
-                                                fprintf(fp,"%d,",shmrd[y].available);
+                                                fprintf(fp,"%2d,",shmrd[y].available);
                                         }
                                         fprintf(fp, ">\n");
 					fflush(stdout);
@@ -477,12 +502,12 @@ shmdt(shmrd);
 					//pid_t child = shmpcb[message.bitIndex].simPID;
 					shmdt(shmpcb);
                                         shmdt(shmrd);
+			                shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
+					shmpid->pid = child;
+					shmdt(shmpid);
                                         r_semop(semid, semsignal, 1);
 
-					//send message back
-                                        //message.mesg_type = 2;
-					//message.pid = child;
-                                        //msgsnd(msgid, &message, (sizeof(struct mesg_buffer)), 0);
+					
 				}
 
 
@@ -524,10 +549,10 @@ shmdt(shmrd);
 						int e = 0;
 						for(e=0;e<20;e++){
 
-							if(!shmrd[e].sharable){
+							//if(!shmrd[e].sharable){
 							shmpcb[c].taken[e] += shmpcb[c].needs[e];
-                                                	shmrd[e].available -= shmpcb[c].needs[e];
-                                                	}
+                                                	//shmrd[e].available -= shmpcb[c].needs[e];
+                                                	//}
 							shmpcb[c].needs[e] = 0;
 							
 						}
@@ -549,7 +574,7 @@ shmdt(shmrd);
 			if(flag){
                                 fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
                                 printf("OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
-				grantedRequests++;
+				//grantedRequests++;
  				fprintf(fp,"OSS: New Allocation after request:\n\n< ");
                                 int y = 0;
                                 for(y=0;y<20;y++){
@@ -561,11 +586,16 @@ shmdt(shmrd);
                                 pid_t child = shmpcb[c].simPID;
 
 				shmpid->pid = child;
-				if((grantedRequests % 20) == 0){
-					printTable(fp);
-				}	
+				//if((grantedRequests % 20) == 0){
+				//	printTable(fp);
+				//}	
 			}
 		}
+                grantedRequests++;
+		if((grantedRequests % 20) == 0){
+	                printTable(fp);
+                }
+	
 		shmdt(shmpcb);
 		shmdt(shmrd);
 		shmdt(shmpid);
@@ -581,7 +611,7 @@ void printTable(FILE *fp){
 	//print allocated
 	fprintf(fp,"Currently Allocated: \n");
 	for(x=0;x<18;x++){
-		fprintf(fp,"P%2d: <",x);
+		fprintf(fp,"P%6d: <",shmpcb[x].simPID);
 		for(y=0;y<20;y++){
 			fprintf(fp,"%2d,",shmpcb[x].taken[y]);
 		}
@@ -591,7 +621,7 @@ void printTable(FILE *fp){
 	//print max claim
 	fprintf(fp,"Max Claims: \n");
         for(x=0;x<18;x++){
-                fprintf(fp,"P%2d: <",x);
+                fprintf(fp,"P%6d: <",shmpcb[x].simPID);
                 for(y=0;y<20;y++){
                         fprintf(fp,"%2d,",shmpcb[x].claims[y]);
                 }
@@ -601,7 +631,7 @@ void printTable(FILE *fp){
 
 	//print available
 	fprintf(fp,"Currently Available: \n");
-	fprintf(fp,"     <");
+	fprintf(fp,"         <");
         for(x=0;x<20;x++){
               fprintf(fp,"%2d,",shmrd[x].available);
         }
