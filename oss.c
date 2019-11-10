@@ -1,16 +1,17 @@
 /************************************************************************************
  * Name: Jackson Hoenig
  * Class: CMPSCI 4760
- * Project 4
+ * Project 5
  * Description:
- * This Project is an operating system scheduler simulator.  The OSS will periodically generate a launch
- * time that it will then fork off a child process exececuting the USER binary. The time is kept track of
- * in the shared memory clock that is incremented in the OSS after each iteration of the loop.
- * The Oss can be called with option t to change the timeout from the default of 3 real-time seconds.
- * The oss communicates with the forked children by going through a round robin queue of three priorities.
- * then the oss dispatches the process by updating shared memory that the children are looking at.
- * oss waits for message received back then either executes the next available process or loops back to the start.
- * See readme for more information.
+ *In this program, the Operating system simulator starts by allocating shared memory
+for the Resource Descriptor array of 20. about 20% of those are then declared sharable and
+each class gets a total number of 1-10 that can be used. then at random time intervals
+child processes are forked off. then the OSS checks to see if any messages are waiting from the
+children. if not it checks to see if there are any pending requests. if there are, the
+request is evaluated to be safe or not.(see Banker Algorithm below) if it is safe it is
+the process is told by changing the shared memory to its child pid. finally the OSS
+increments the clock and loops back.
+
  * *************************************************************************************
 */
 
@@ -36,6 +37,7 @@
 #define NUM_RES 20
 //global var.
 int processes = 0;
+char bound[20];
 bool verbose = false;
 //prototype for exit safe
 void exitSafe(int);
@@ -120,14 +122,15 @@ struct sembuf semsignal[1];
 
 
 int main(int argc, char **argv){
+        snprintf(bound, sizeof(bound), "%d", 250);
 	//const int ALPHA = 1;
 	//const int BETA = 1;
 	int opt;
 	//get the options from the user.
-	while((opt = getopt (argc, argv, "ht:v:")) != -1){
+	while((opt = getopt (argc, argv, "ht:vb:")) != -1){
 		switch(opt){
 			case 'h':
-				printf("Usage: ./oss [-t [timeout in seconds]]\n");
+				printf("Usage: ./oss [-v: verbose enabled] [-t [timeout in seconds]] [-b [bound in milliseconds]]\n");
 				exit(1);
 			case 't':
 				timeout = atoi(optarg);
@@ -135,8 +138,11 @@ int main(int argc, char **argv){
 			case 'v':
 				verbose = true;
 				break;
+			case 'b':
+                                snprintf(bound, sizeof(bound), "%d",atoi(optarg));// BoundOptarg);
+				break;
 			default:
-				printf("Wrong Option used.\nUsage: ./oss [-t [timeout in seconds]]\n");
+				printf("Wrong Option used.\nUsage: ./oss [-v: verbose enabled] [-t [timeout in seconds]] [-b [bound in milliseconds]]\n");
 				exit(1);
 		}
 	}
@@ -286,8 +292,8 @@ int main(int argc, char **argv){
 	int lines = 0;
 	processes = 0;
 	int grantedRequests = 0;
-	const int maxTimeBetweenNewProcsNS = 10;
-	const int maxTimeBetweenNewProcsSecs = 2;
+	const int maxTimeBetweenNewProcsNS = 5000000;
+	//const int maxTimeBetweenNewProcsSecs = 0;
 	shmpid = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
 	struct Clock launchTime;
 	launchTime.second = 0;
@@ -308,7 +314,7 @@ int main(int argc, char **argv){
                         }
                         else{
 				shmclock = (struct Clock*) shmat(shmid, (void*)0,0);
-                                launchTime.second = shmclock->second + (rand() % maxTimeBetweenNewProcsSecs);
+                                launchTime.second = shmclock->second;//+ (rand() % maxTimeBetweenNewProcsSecs);
                                 launchTime.nano = shmclock->nano + (rand() % maxTimeBetweenNewProcsNS);
 				shmdt(shmclock);
 					
@@ -351,7 +357,7 @@ int main(int argc, char **argv){
 						snprintf(bitIndex, sizeof(bitIndex), "%d", lastPid);
 						char rdid[20];
 						snprintf(rdid, sizeof(rdid), "%d", shmidRD);
-                                		execl("./user","./user",arg,spid,msid,disId,pcbID,bitIndex,rdid,NULL);
+                                		execl("./user","./user",arg,spid,msid,disId,pcbID,bitIndex,rdid,bound,NULL);
                                 		perror("Error: oss: exec failed. ");
                                 		//fclose(fp);
 						exitSafe(1);
@@ -362,7 +368,7 @@ int main(int argc, char **argv){
 					}
                         		//printf("forked child %d\n",pid);
                         		lines++;
-					if(lines < 10000){
+					if(lines < 100000){
                         		fprintf(fp,"OSS: Generating process %d with pid %lld at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
 					}
 					fflush(fp);	
@@ -391,8 +397,12 @@ int main(int argc, char **argv){
 			if((strcmp(message.mesg_text,"Done")) == 0){
 				int status = 0;
 				//printf("message received waiting on pid");
+				lines++;
+				if(lines < 100000){
 				fprintf(fp,"OSS: Message received, process %lld is terminating and releasing its resources\n",(long long)message.pid);
+				printf("OSS: Message received, process %lld is terminating and releasing its resources\n",(long long)message.pid);
 				fflush(fp);
+				}
 				waitpid(message.pid, &status, 0);
 				
 				int PCBindex = message.bitIndex;
@@ -407,13 +417,16 @@ int main(int argc, char **argv){
 						shmrd[i].available += shmpcb[PCBindex].taken[i];
 					}
 				}
-				fprintf(fp, "OSS: Current Allocation = <");
-                                int y = 0;
-                                for(y=0;y<NUM_RES;y++){
- 	                               fprintf(fp,"%d,",shmrd[y].available);
-                                }
-                                fprintf(fp, ">\n");
+				lines++;
+                                if(lines < 100000){
 
+					fprintf(fp, "OSS: Current Allocation = <");
+                                	int y = 0;
+                                	for(y=0;y<NUM_RES;y++){
+ 	                        	       fprintf(fp,"%d,",shmrd[y].available);
+                                	}
+                                	fprintf(fp, ">\n");
+				}
 				//clear pcb
      			
                			shmpcb[PCBindex].CPU = 0;
@@ -440,8 +453,12 @@ int main(int argc, char **argv){
 				}
 				else if ((strcmp(message.mesg_text,"Nothing")) == 0){
 					//printf("Releasing nothing\n");
-					fprintf(fp,"OSS: Process %lld Chose to release but did not have any resources.\n",(long long)message.pid);
-					fflush(fp);
+					lines++;
+	                                if(lines < 100000){
+
+						fprintf(fp,"OSS: Process %lld Chose to release but did not have any resources.\n",(long long)message.pid);
+						fflush(fp);
+					}
 					//fflush(stdout);
 					//message.mesg_type = 2;
                                        // msgsnd(msgid, &message, sizeof(message), 0);
@@ -454,20 +471,23 @@ int main(int argc, char **argv){
 					//shmrd[message.resourceClass].available += message.quantity;
 					//shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
 					int i = 0;
-					bool isReleasing = false;
+					//bool isReleasing = false;
 					for(i=0;i<NUM_RES;i++){
 						if(shmpcb[message.bitIndex].release[i] > 0){
-							isReleasing = true;
+							//isReleasing = true;
 							break;
 						}
 					}
-					fprintf(fp,"OSS: Process %lld Releasing some Resources:\n<",(long long)message.pid);
+					lines++;
+	                                if(lines < 100000){
+	                                        fprintf(fp,"OSS: Process %lld Releasing some Resources:\n",(long long)message.pid);
+
+					}
                                         printf("OSS: Process %lld Releasing some Resources\n",(long long)message.pid);
 					
                                         
 					i = 0;
                                         for(i=0;i<NUM_RES;i++){
-						fprintf(fp,"%2d,",shmpcb[message.bitIndex].release[i]);
                                                 
 						shmpcb[message.bitIndex].taken[i] -= shmpcb[message.bitIndex].release[i];
                                                 if(shmrd[i].sharable == false){
@@ -476,15 +496,18 @@ int main(int argc, char **argv){
 						shmpcb[message.bitIndex].release[i] = 0;
                                         }
 					pid_t child = shmpcb[message.bitIndex].simPID;
-					fprintf(fp,">\n");
-					fprintf(fp,"Available Now:\n<");
-					int y = 0;
-                                        for(y=0;y<NUM_RES;y++){
-                                                fprintf(fp,"%2d,",shmrd[y].available);
-                                        }
-                                        fprintf(fp, ">\n");
-					fflush(stdout);
-					fflush(fp);
+					if(verbose && lines < 100000){
+	                                        lines += 2;
+	
+						fprintf(fp,"Available Now:\n<");
+						int y = 0;
+                        	                for(y=0;y<NUM_RES;y++){
+                                	                fprintf(fp,"%2d,",shmrd[y].available);
+                                	        }
+                                	        fprintf(fp, ">\n");
+						fflush(stdout);
+						fflush(fp);
+					}
 					//pid_t child = shmpcb[message.bitIndex].simPID;
 					shmdt(shmpcb);
                                         shmdt(shmrd);
@@ -520,10 +543,6 @@ int main(int argc, char **argv){
 			flag = false;
 			for(d=0;d<NUM_RES;d++){
 				if(shmpcb[c].needs[d] > 0){
-					grantedRequests++;
-					if((grantedRequests % 20) == 0){
-                		                printTable(fp);
-		                        }
 
 					if(isSafe(c,fp)){
 						flag = true;
@@ -547,18 +566,25 @@ int main(int argc, char **argv){
 			}
 			
 			if(flag){
-                                fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
-                                printf("OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
-				//grantedRequests++;
- 				fprintf(fp,"OSS: New Allocation after request:\n\n< ");
-                                int y = 0;
-                                for(y=0;y<NUM_RES;y++){
-                                       fprintf(fp,"%d,",shmrd[y].available);
+				if(lines < 100000){
+                                	fprintf(fp,"OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
+                                lines++;
+				}
+				printf("OSS: Request for resources from process %lld has been granted.\n",(long long)shmpcb[c].simPID);
+				grantedRequests++;
+				if(verbose && lines < 100000){
+                                        lines += 4;
+
+					fprintf(fp,"OSS: New Allocation after request:\n\n< ");
+                	                int y = 0;
+                        	        for(y=0;y<NUM_RES;y++){
+                                	       fprintf(fp,"%d,",shmrd[y].available);
+                               		}
+                               		fprintf(fp, ">\n\n");
+                                	fflush(fp);
+					fflush(stdout);
                                 }
-                                fprintf(fp, ">\n\n");
-                                fflush(fp);
-				fflush(stdout);
-                                pid_t child = shmpcb[c].simPID;
+				pid_t child = shmpcb[c].simPID;
 				
 				//message.mesg_type = child;
 			//	msgsnd(msgid, &message, sizeof(message),0);	
@@ -570,9 +596,9 @@ int main(int argc, char **argv){
 					}
 				}
 				//msgrcv(msgid, &message, sizeof(message), getpid(), 0);
-				//if((grantedRequests % 20) == 0){
-				//	printTable(fp);
-				//}	
+				if(verbose && ((grantedRequests % 20) == 0)){
+					printTable(fp);
+				}	
 			}
 		}
 	
@@ -636,15 +662,17 @@ bool req_lt_avail ( const int * req, const int * avail, const int pnum, const in
 			break;
 	return ( i == num_res );
 }
-
-
+/*
+Banker Algorithm:
+        The banker algorithm is run with a request and the shared memory.
+	the request is simulated on copies of the current Resource Tables and
+	the algorithm tries to find a safe sequence of processes. if it cannot find
+	one then the request is deemed unsafe and is put to sleep until something
+	changes.
+*/
 bool isSafe(int index, FILE *fp){
-	//shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
-	//shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
-	//shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
 	short max[18][NUM_RES], need[18][NUM_RES], alloc[18][NUM_RES], available[NUM_RES],request[NUM_RES];//completed[20], safe[18];
 	//18 processes 0-17, and 20 resources 0-19
-	//
 	//init the 2d arrays with double for loop
 	int x,y;
 	for(x=0;x<18;x++){
@@ -660,43 +688,42 @@ bool isSafe(int index, FILE *fp){
 		request[x] = shmpcb[index].needs[x];
 		available[x] = shmrd[x].available;
 	}
-	//FILE* fp;
-	//fp = fopen("test.txt" "w");
+    if(verbose){
 	for(x = 0; x < 5; x ++){
 		if(x == 0){
 			fprintf(fp,"\n%lld's Request vector:\n<",(long long)shmpcb[index].simPID);
 			for(y=0;y<NUM_RES;y++){
-	                        fprintf(fp,"%2d,",request[y]);//,shmpcb[index].needs[y]);//request[x]);
+	                        fprintf(fp,"%2d,",request[y]);
 	                }
 		}
 		else if(x == 1){
                         fprintf(fp,"MaxClaim vector:\n<");
                         for(y=0;y<NUM_RES;y++){
-                                fprintf(fp,"%2d,",max[index][y]);//,shmpcb[index].claims[y]);
+                                fprintf(fp,"%2d,",max[index][y]);
                         }
                 }
 		else if(x == 2){
                         fprintf(fp,"taken/Allocated vector:\n<");
                         for(y=0;y<NUM_RES;y++){
-                                fprintf(fp,"%2d,",alloc[index][y]);//,shmpcb[index].taken[y]);
+                                fprintf(fp,"%2d,",alloc[index][y]);
                         }
                 }
 
 		else if(x == 3){
                         fprintf(fp,"MaxClaim-taken or NEED vector:\n<");
 			for(y=0;y<NUM_RES;y++){
-        	                fprintf(fp,"%2d,",need[index][y]);//,(shmpcb[x].claims[y] - shmpcb[x].taken[y]));
+        	                fprintf(fp,"%2d,",need[index][y]);
 	                }
 		}
 		else{
                         fprintf(fp,"Available vector:\n<");
 			for(y=0;y<NUM_RES;y++){
-				fprintf(fp,"%2d,",available[y]);//,shmrd[y].available);
+				fprintf(fp,"%2d,",available[y]);
 			}
 		}
 		fprintf(fp,">\n");
 	}
-
+    }
 	for(x=0; x<NUM_RES; x++){
         	//check that it is not asking for more than it will ever need.
         	if(need[index][x] < request[x]){
@@ -725,19 +752,25 @@ bool isSafe(int index, FILE *fp){
 	
 	//get the safe sequence
 	int safeSeq[p];
-	
+
+	//count is to keep track of how many processes are completed	
 	int count = 0;
 	while (count < p){
 		bool found = false;
 		int process;
+		//for each process
 		for(process=0;process < p; process++){
+			//check to see if it is finished
 			if(finish[process] == false){
 				int j;
 				for(j = 0;j<m;j++){
+					//if the resource is not sharable and the need is greater
+					//than what is available then we cannot complete the process
 					if(need[process][j] > available[j] && !shmrd[j].sharable){
 						break;
 					}
 				}
+				//if break did not happen
 				if(j == m){
 					int k;
 					for(k = 0; k< m; k++){
@@ -745,7 +778,7 @@ bool isSafe(int index, FILE *fp){
 						//back to available
 						available[k] += alloc[process][k]; 
 					}
-				//	count++;
+					//increment cound and update safe sequence
 					safeSeq[count++] = process;
 					
 					finish[process] = true;
@@ -759,12 +792,15 @@ bool isSafe(int index, FILE *fp){
 		}
 	}
 	//system is safe
-	fprintf(fp,"Safe Sequence: <");
-	for(i=0;i<p;i++){
-		fprintf(fp, "P%d,", safeSeq[i]);
+	if(verbose){
+		
+		fprintf(fp,"Safe Sequence: <");
+		for(i=0;i<p;i++){
+			fprintf(fp, "P%d,", safeSeq[i]);
+		}
+		fprintf(fp,"\n");
 	}
-	fprintf(fp,"\n");
-	printTable(fp);
+	//printTable(fp);
 	return true;
 	
 }
@@ -774,7 +810,7 @@ bool isSafe(int index, FILE *fp){
 
 
 //Increment the clock after each iteration of the loop.
-//by 1.xx seconds with xx nanoseconds between 1-1000
+//by 1.xx seconds with xx nanoseconds between 1-1000 and 5MS
 void incrementClock(){
 		if (r_semop(semid, semwait, 1) == -1){
                         perror("Error: oss: Failed to lock semid. ");

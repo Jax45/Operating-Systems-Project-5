@@ -4,8 +4,35 @@ Project 5
 
 Description: 
 -------------------------------------------------------------------------
-	In this program, the Operating system simulator starts by allocating shared memory for the Resource Descriptor array of 20. about 20% of those are then declared sharable and each class gets a total number of 1-10 that can be used.
+OSS:
+	In this program, the Operating system simulator starts by allocating shared memory
+for the Resource Descriptor array of 20. about 20% of those are then declared sharable and
+each class gets a total number of 1-10 that can be used. then at random time intervals
+child processes are forked off. then the OSS checks to see if any messages are waiting from the
+children. if not it checks to see if there are any pending requests. if there are, the 
+request is evaluated to be safe or not.(see Banker Algorithm below) if it is safe it is
+the process is told by changing the shared memory to its child pid. finally the OSS
+increments the clock and loops back.
 
+USER:
+	When the user is forked off, it first calculates a time that it will run
+an event based on the shared memory clock and the bound given in the options of OSS.
+when that event time passes a number from 0-2 is generated(0 only possible after 1 second)
+0 means terminate and a message is sent to OSS to let it know.
+1 means request and it awaits its request granted by waiting on shared memory.
+2 means release and it waits on the shared memory for the OSS to tell it
+that is is done releasing memory. then the process loops until a 0 is rolled or
+the OSS kills it.
+
+NOTE: to make the project look more life like the 0 is forced if the process
+has received all of its max claims of resources.
+
+Banker Algorithm:
+	The banker algorithm is run with a request and the shared memory.
+the request is simulated on copies of the current Resource Tables and
+the algorithm tries to find a safe sequence of processes. if it cannot find
+one then the request is deemed unsafe and is put to sleep until something 
+changes.
 --------------------------------------------------------------------------
 
 Ending situations:
@@ -24,7 +51,7 @@ How to run:
 -----------------------------------------------------------------------------
 $ make clean
 $ make
-$ ./oss [-t Time in Seconds before timeout]
+$ ./oss [-t Time in Seconds before timeout] [-v for verbose] [-b [Bound]]
 -----------------------------------------------------------------------------
 
 GitLog:

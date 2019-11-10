@@ -1,12 +1,19 @@
 //Name: Jackson Hoenig
 //Class: CMP-SCI 4760
-//Description: This is the child process of the parent program oss.c
-//please check that one for details on the whole project. this program is not
-//designed to be called on its own.
-//This program takes in 5 arguments, the shared memory id, semaphore id, the message queue id, the dispatch shmid, and the PCB shmid.
-//after it gets that data the program waits for the dispatch to show its pid, then waits on the semaphore to prevent race condition.
-//then calculates what it will do with it's quantum and when it is done returns the control to the OSS with a message.
-//the process will only end if the oss kills it or a 0 is generated in the purpose variable.
+/*Description:
+
+When the user is forked off, it first calculates a time that it will run
+an event based on the shared memory clock and the bound given in the options of OSS.
+when that event time passes a number from 0-2 is generated(0 only possible after 1 second)
+0 means terminate and a message is sent to OSS to let it know.
+1 means request and it awaits its request granted by waiting on shared memory.
+2 means release and it waits on the shared memory for the OSS to tell it
+that is is done releasing memory. then the process loops until a 0 is rolled or
+the OSS kills it.
+
+NOTE: to make the project look more life like the 0 is forced if the process
+has received all of its max claims of resources.
+*/
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -37,7 +44,8 @@ int main(int argc, char  **argv) {
 	int shmidpcb = atoi(argv[5]);
 	int bitIndex = atoi(argv[6]);
 	int shmidrd = atoi(argv[7]);	
-        if(semid == -1){
+        int bound = atoi(argv[8]);
+	if(semid == -1){
                 perror("Error: user: Failed to create a private semaphore");
                 exit(1);
         }	
@@ -54,7 +62,7 @@ int main(int argc, char  **argv) {
 	r_semop(semid, semwait, 1);
 	struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
 	struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-	bool done = false;
+	//bool done = false;
 	while(x < numClasses){
 		y = rand() % NUM_RES + 1;
 		if(shmpcb[bitIndex].claims[y] == 0){
@@ -71,7 +79,7 @@ int main(int argc, char  **argv) {
 
 	
 	//generate random time to execute event
-	int executeMS = rand() % 250 + 1;
+	int executeMS = rand() % bound + 1;
 	struct Clock execute;
 	execute.nano = 0;
 	execute.second = 0;
@@ -96,7 +104,6 @@ int main(int argc, char  **argv) {
 		
 
 			
-	//printf("Waiting for time %d:%d\n",execute.second,execute.nano);
 	fflush(stdout);
 	bool isWaiting = true;
 	while(isWaiting){
@@ -133,12 +140,12 @@ int main(int argc, char  **argv) {
 	else{
 		purpose =  rand() % 2 + 1;
 	}
-	//purpose = 1;	
 	if (purpose == 0 || finished){
 		//terminate
 		message.pid = getpid();
                 message.mesg_type = 2;
-                /*send back what time you calculated to end on.*/
+                
+		/*send back what time you calculated to end on.*/
                 sprintf(message.mesg_text, "Done");
 		message.bitIndex = bitIndex;
                 msgsnd(msgid, &message, sizeof(message), 0);
@@ -173,7 +180,6 @@ int main(int argc, char  **argv) {
 	        //msgsnd(msgid, &message, sizeof(message), 0);
 	        
 		if(isRequesting){
-			printf("USER: pid %lld is requesting resources",getpid());
 			struct Dispatch* dispatch = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
 			while(1){
 				if(dispatch->pid == getpid()){
@@ -188,7 +194,6 @@ int main(int argc, char  **argv) {
 		//message.mesg_type = getppid();
 		//msgsnd(msgid, &message, sizeof(message), 0);
 		//msgrcv(msgid, &message, sizeof(message), getpid(), 0);
-		printf("USER: pid %lld has been granted request\n",getpid());
 		fflush(stdout);
 		}
 	}
