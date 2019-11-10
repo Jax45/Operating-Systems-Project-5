@@ -33,7 +33,7 @@
 #define PERMS (IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 #define ALPHA 1
 #define BETA 1
-
+#define NUM_RES 20
 //global var.
 int processes = 0;
 bool verbose = false;
@@ -178,7 +178,7 @@ int main(int argc, char **argv){
 		shmpcb[x].CPU = 0;
 		shmpcb[x].simPID = 0;
 		int i;
-		for(i=0; i < 20; i++){
+		for(i=0; i < NUM_RES; i++){
 			shmpcb[x].claims[i] = 0;
                 	shmpcb[x].taken[i] = 0;
 			shmpcb[x].needs[i] = 0;
@@ -188,17 +188,21 @@ int main(int argc, char **argv){
         shmdt(shmpcb);
 	//setup the shared memory for the Resource Descriptor
 	key_t rdkey = ftok("./oss", 'g');
-	size_t RDSize = sizeof(struct RD) * 20;
+	size_t RDSize = sizeof(struct RD) * NUM_RES;
 	shmidRD = shmget(rdkey,RDSize,0666|IPC_CREAT);
 	if (shmidRD == -1 || errno){
 		perror("Error: oss: Failed to get shared memory");
 		exitSafe(1);
 	}
 	shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
-	for(x = 0; x < 20; x++){
+	for(x = 0; x < NUM_RES; x++){
 		if((rand() % 100) <= 20){
 			//it is sharable
 			shmrd[x].sharable = true;
+		}
+		else{
+                        shmrd[x].sharable = false;
+
 		}
 		shmrd[x].total = rand() % 10 + 1;
 		shmrd[x].available = shmrd[x].total;	
@@ -269,18 +273,14 @@ int main(int argc, char **argv){
 	remove(logFile);
 	fp = fopen(logFile, "a");
 
-//FOR TESTING
-shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
-fprintf(fp,"Total in RD: < ");
-int abc = 0;
-for(abc = 0; abc < 20; abc++){
-	fprintf(fp,"%d,",shmrd[abc].total);
-}
-fprintf(fp,">\n\n");
-shmdt(shmrd);
-
-	
-		
+	shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
+	fprintf(fp,"Total in RD: < ");
+	int abc = 0;
+	for(abc = 0; abc < NUM_RES; abc++){
+		fprintf(fp,"%d,",shmrd[abc].total);
+	}
+	fprintf(fp,">\n\n");
+	shmdt(shmrd);
 
 	//for limit purposes.
 	int lines = 0;
@@ -292,13 +292,7 @@ shmdt(shmrd);
 	struct Clock launchTime;
 	launchTime.second = 0;
 	launchTime.nano = 0;
-	//struct Clock currentTime;
-	//make the initial 18 processes
-	//for(i = 0; i < 1; i++){
 	int lastPid = -1;
-	
-	//int j;
-	//for(j = 0; j < 1; j++){
 	while(1){
 		//if we do not have a launch time, generate a new one.
 		if(launchTime.second == 0 && launchTime.nano == 0){
@@ -325,10 +319,8 @@ shmdt(shmrd);
 			}
 				
 
-			//printf("Launch time: %d:%d",launchTime.second,launchTime.nano);
 		}
 		//check if we need to launch the processes
-		//printf("Outside the for loop\n");
 		
 		//get the semaphore	
 		if (r_semop(semid, semwait, 1) == -1){
@@ -376,8 +368,6 @@ shmdt(shmrd);
 					fflush(fp);	
 					printf("OSS: Generating process %d with pid %lld at time %d:%d\n",processes,(long long)pid,shmclock->second,shmclock->nano);
 					processes++;
-					//printf("Queue size: %d \n",sizeOfQueue(priorityZero));
-					
                        		        //Setting up the PCB
                        		        shmpcb = (struct PCB*) shmat(shmidPCB, (void*)0,0);
                        		        shmpcb[lastPid].simPID = pid;
@@ -394,10 +384,6 @@ shmdt(shmrd);
                 	}        
 		        
 		}
-		//calculate the wait times for queue 1 and 2
-		//dispatch the ready process
-		//check queue 0
-		//keep track of the current queue.	
 		 //Look for message
 
 		//if msg received, run algorithm
@@ -416,14 +402,14 @@ shmdt(shmrd);
 				shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 				int i = 0;
 				//add resources back to available.
-				for(i=0; i<20; i++){
+				for(i=0; i<NUM_RES; i++){
 					if(!shmrd[i].sharable){
 						shmrd[i].available += shmpcb[PCBindex].taken[i];
 					}
 				}
 				fprintf(fp, "OSS: Current Allocation = <");
                                 int y = 0;
-                                for(y=0;y<20;y++){
+                                for(y=0;y<NUM_RES;y++){
  	                               fprintf(fp,"%d,",shmrd[y].available);
                                 }
                                 fprintf(fp, ">\n");
@@ -433,7 +419,7 @@ shmdt(shmrd);
                			shmpcb[PCBindex].CPU = 0;
        			        shmpcb[PCBindex].simPID = 0;
        			        int a;
-       			        for(a=0; a < 20; a++){
+       			        for(a=0; a < NUM_RES; a++){
        			                shmpcb[PCBindex].claims[a] = 0;
         		                shmpcb[PCBindex].taken[a] = 0;
         		        }
@@ -469,7 +455,7 @@ shmdt(shmrd);
 					//shmpcb[message.bitIndex].taken[message.resourceClass] -= message.quantity;
 					int i = 0;
 					bool isReleasing = false;
-					for(i=0;i<20;i++){
+					for(i=0;i<NUM_RES;i++){
 						if(shmpcb[message.bitIndex].release[i] > 0){
 							isReleasing = true;
 							break;
@@ -480,11 +466,11 @@ shmdt(shmrd);
 					
                                         
 					i = 0;
-                                        for(i=0;i<20;i++){
+                                        for(i=0;i<NUM_RES;i++){
 						fprintf(fp,"%2d,",shmpcb[message.bitIndex].release[i]);
                                                 
 						shmpcb[message.bitIndex].taken[i] -= shmpcb[message.bitIndex].release[i];
-                                                if(!shmrd[i].sharable){
+                                                if(shmrd[i].sharable == false){
 							shmrd[i].available += shmpcb[message.bitIndex].release[i];
                                                 }
 						shmpcb[message.bitIndex].release[i] = 0;
@@ -493,7 +479,7 @@ shmdt(shmrd);
 					fprintf(fp,">\n");
 					fprintf(fp,"Available Now:\n<");
 					int y = 0;
-                                        for(y=0;y<20;y++){
+                                        for(y=0;y<NUM_RES;y++){
                                                 fprintf(fp,"%2d,",shmrd[y].available);
                                         }
                                         fprintf(fp, ">\n");
@@ -502,10 +488,12 @@ shmdt(shmrd);
 					//pid_t child = shmpcb[message.bitIndex].simPID;
 					shmdt(shmpcb);
                                         shmdt(shmrd);
-			                shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
-					shmpid->pid = child;
-					shmdt(shmpid);
+			                //shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
+					//shmpid->pid = child;
+					//shmdt(shmpid);
                                         r_semop(semid, semsignal, 1);
+					message.mesg_type = child;
+                                        msgsnd(msgid, &message, sizeof(message), 0);
 
 					
 				}
@@ -517,11 +505,6 @@ shmdt(shmrd);
 			errno = 0;
 		//	printf("No message Received increment clock and loop back\n");
 		}
-			//send verdict back to user
-			//and check again?
-		//sprintf(message.mesg_text,"WOOP");
-		//message.mesg_type = 3;
-                //msgsnd(msgid, &message, sizeof(message), IPC_NOWAIT);
 		r_semop(semid,semwait,1);
                 shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
                 shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
@@ -529,43 +512,35 @@ shmdt(shmrd);
 		int c,d;
 		bool flag = false;
 		for(c=0;c<18;c++){
+			/*grantedRequests++;
+	                if((grantedRequests % 20) == 0){
+        	                printTable(fp);
+        	        }
+			*/
 			flag = false;
-			for(d=0;d<20;d++){
+			for(d=0;d<NUM_RES;d++){
 				if(shmpcb[c].needs[d] > 0){
-				/*	fprintf(fp,"OSS: %lld Requests:\n < ",shmpcb[c].simPID);
-					int y = 0;
-                                        for(y=0;y<20;y++){
-	                                        fprintf(fp,"%d,",shmpcb[c].needs[y]);
-                                        }
-					fprintf(fp,">\n");
-					fprintf(fp,"OSS: Currently Available:\n < ");
-					for(y=0;y<20;y++){
-                                                fprintf(fp,"%d,",shmrd[y].available);
-                                        }
-					fprintf(fp,">\n\n");
-				*/
+					grantedRequests++;
+					if((grantedRequests % 20) == 0){
+                		                printTable(fp);
+		                        }
+
 					if(isSafe(c,fp)){
 						flag = true;
 						int e = 0;
-						for(e=0;e<20;e++){
+						for(e=0;e<NUM_RES;e++){
 
-							//if(!shmrd[e].sharable){
-							shmpcb[c].taken[e] += shmpcb[c].needs[e];
-                                                	//shmrd[e].available -= shmpcb[c].needs[e];
-                                                	//}
+							if(shmrd[e].sharable == false){
+								shmpcb[c].taken[e] += shmpcb[c].needs[e];
+                                                		shmrd[e].available -= shmpcb[c].needs[e];
+                                                	}
+							else{
+								//shmrd[e].available -= shmpcb[c].needs[e];
+                                                                shmpcb[c].taken[e] += shmpcb[c].needs[e];
+							}
 							shmpcb[c].needs[e] = 0;
 							
 						}
-					}
-					else{
-						//fprintf(fp,"OSS: Request for resources from process %lld has been Denied\n",shmpcb[c].simPID);
-		                //                printf("OSS: Request for resources from process %lld has been Denied.\n",shmpcb[c].simPID);
-		
-                                		//fprintf(fp,"OSS: New Allocation after request:\n< ");
-                                		//int y = 0;
-                                		//for(y=0;y<20;y++){
-                                		//       fprintf(fp,"%d,",shmrd[y].available);
-						//}
 					}
 					break;
 				}
@@ -577,24 +552,29 @@ shmdt(shmrd);
 				//grantedRequests++;
  				fprintf(fp,"OSS: New Allocation after request:\n\n< ");
                                 int y = 0;
-                                for(y=0;y<20;y++){
+                                for(y=0;y<NUM_RES;y++){
                                        fprintf(fp,"%d,",shmrd[y].available);
                                 }
                                 fprintf(fp, ">\n\n");
                                 fflush(fp);
 				fflush(stdout);
                                 pid_t child = shmpcb[c].simPID;
-
+				
+				//message.mesg_type = child;
+			//	msgsnd(msgid, &message, sizeof(message),0);	
+				
 				shmpid->pid = child;
+				while(1){
+					if(shmpid->pid == getpid()){
+						break;
+					}
+				}
+				//msgrcv(msgid, &message, sizeof(message), getpid(), 0);
 				//if((grantedRequests % 20) == 0){
 				//	printTable(fp);
 				//}	
 			}
 		}
-                grantedRequests++;
-		if((grantedRequests % 20) == 0){
-	                printTable(fp);
-                }
 	
 		shmdt(shmpcb);
 		shmdt(shmrd);
@@ -612,7 +592,7 @@ void printTable(FILE *fp){
 	fprintf(fp,"Currently Allocated: \n");
 	for(x=0;x<18;x++){
 		fprintf(fp,"P%6d: <",shmpcb[x].simPID);
-		for(y=0;y<20;y++){
+		for(y=0;y<NUM_RES;y++){
 			fprintf(fp,"%2d,",shmpcb[x].taken[y]);
 		}
 		fprintf(fp,">\n");
@@ -622,8 +602,18 @@ void printTable(FILE *fp){
 	fprintf(fp,"Max Claims: \n");
         for(x=0;x<18;x++){
                 fprintf(fp,"P%6d: <",shmpcb[x].simPID);
-                for(y=0;y<20;y++){
+                for(y=0;y<NUM_RES;y++){
                         fprintf(fp,"%2d,",shmpcb[x].claims[y]);
+                }
+                fprintf(fp,">\n");
+        }
+        fprintf(fp,"\n");
+	//print needed
+	fprintf(fp,"Needed: \n");
+        for(x=0;x<18;x++){
+                fprintf(fp,"P%6d: <",shmpcb[x].simPID);
+                for(y=0;y<NUM_RES;y++){
+                        fprintf(fp,"%2d,",shmpcb[x].claims[y] - shmpcb[x].taken[y]);
                 }
                 fprintf(fp,">\n");
         }
@@ -632,7 +622,7 @@ void printTable(FILE *fp){
 	//print available
 	fprintf(fp,"Currently Available: \n");
 	fprintf(fp,"         <");
-        for(x=0;x<20;x++){
+        for(x=0;x<NUM_RES;x++){
               fprintf(fp,"%2d,",shmrd[x].available);
         }
         fprintf(fp,"\n");
@@ -652,13 +642,13 @@ bool isSafe(int index, FILE *fp){
 	//shmpcb = (struct PCB*) shmat(shmidPCB,(void*)0,0);
 	//shmrd = (struct RD*) shmat(shmidRD,(void*)0,0);
 	//shmpid = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
-	short max[18][20], need[18][20], alloc[18][20], available[20],request[20];//completed[20], safe[18];
+	short max[18][NUM_RES], need[18][NUM_RES], alloc[18][NUM_RES], available[NUM_RES],request[NUM_RES];//completed[20], safe[18];
 	//18 processes 0-17, and 20 resources 0-19
 	//
 	//init the 2d arrays with double for loop
 	int x,y;
 	for(x=0;x<18;x++){
-		for(y=0;y<20;y++){
+		for(y=0;y<NUM_RES;y++){
 			need[x][y] = shmpcb[x].claims[y] - shmpcb[x].taken[y];
 			alloc[x][y] = shmpcb[x].taken[y];
 			max[x][y] = shmpcb[x].claims[y];
@@ -666,7 +656,7 @@ bool isSafe(int index, FILE *fp){
 	}
 	
 	//get available and request.
-	for(x=0; x<20;x++){
+	for(x=0; x<NUM_RES;x++){
 		request[x] = shmpcb[index].needs[x];
 		available[x] = shmrd[x].available;
 	}
@@ -675,48 +665,50 @@ bool isSafe(int index, FILE *fp){
 	for(x = 0; x < 5; x ++){
 		if(x == 0){
 			fprintf(fp,"\n%lld's Request vector:\n<",(long long)shmpcb[index].simPID);
-			for(y=0;y<20;y++){
+			for(y=0;y<NUM_RES;y++){
 	                        fprintf(fp,"%2d,",request[y]);//,shmpcb[index].needs[y]);//request[x]);
 	                }
 		}
 		else if(x == 1){
                         fprintf(fp,"MaxClaim vector:\n<");
-                        for(y=0;y<20;y++){
+                        for(y=0;y<NUM_RES;y++){
                                 fprintf(fp,"%2d,",max[index][y]);//,shmpcb[index].claims[y]);
                         }
                 }
 		else if(x == 2){
                         fprintf(fp,"taken/Allocated vector:\n<");
-                        for(y=0;y<20;y++){
+                        for(y=0;y<NUM_RES;y++){
                                 fprintf(fp,"%2d,",alloc[index][y]);//,shmpcb[index].taken[y]);
                         }
                 }
 
 		else if(x == 3){
                         fprintf(fp,"MaxClaim-taken or NEED vector:\n<");
-			for(y=0;y<20;y++){
+			for(y=0;y<NUM_RES;y++){
         	                fprintf(fp,"%2d,",need[index][y]);//,(shmpcb[x].claims[y] - shmpcb[x].taken[y]));
 	                }
 		}
 		else{
                         fprintf(fp,"Available vector:\n<");
-			for(y=0;y<20;y++){
+			for(y=0;y<NUM_RES;y++){
 				fprintf(fp,"%2d,",available[y]);//,shmrd[y].available);
 			}
 		}
 		fprintf(fp,">\n");
 	}
 
-	for(x=0; x<20; x++){
+	for(x=0; x<NUM_RES; x++){
         	//check that it is not asking for more than it will ever need.
         	if(need[index][x] < request[x]){
-        	        //printf("Asked for more than initial max request\n");
+        	        printf("Asked for more than initial max request\n");
         	        return false;
         	}
         	if(request[x] <= available[x]){
-        	        available[x] -= request[x];
-        	        alloc[index][x] += request[x];
-        	        need[index][x] -= request[x];
+			//if(shmrd[x].sharable == false){
+        	        	available[x] -= request[x];
+        	        	alloc[index][x] += request[x];
+        	        	need[index][x] -= request[x];
+			//}
         	}
         	else{
         	        return false;
@@ -725,14 +717,14 @@ bool isSafe(int index, FILE *fp){
 	}
 
 		
-	int p = 18; int m = 20;
+	int p = 18; int m = NUM_RES;
 	bool finish[p];
 	int i;
 	//mark the processes as unfinished
 	for(i = 0; i < p; finish[i++] = false );
 	
 	//get the safe sequence
-	//int safeSeq[p];
+	int safeSeq[p];
 	
 	int count = 0;
 	while (count < p){
@@ -742,7 +734,7 @@ bool isSafe(int index, FILE *fp){
 			if(finish[process] == false){
 				int j;
 				for(j = 0;j<m;j++){
-					if(need[process][j] > available[j] && !shmrd[j].sharable){
+					if(need[process][j] > available[j]){// && !shmrd[j].sharable){
 						break;
 					}
 				}
@@ -753,8 +745,8 @@ bool isSafe(int index, FILE *fp){
 						//back to available
 						available[k] += alloc[process][k]; 
 					}
-					count++;
-					//safeSeq[count++] = process;
+				//	count++;
+					safeSeq[count++] = process;
 					
 					finish[process] = true;
 					
@@ -767,123 +759,17 @@ bool isSafe(int index, FILE *fp){
 		}
 	}
 	//system is safe
+	fprintf(fp,"Safe Sequence: <");
+	for(i=0;i<p;i++){
+		fprintf(fp, "P%d,", safeSeq[i]);
+	}
+	fprintf(fp,"\n");
 	return true;
-
-}
-
-
-
-
-
-/*
-for(x=0; x<20; x++){
-	check that it is not asking for more than it will ever need.
-	if(need[index][x] < request[x]){
-                printf("Asked for more than initial max request\n");
-		return false;
-        }
-        if(request[x] <= available[x]){
-                available[x] -= request[x];
-                alloc[index][x] += request[x];
-                need[index][x] -= request[x];
-		return true;
-        }
-	else{
-		return false;
-	}
 	
 }
-	//We have simulated the request now check to see if we are in a safe state
-	
 
 
 
-
-
-
-
-
-
-
-	int m=20,n=18;
-	
-	int work[m];
-	bool finish[n];
-	int i = 0;
-	for(i = 0; i < m; work[i] = available[i++] );
-	for(i = 0; i < n; finish[i++] = false );
-	
-	int p = 0;
-	for ( ; p < n; p++){
-		if(finish[p]){
-			continue;
-		}
-		//simulate function here:
-		bool flag;
-		int i = 0;
-		for(; i < m; i++){
-			if(need[p][i] > available[i]){
-				break;
-			}
-		}
-		
-		if(i == m){//req_lt_avail (need, work, p, m) ){
-			finish[p] = true;
-			for (i = 0; i< m; i++){
-				work[i] += alloc[p*m+i];
-			}
-			p = -1;
-		}
-	}
-	
-	for(p=0; p<n; p++){
-		if( !finish[p]){
-			break;
-		}
-	}
-	return (p != n);
-}
-*/
-/*int n = 18; //number of proceses
-int m = 20; // number of resources
-int i=0,j=0,k=0;
-y=0;
-int f[n], ans[n], ind = 0;
-for(y=0;y<n;y++){
-	f[n] = 0;
-}
-y=0;
-for (k = 0; k < 18; k++) { 
-        for (i = 0; i < n; i++) { 
-	    //inited to zero
-            if (f[i] == 0) { 
-  
-                int flag = 0; 
-                for (j = 0; j < m; j++) { 
-                    if (need[i][j] > available[j]){ 
-                        flag = 1; 
-                         break; 
-                    } 
-                } 
-  
-                if (flag == 0) { 
-                    ans[ind++] = i; 
-                    for (y = 0; y < m; y++) 
-                        available[y] += alloc[i][y]; 
-                    f[i] = 1; 
-                } 
-            } 
-        } 
-    } 
-  
-    printf("Following is the SAFE Sequence\n"); 
-    for (i = 0; i < n - 1; i++) 
-        printf(" P%d ->", ans[i]); 
-    printf(" P%d", ans[n - 1]);
-
-    return true; 
-}
-*/
 
 
 //Increment the clock after each iteration of the loop.

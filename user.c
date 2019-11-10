@@ -22,19 +22,10 @@
 #include "customStructs.h"
 #include "semaphoreFunc.h"
 #define PERMS (IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
-
-//Global shm pointers
-//struct PCB *shmpcb;
-//struct Dispatch *dispatch;
-
-//void sigHandler(int sig){
-//	exit(1);
-//}
-
+#define NUM_RES 20
 
 int main(int argc, char  **argv) {
 	srand(getpid());
-	//signal(SIGKILL,sigHandler);
 	struct sembuf semsignal[1];
 	struct sembuf semwait[1];
 	//int error;	
@@ -55,10 +46,9 @@ int main(int argc, char  **argv) {
 	bool isFinished = false;
 	setsembuf(semwait, 0, -1, 0);
 	setsembuf(semsignal, 0, 1, 0);
-	//printf("Before the while loop\n");
 	
 	//Read/write the PCB and get max claims.
-	int numClasses = rand() % 20 + 1;
+	int numClasses = rand() % NUM_RES + 1;
 	int x = 0;
 	int y = 0;
 	r_semop(semid, semwait, 1);
@@ -66,46 +56,22 @@ int main(int argc, char  **argv) {
 	struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
 	bool done = false;
 	while(x < numClasses){
-	//for(x=0;x<numClasses;x++){
-		//while(done == false){
-			y = rand() % 20 + 1;
-			if(shmpcb[bitIndex].claims[y] == 0){
-				shmpcb[bitIndex].claims[y] = rand() % (shmrd[y].total + 1);
-				x++;
-				
-			}
-		//}	
+		y = rand() % NUM_RES + 1;
+		if(shmpcb[bitIndex].claims[y] == 0){
+			shmpcb[bitIndex].claims[y] = rand() % (shmrd[y].total + 1);
+			x++;
+			
+		}
 	}
 	shmdt(shmpcb);
 	shmdt(shmrd);
 	r_semop(semid, semsignal, 1);
-
-	//printf("after the rd stuff\n");
 	bool finished = false;
     while(1){	
 
 	
-/*	 dispatch = (struct Dispatch*) shmat(shmidPID,(void*)0,0);
-	pid_t myPid = getpid();
-	while(1){
-			
-        	if(dispatch->pid == myPid){
-        		break;	
-		}
-	}
-
-	//wait for semaphore and reset shmpid
-	r_semop(semid, semwait, 1);
-	dispatch->pid = 0;
-	quantum = dispatch->quantum;
-        bitIndex = dispatch->index;
-	dispatch->index = -1;
-	dispatch->quantum = 0;
-	shmdt(dispatch);
-	r_semop(semid, semsignal, 1);
-*/	
 	//generate random time to execute event
-	int executeMS = 250;//rand() % 250 + 1;
+	int executeMS = rand() % 250 + 1;
 	struct Clock execute;
 	r_semop(semid, semwait, 1);
         struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
@@ -126,23 +92,31 @@ int main(int argc, char  **argv) {
 			
 	//printf("Waiting for time %d:%d\n",execute.second,execute.nano);
 	//fflush(stdout);
-	bool isWaiting = true;
-	while(isWaiting){
-		r_semop(semid, semwait, 1);
-                struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
+	//bool isWaiting = true;
+	//while(isWaiting){
+	r_semop(semid, semwait, 1);
+        shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
+        struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+	finished = true;
+        for(x=0; x<NUM_RES; x++){
+ 	       if(shmpcb[bitIndex].claims[x] != shmpcb[bitIndex].taken[x]){
+	               finished = false;
+               }
+        }
 
-		if((execute.second == shmclock->second && execute.nano > shmclock->nano) || execute.second > shmclock->second){
-			isWaiting = false;
-			//add cpu time
-			struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-			shmpcb[bitIndex].CPU += executeMS;
-			if(shmpcb[bitIndex].CPU > 1000){
-				isFinished = true;
-			}
-		}	
-		shmdt(shmclock);
-		r_semop(semid, semsignal, 1);
+	if((execute.second == shmclock->second && execute.nano > shmclock->nano) || execute.second > shmclock->second){
+	//isWaiting = false;
+		//add cpu time
+		struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+		shmpcb[bitIndex].CPU += executeMS;
+		if(shmpcb[bitIndex].CPU > 1000){
+			isFinished = true;
+		}
 	}
+	shmdt(shmpcb);	
+	shmdt(shmclock);
+	r_semop(semid, semsignal, 1);
+	//}
 	
 	
 
@@ -153,8 +127,7 @@ int main(int argc, char  **argv) {
 	else{
 		purpose =  rand() % 2 + 1;
 	}
-	
-	//purpose = 1;
+	//purpose = 1;	
 	if (purpose == 0 || finished){
 		//terminate
 		message.pid = getpid();
@@ -162,41 +135,34 @@ int main(int argc, char  **argv) {
                 /*send back what time you calculated to end on.*/
                 sprintf(message.mesg_text, "Done");
 		message.bitIndex = bitIndex;
-	//	printf("Sending message back to OSS\n");
-	//	fflush(stdout);
                 msgsnd(msgid, &message, sizeof(message), 0);
-		//shmdt(shmpcb);
-	//	shmdt(dispatch);
                 exit(0);
 	}	
 	else if(purpose == 1){
 		//Request for more resources
-		//sprintf(message.mesg_text, "Request");
         	int x = 0; 
 	       	r_semop(semid,semwait,1);
                 struct RD *shmrd = (struct RD*) shmat(shmidrd,(void*)0,0);
                 struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
 		bool isRequesting = false;
-		for(x=0; x<20; x++){
+		for(x=0; x<NUM_RES; x++){
                         if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
-				if((shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x]) > 0){
-					shmpcb[bitIndex].needs[x] = shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x];//rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x] + 1);
-          //              		if(shmpcb[bitIndex].needs[x] > 0){
-	                        	        isRequesting = true;
-	
-	//				}
+				shmpcb[bitIndex].needs[x] =  rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x] + 1);
+                        	if(shmpcb[bitIndex].needs[x] > 0){
+	                       	        isRequesting = true;
+
 				}
 			}
                 }
-		//pid_t myPid = shmpcb[bitIndex].simPID;
-		//message.quantity = (rand() % shmpcb[bitIndex].claims[x] + 1) - shmpcb[bitIndex].taken[x];
+		/*finished = true;
+		for(x=0; x<NUM_RES; x++){
+			if(shmpcb[bitIndex].claims[x] != shmpcb[bitIndex].taken[x]){
+				finished = false;
+			}
+		}*/
 		shmdt(shmpcb);
                 shmdt(shmrd);
                 r_semop(semid,semsignal,1);
-		//message.pid = myPid;
-		
-	        //message.mesg_type = 2;
-	        //message.bitIndex = bitIndex;
 	        //msgsnd(msgid, &message, sizeof(message), 0);
 	        if(isRequesting){
 			struct Dispatch* dispatch = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
@@ -206,22 +172,14 @@ int main(int argc, char  **argv) {
 				}
 			}
 			
-			r_semop(semid,semwait,1);
-			dispatch->pid = 0;
+			//r_semop(semid,semwait,1);
+			dispatch->pid = getppid();
 			shmdt(dispatch);
-			r_semop(semid,semsignal,1);
+			//r_semop(semid,semsignal,1);
+		//message.mesg_type = getppid();
+		//msgsnd(msgid, &message, sizeof(message), 0);
+		//msgrcv(msgid, &message, sizeof(message), getpid(), 0);
 		}
-	//	else{
-	//		finished = true;
-	//	}
-		/*while(1){
-			int result = msgrcv(msgid, &message, (sizeof(struct mesg_buffer)), myPid, IPC_NOWAIT);
-			if(result != -1){
-				if(message.pid == myPid){
-					break;
-				}
-			}
-		}	*/
 	}
 	else if(purpose == 2){
 		//Release some Resources
@@ -231,12 +189,10 @@ int main(int argc, char  **argv) {
 		sprintf(message.mesg_text, "Release");
 		int x = 0;
 		bool isReleasing = false;
-		for(x=0; x<20; x++){
+		for(x=0; x<NUM_RES; x++){
 			if(shmpcb[bitIndex].taken[x] > 0){
-				//message.resourceClass = x;
-	                        //message.quantity = rand() % shmpcb[bitIndex].taken[x] + 1;
 				int releaseAmount = rand() % shmpcb[bitIndex].taken[x] + 1;
-				shmpcb[bitIndex].release[x] = releaseAmount;//rand() % shmpcb[bitIndex].taken[x] + 1;
+				shmpcb[bitIndex].release[x] = releaseAmount;
 				if(releaseAmount > 0){
 					isReleasing = true;
 				}
@@ -257,7 +213,7 @@ int main(int argc, char  **argv) {
 			message.mesg_type = 2;
 	        	message.bitIndex = bitIndex;
 	        	msgsnd(msgid, &message, sizeof(message), 0);
-			struct Dispatch* dispatch = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
+			/*struct Dispatch* dispatch = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
                         while(1){
                                 if(dispatch->pid == getpid()){
                                         break;
@@ -268,12 +224,12 @@ int main(int argc, char  **argv) {
                         dispatch->pid = 0;
                         shmdt(dispatch);
                         r_semop(semid,semsignal,1);
-
-			//msgrcv(msgid, &message, sizeof(message), 2, 0);
+			*/
+			
+			msgrcv(msgid, &message, sizeof(message), getpid(), 0);
 		}
 	}
 	//continue back.	
-    	//isFinished = true;
 	}
 	return 0;
 }	
