@@ -704,11 +704,11 @@ bool isSafe(int index, FILE *fp){
         	        return false;
         	}
         	if(request[x] <= available[x]){
-			//if(shmrd[x].sharable == false){
+			if(shmrd[x].sharable == false){
         	        	available[x] -= request[x];
         	        	alloc[index][x] += request[x];
         	        	need[index][x] -= request[x];
-			//}
+			}
         	}
         	else{
         	        return false;
@@ -734,7 +734,7 @@ bool isSafe(int index, FILE *fp){
 			if(finish[process] == false){
 				int j;
 				for(j = 0;j<m;j++){
-					if(need[process][j] > available[j]){// && !shmrd[j].sharable){
+					if(need[process][j] > available[j] && !shmrd[j].sharable){
 						break;
 					}
 				}
@@ -764,6 +764,7 @@ bool isSafe(int index, FILE *fp){
 		fprintf(fp, "P%d,", safeSeq[i]);
 	}
 	fprintf(fp,"\n");
+	printTable(fp);
 	return true;
 	
 }
@@ -790,9 +791,12 @@ void incrementClock(){
                         else{
                                 shmclock->nano += increment;
                         }
+			
 			if(processes < 100){
 				passedTime = (shmclock->second) + (double)(shmclock->nano / 1000000000);
                         }
+			//printf("Current Time: %d:%d\n",shmclock->second,shmclock->nano);
+			shmclock->second += 1;
                         shmdt(shmclock);
                         if (r_semop(semid, semsignal, 1) == -1) {
                                 perror("Error: oss: failed to signal Semaphore. ");

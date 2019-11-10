@@ -73,17 +73,23 @@ int main(int argc, char  **argv) {
 	//generate random time to execute event
 	int executeMS = rand() % 250 + 1;
 	struct Clock execute;
+	execute.nano = 0;
+	execute.second = 0;
 	r_semop(semid, semwait, 1);
         struct Clock *shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-	long long exeNS = shmclock->nano + (executeMS * 1000000);
+	//execute.nano += shmclock->nano;
+	execute.second += shmclock->second;
+	
+	long long exeNS = (executeMS * 1000000) + shmclock->nano;
 	if(exeNS > 1000000000){
-		execute.second = (exeNS / 1000000000) + shmclock->second;
-		execute.nano = exeNS % 1000000000;
+		execute.second += (exeNS / 1000000000);
+		execute.nano += exeNS % 1000000000;
 	}
 	else{
 		execute.second = shmclock->second;
 		execute.nano = exeNS;
 	}
+	//execute.nano += shmclock->nano;
 	shmdt(shmclock);
 	r_semop(semid, semsignal, 1);
 	// 0 - 250 ms
@@ -91,32 +97,32 @@ int main(int argc, char  **argv) {
 
 			
 	//printf("Waiting for time %d:%d\n",execute.second,execute.nano);
-	//fflush(stdout);
-	//bool isWaiting = true;
-	//while(isWaiting){
-	r_semop(semid, semwait, 1);
-        shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
-        struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-	finished = true;
-        for(x=0; x<NUM_RES; x++){
- 	       if(shmpcb[bitIndex].claims[x] != shmpcb[bitIndex].taken[x]){
-	               finished = false;
-               }
-        }
-
-	if((execute.second == shmclock->second && execute.nano > shmclock->nano) || execute.second > shmclock->second){
-	//isWaiting = false;
-		//add cpu time
-		struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
-		shmpcb[bitIndex].CPU += executeMS;
-		if(shmpcb[bitIndex].CPU > 1000){
-			isFinished = true;
+	fflush(stdout);
+	bool isWaiting = true;
+	while(isWaiting){
+		r_semop(semid, semwait, 1);
+        	shmclock = (struct Clock*) shmat(shmid,(void*)0,0);
+        	struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+		finished = true;
+        	for(x=0; x<NUM_RES; x++){
+ 		       if(shmpcb[bitIndex].claims[x] != shmpcb[bitIndex].taken[x]){
+		               finished = false;
+        	       }
+        	}
+	
+		if((execute.second == shmclock->second && execute.nano < shmclock->nano) || execute.second < shmclock->second){
+			isWaiting = false;
+			//add cpu time
+			struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
+			shmpcb[bitIndex].CPU += executeMS;
+			if(shmpcb[bitIndex].CPU > 1000){
+				isFinished = true;
+			}
 		}
+		shmdt(shmpcb);	
+		shmdt(shmclock);
+		r_semop(semid, semsignal, 1);
 	}
-	shmdt(shmpcb);	
-	shmdt(shmclock);
-	r_semop(semid, semsignal, 1);
-	//}
 	
 	
 
@@ -146,9 +152,10 @@ int main(int argc, char  **argv) {
                 struct PCB *shmpcb = (struct PCB*) shmat(shmidpcb, (void*)0,0);
 		bool isRequesting = false;
 		for(x=0; x<NUM_RES; x++){
-                        if(shmpcb[bitIndex].claims[x] > 0 && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
-				shmpcb[bitIndex].needs[x] =  rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x] + 1);
-                        	if(shmpcb[bitIndex].needs[x] > 0){
+                        if(shmpcb[bitIndex].claims[x] > 0){// && shmpcb[bitIndex].taken[x] < shmpcb[bitIndex].claims[x]){
+				shmpcb[bitIndex].needs[x] = rand() % (shmpcb[bitIndex].claims[x] - shmpcb[bitIndex].taken[x] + 1);
+                        	//shmpcb[bitIndex].needs[x]--;
+				if(shmpcb[bitIndex].needs[x] > 0){
 	                       	        isRequesting = true;
 
 				}
@@ -164,7 +171,9 @@ int main(int argc, char  **argv) {
                 shmdt(shmrd);
                 r_semop(semid,semsignal,1);
 	        //msgsnd(msgid, &message, sizeof(message), 0);
-	        if(isRequesting){
+	        
+		if(isRequesting){
+			printf("USER: pid %lld is requesting resources",getpid());
 			struct Dispatch* dispatch = (struct Dispatch*) shmat(shmidPID, (void*)0,0);
 			while(1){
 				if(dispatch->pid == getpid()){
@@ -179,6 +188,8 @@ int main(int argc, char  **argv) {
 		//message.mesg_type = getppid();
 		//msgsnd(msgid, &message, sizeof(message), 0);
 		//msgrcv(msgid, &message, sizeof(message), getpid(), 0);
+		printf("USER: pid %lld has been granted request\n",getpid());
+		fflush(stdout);
 		}
 	}
 	else if(purpose == 2){
